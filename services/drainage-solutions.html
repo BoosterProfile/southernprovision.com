@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Drainage Solutions in DFW, Texas | Southern Pro-Vision</title>
+<meta name="description" content="Custom drainage solutions to protect your yard, foundation, and outdoor spaces from standing water and runoff. DFW, Texas. Free estimate." />
+<link rel="icon" href="../brand_assets/logo-circular.webp" type="image/webp" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root {
+    --green: #004E05;
+    --green-dark: #003204;
+    --green-primary: #008037;
+    --green-hover: #006a2e;
+    --green-light: #e8f4ec;
+    --white: #ffffff;
+    --black: #0d0d0d;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+
+  .skip-link {
+    position: absolute; top: -100px; left: 16px;
+    background: var(--green); color: white;
+    padding: 12px 18px; border-radius: 6px;
+    font-weight: 700; z-index: 999;
+    transition: top .2s var(--ease);
+  }
+  .skip-link:focus { top: 16px; }
+  :focus-visible { outline: 2px solid var(--green-primary); outline-offset: 3px; border-radius: 4px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---- NAVBAR ---- */
+  header.nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 20; padding: 10px 0;
+    background: var(--green);
+    transition: background .3s ease;
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; max-width: 1400px; margin: 0 auto; padding: 0 20px;
+  }
+  .logo-wrapper { width: 160px; flex-shrink: 0; display: flex; align-items: center; }
+  .nav-links {
+    display: flex; gap: 0; list-style: none; flex-wrap: nowrap; align-items: center;
+  }
+  .nav-links > li { position: relative; }
+  .nav-links > li > a {
+    color: white; font-size: 13px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.05em; padding: 8px 12px; white-space: nowrap;
+    display: flex; align-items: center; gap: 4px; transition: color .2s; position: relative;
+  }
+  .nav-links > li > a::after {
+    content: ''; position: absolute; bottom: 2px; left: 12px; right: 12px;
+    height: 2px; background: var(--green-primary);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform .25s var(--ease); border-radius: 2px;
+  }
+  .nav-links > li > a:hover::after,
+  .nav-links > li > a.active::after { transform: scaleX(1); }
+  .nav-links .dropdown > a::after {
+    content: "\f078"; font-family: "Font Awesome 6 Free"; font-weight: 900;
+    font-size: 10px; margin-left: 4px; position: static;
+    height: auto; width: auto; background: none; transform: none; border-radius: 0;
+    transition: transform .25s;
+  }
+  .nav-links .dropdown:hover > a::after { transform: rotate(180deg); }
+  .dropdown-menu {
+    position: absolute; top: calc(100% + 6px); left: 0;
+    background: white; min-width: 230px; padding: 6px;
+    box-shadow: 0 16px 48px -8px rgba(0,40,10,0.22), 0 2px 8px rgba(0,0,0,0.06);
+    border-radius: 10px; border-top: 3px solid var(--green-primary);
+    opacity: 0; visibility: hidden; transform: translateY(6px);
+    transition: opacity .2s var(--ease), transform .2s var(--ease), visibility .2s;
+    list-style: none; z-index: 30;
+  }
+  .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+  .dropdown-menu li a {
+    display: flex; align-items: center; gap: 10px; padding: 9px 13px;
+    color: #1a1a1a; font-size: 13px; font-weight: 600; border-radius: 6px;
+    transition: background .15s, color .15s, padding-left .2s var(--ease);
+    text-transform: capitalize; line-height: 1.3;
+  }
+  .dropdown-menu li a::before {
+    content: ''; width: 5px; height: 5px; border-radius: 50%;
+    background: var(--green-primary); flex-shrink: 0;
+    opacity: 0; transform: scale(0); transition: opacity .15s, transform .2s var(--ease);
+  }
+  .dropdown-menu li a:hover { background: var(--green-primary); color: white; padding-left: 18px; }
+  .dropdown-menu li a:hover::before { opacity: 1; transform: scale(1); background: white; }
+  .dropdown-menu li a.current { font-weight: 800; color: var(--green); }
+
+  .nav-cta { display: flex; gap: 10px; align-items: center; flex-shrink: 0; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 15px 20px; border-radius: 6px; font-family: 'Montserrat';
+    font-weight: 900; font-size: 14px; text-transform: uppercase; cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease), box-shadow .25s var(--ease);
+    white-space: nowrap;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--green-primary); color: white; box-shadow: 0 6px 18px -6px rgba(0,128,55,0.5); }
+  .btn-primary:hover { border-color: white; box-shadow: 0 10px 24px -8px rgba(0,128,55,0.7); }
+  .btn-secondary { background: white; color: var(--green-primary); border-color: var(--green-primary); }
+  .btn-secondary:hover { border-color: var(--black); }
+
+  /* ---- SERVICE HERO ---- */
+  .svc-hero {
+    position: relative;
+    min-height: 460px;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center; text-align: center;
+    background:
+      linear-gradient(135deg, rgba(0,20,10,0.80) 0%, rgba(0,50,20,0.68) 50%, rgba(0,20,10,0.82) 100%),
+      url('../brand_assets/drainage-card.webp') center/cover no-repeat;
+    padding: 160px 20px 90px;
+    color: white;
+  }
+  .svc-hero-inner { position: relative; z-index: 1; max-width: 760px; }
+  .svc-hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: rgba(255,255,255,0.65); font-size: 11px; font-weight: 800;
+    letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 18px;
+  }
+  .svc-hero-eyebrow::before,
+  .svc-hero-eyebrow::after {
+    content: ''; display: inline-block; width: 26px; height: 2px;
+    background: var(--green-primary); flex-shrink: 0;
+  }
+  .svc-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(32px, 4vw, 48px); font-weight: 900; text-transform: uppercase;
+    letter-spacing: -0.03em; line-height: 0.95;
+    color: white; margin-bottom: 20px;
+    text-shadow: 0 4px 40px rgba(0,0,0,0.4);
+    max-width: 700px;
+  }
+  .svc-hero-sub {
+    font-size: 17px; line-height: 1.65;
+    color: rgba(255,255,255,0.88); font-weight: 400;
+    max-width: 540px; margin: 0 auto 28px;
+  }
+  .svc-hero-badges {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 10px; margin-top: 4px;
+  }
+  .svc-hero-badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.22);
+    color: white; font-size: 12px; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 8px 16px; border-radius: 100px;
+    backdrop-filter: blur(4px);
+  }
+  .svc-hero-badge i { color: var(--green-primary); font-size: 11px; }
+
+  /* ---- SHARED SECTION PATTERNS ---- */
+  .svc-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--muted); font-size: 11px; font-weight: 800;
+    letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px;
+  }
+  .svc-eyebrow::before {
+    content: ''; display: inline-block; width: 26px; height: 2px;
+    background: var(--green-primary); flex-shrink: 0;
+  }
+  .svc-title-row { margin-bottom: 20px; }
+  .svc-title-row h2 {
+    font-family: 'Montserrat', sans-serif; font-size: 34px; font-weight: 900;
+    color: var(--green); letter-spacing: -0.02em; line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .svc-divider {
+    width: 48px; height: 3px; background: var(--green-primary);
+    border: none; border-radius: 2px; margin-bottom: 22px;
+  }
+  .svc-body-text {
+    font-size: 16px; color: #4a4a4a; line-height: 1.75; font-weight: 400;
+    margin-bottom: 28px;
+  }
+  .svc-check-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+  .svc-check-item { display: flex; gap: 14px; align-items: flex-start; }
+  .svc-check-icon {
+    width: 26px; height: 26px; background: var(--green-light); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 2px;
+    color: var(--green-primary); font-size: 12px;
+  }
+  .svc-check-title {
+    font-size: 15px; font-weight: 800; color: var(--green);
+    margin-bottom: 3px; display: block;
+  }
+  .svc-check-text { font-size: 14px; color: #5a5a5a; line-height: 1.65; }
+  .svc-cta-inline {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 24px; border-radius: 6px; font-family: 'Montserrat', sans-serif;
+    font-weight: 900; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em;
+    cursor: pointer; border: 2px solid transparent;
+    background: var(--green-primary); color: white;
+    box-shadow: 0 6px 18px -6px rgba(0,128,55,0.5);
+    transition: transform .2s var(--ease), box-shadow .25s var(--ease), border-color .2s var(--ease);
+    margin-top: 32px;
+  }
+  .svc-cta-inline:hover {
+    border-color: white; transform: translateY(-1px);
+    box-shadow: 0 10px 24px -8px rgba(0,128,55,0.7);
+  }
+
+  /* ---- WHY CHOOSE US SECTION ---- */
+  .svc-why {
+    background-color: #fafaf7;
+    padding: 80px 0;
+    position: relative;
+  }
+  .svc-why::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: url('../brand_assets/faq-bg.webp');
+    background-size: 100% auto; background-position: center top;
+    background-repeat: no-repeat; opacity: 0.07;
+    pointer-events: none; z-index: 0;
+  }
+  .svc-why-inner { position: relative; z-index: 1; }
+  .svc-two-col {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+  }
+  .svc-img-wrap {
+    border-radius: 10px; overflow: hidden;
+    box-shadow: 0 16px 48px -12px rgba(0,78,5,0.22), 0 4px 12px -4px rgba(0,78,5,0.1);
+  }
+  .svc-img-wrap img {
+    width: 100%; height: 100%; min-height: 380px;
+    object-fit: cover; display: block;
+    transition: transform .5s var(--ease);
+  }
+  .svc-img-wrap:hover img { transform: scale(1.03); }
+
+  /* ---- SECOND CONTENT SECTION ---- */
+  .svc-detail {
+    background: var(--green-light);
+    padding: 80px 0;
+    position: relative;
+  }
+  .svc-detail::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: url('../brand_assets/process-bg.webp');
+    background-size: cover; background-position: center;
+    background-repeat: no-repeat; opacity: 0.3;
+    pointer-events: none; z-index: 0;
+  }
+  .svc-detail-inner { position: relative; z-index: 1; }
+
+  /* ---- FAQ SECTION ---- */
+  .svc-faq {
+    background-color: #f8f9f6;
+    padding: 72px 0;
+    position: relative;
+  }
+  .svc-faq::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: url('../brand_assets/faq-bg.webp');
+    background-size: 100% auto; background-position: center top;
+    background-repeat: no-repeat; opacity: 0.18;
+    pointer-events: none; z-index: 0;
+  }
+  .svc-faq-inner { max-width: 1060px; margin: 0 auto; position: relative; z-index: 1; }
+  .faq-header { margin-bottom: 48px; }
+  .faq-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--muted); font-size: 11px; font-weight: 800;
+    letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .faq-eyebrow::before {
+    content: ''; display: inline-block; width: 26px; height: 2px;
+    background: var(--green-primary); flex-shrink: 0;
+  }
+  .faq-title-row { display: flex; align-items: center; gap: 22px; margin-bottom: 14px; }
+  .faq-title-row h2 {
+    font-family: 'Montserrat', sans-serif; font-size: 48px; font-weight: 900;
+    color: var(--green); letter-spacing: -0.005em; line-height: 1;
+    flex-shrink: 0; text-transform: uppercase;
+  }
+  .faq-title-divider { flex: 1; border-top: 2px solid var(--green-primary); transform: translateY(2px); }
+  .faq-sub { font-size: 16px; color: #4a4a4a; font-weight: 400; line-height: 1.7; max-width: 560px; }
+  .faq-list { margin-bottom: 0; }
+  .faq-item { border-top: 1px solid rgba(0,78,5,0.15); }
+  .faq-item:last-child { border-bottom: 1px solid rgba(0,78,5,0.15); }
+  .faq-btn {
+    display: flex; justify-content: space-between; align-items: center;
+    width: 100%; background: none; border: none; padding: 24px 0;
+    cursor: pointer; font-family: 'Montserrat', sans-serif;
+    font-size: 15px; font-weight: 800; color: var(--green);
+    text-align: left; gap: 32px; line-height: 1.35; letter-spacing: 0.01em;
+    text-transform: uppercase; transition: color .2s;
+  }
+  .faq-btn:hover { color: var(--green-primary); }
+  .faq-item.open .faq-btn { color: var(--green-primary); }
+  .faq-icon {
+    font-size: 18px; color: var(--green); flex-shrink: 0;
+    transition: transform .3s var(--ease), color .2s; line-height: 1; font-weight: 900;
+  }
+  .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--green-primary); }
+  .faq-ans { max-height: 0; overflow: hidden; transition: max-height .38s var(--ease); }
+  .faq-ans p {
+    color: #4a4a4a; font-size: 15px; line-height: 1.75; padding-bottom: 24px;
+    font-weight: 400; border-left: 3px solid var(--green-primary); padding-left: 16px;
+  }
+  .faq-item.open .faq-ans { max-height: 400px; }
+
+  /* ---- CONTACT FORM SECTION ---- */
+  .svc-contact {
+    background-color: #fafaf7;
+    padding: 80px 0;
+    position: relative;
+  }
+  .svc-contact::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: url('../brand_assets/faq-bg.webp');
+    background-size: 100% auto; background-position: center top;
+    background-repeat: no-repeat; opacity: 0.07;
+    pointer-events: none; z-index: 0;
+  }
+  .svc-contact-inner {
+    position: relative; z-index: 1;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+  }
+  .svc-contact-left { padding-top: 56px; }
+  .contact-info-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--muted); font-size: 11px; font-weight: 800;
+    letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px;
+  }
+  .contact-info-eyebrow::before {
+    content: ''; display: inline-block; width: 26px; height: 2px;
+    background: var(--green-primary); flex-shrink: 0;
+  }
+  .contact-info-heading {
+    font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 900;
+    color: var(--green); letter-spacing: -0.02em; line-height: 1.15;
+    text-transform: uppercase; margin-bottom: 16px;
+  }
+  .contact-info-divider {
+    width: 48px; height: 3px; background: var(--green-primary);
+    border: none; margin-bottom: 24px; border-radius: 2px;
+  }
+  .contact-info-desc {
+    font-size: 16px; color: #4a4a4a; line-height: 1.75; font-weight: 400;
+    margin-bottom: 14px;
+    border-left: 3px solid var(--green-primary); padding-left: 16px;
+  }
+  .contact-info-note {
+    font-size: 14px; color: #6b6b6b; line-height: 1.65;
+    font-style: italic; margin-bottom: 36px;
+  }
+  .contact-info-links { display: flex; flex-direction: column; gap: 16px; }
+  .contact-info-link {
+    display: flex; align-items: center; gap: 18px;
+    text-decoration: none; color: var(--text);
+    padding: 16px 20px; background: white;
+    border: 1.5px solid rgba(0,78,5,0.14); border-radius: 8px;
+    box-shadow: 0 2px 8px -2px rgba(0,78,5,0.06), 0 6px 20px -6px rgba(0,78,5,0.07);
+    transition: border-color .2s var(--ease), box-shadow .2s var(--ease), transform .2s var(--ease);
+  }
+  .contact-info-link:hover {
+    border-color: var(--green-primary);
+    box-shadow: 0 4px 16px -4px rgba(0,78,5,0.14), 0 10px 28px -6px rgba(0,78,5,0.14);
+    transform: translateX(4px);
+  }
+  .contact-info-link-icon {
+    width: 42px; height: 42px; background: var(--green-light); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; color: var(--green-primary); font-size: 17px;
+  }
+  .contact-info-link-label {
+    font-size: 11px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--muted); display: block; margin-bottom: 2px;
+  }
+  .contact-info-link-value { font-size: 15px; font-weight: 700; color: var(--green); }
+
+  /* Quote form */
+  .svc-contact-right { padding-top: 20px; }
+  .quote-form {
+    position: relative; background: #005c0a; color: white;
+    padding: 78px 28px 26px; border-radius: 10px;
+    box-shadow: 0 30px 70px -20px rgba(0,0,0,0.35);
+    width: 100%; border-top: 4px solid var(--green-primary);
+  }
+  .quote-form .form-logo {
+    position: absolute; top: -55px; left: 50%; transform: translateX(-50%);
+    width: 110px; height: 110px; border-radius: 50%;
+    background: white; padding: 8px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.3);
+    object-fit: contain; display: block;
+  }
+  .quote-form h2 {
+    font-family: 'Montserrat'; text-transform: uppercase; text-align: center;
+    font-size: 32px; margin-bottom: 18px; color: white;
+    font-weight: 800; line-height: 1.2; letter-spacing: -0.005em;
+  }
+  .field { margin-bottom: 14px; }
+  .field label {
+    display: block; font-size: 14px; font-weight: 900; margin-bottom: 6px; color: white;
+  }
+  .field label .req { color: white; margin-left: 2px; }
+  .field input, .field textarea {
+    width: 100%; padding: 12px 14px; border: 1px solid #ACACAC; border-radius: 5px;
+    font-family: 'Montserrat'; font-size: 14px; font-weight: 600;
+    background: white; color: #000; line-height: 1.4;
+  }
+  .field input { height: 44px; }
+  .field input::placeholder, .field textarea::placeholder { color: #8c8c8c; }
+  .field textarea { resize: vertical; height: 90px; min-height: 90px; }
+  .field input:focus, .field textarea:focus {
+    outline: none; border-color: var(--green-primary);
+    box-shadow: 0 0 0 3px rgba(0,128,55,0.15);
+  }
+  .checkbox-row {
+    display: flex; gap: 10px; font-size: 13px;
+    margin: 12px 0 14px; line-height: 1.45; color: white; align-items: flex-start;
+  }
+  .checkbox-row input { margin-top: 3px; flex-shrink: 0; width: 15px; height: 15px; accent-color: var(--green-primary); }
+  .checkbox-row a { text-decoration: underline; color: #335dff; }
+  .submit-btn {
+    width: 100%; padding: 13px; border-radius: 5px; border: none;
+    background: var(--green-primary); color: white; font-weight: 900; font-size: 22px;
+    font-family: 'Montserrat'; cursor: pointer; margin-top: 4px; letter-spacing: 0.03em;
+    transition: background .2s var(--ease), transform .15s var(--ease);
+  }
+  .submit-btn:hover { background: var(--green-hover); transform: translateY(-1px); }
+  .form-status {
+    margin-top: 12px; font-size: 13px; color: white;
+    min-height: 1.2em; opacity: 0; transition: opacity .25s var(--ease);
+  }
+  .form-status.is-visible { opacity: 1; }
+  .form-status.is-error { color: #FFD3D3; }
+  .form-status.is-success { color: #B7F2C9; }
+
+  /* ---- FOOTER ---- */
+  footer {
+    background-color: #fdfcf8; color: #1a1a1a;
+    border-top: 1px solid #e5e7eb; position: relative;
+  }
+  footer::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: url('../brand_assets/footer-bg.webp');
+    background-size: cover; background-position: center;
+    background-repeat: no-repeat; opacity: 0.35;
+    pointer-events: none; z-index: 0;
+  }
+  footer .container { position: relative; z-index: 1; }
+  .footer-main {
+    display: grid; grid-template-columns: 200px 1fr 1fr 320px;
+    gap: 56px; padding: 60px 0 52px; align-items: start;
+  }
+  .footer-brand-logo { width: 80px; height: 80px; object-fit: contain; margin-bottom: 20px; display: block; }
+  .footer-license-label { font-size: 14px; color: #6b7280; display: block; margin-bottom: 5px; }
+  .footer-license-num { font-size: 14px; font-weight: 700; color: #111827; display: block; }
+  .footer-col-heading { font-size: 15px; font-weight: 700; color: #111827; margin-bottom: 20px; text-transform: none; }
+  .footer-col-links { list-style: none; }
+  .footer-col-links li { margin-bottom: 13px; }
+  .footer-col-links li a {
+    font-size: 14px; color: #6b7280; font-weight: 400;
+    transition: color .2s; line-height: 1.4;
+  }
+  .footer-col-links li a:hover { color: #111827; }
+  .footer-map-frame { width: 100%; height: 250px; border: 0; border-radius: 6px; display: block; }
+  .footer-hr { border: none; border-top: 1px solid #e5e7eb; margin: 0; }
+  .footer-rating { display: flex; align-items: center; gap: 14px; padding: 22px 0; }
+  .footer-g-svg { width: 42px; height: 42px; flex-shrink: 0; }
+  .footer-stars { display: flex; gap: 4px; color: #FBBF24; font-size: 22px; }
+  .footer-bottom-bar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 18px 0; border-top: 1px solid #e5e7eb; padding-right: 180px;
+  }
+  .footer-bottom-left { display: flex; flex-direction: column; gap: 5px; }
+  .footer-bottom-left span { font-size: 13px; color: #6b7280; }
+  .footer-bottom-left a { font-size: 13px; color: #6b7280; text-decoration: underline; transition: color .2s; width: fit-content; }
+  .footer-bottom-left a:hover { color: #111827; }
+  .footer-social-icons { display: flex; gap: 16px; align-items: center; }
+  .footer-social-icons a { display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .footer-social-icons a img { width: 48px; height: 48px; object-fit: contain; display: block; }
+
+  /* ---- FLOATING CTA ---- */
+  .cta-bottom-right {
+    position: fixed; bottom: 20px; right: 100px; z-index: 50;
+    opacity: 0; transform: translateX(100%); transition: all .5s ease;
+  }
+  body.scrolled .cta-bottom-right { opacity: 1; transform: translateX(0); }
+  .cta-bottom-right button {
+    background: var(--green-primary); color: white; padding: 17px 20px;
+    font-weight: 900; font-size: 14px; text-transform: uppercase;
+    border: 2px solid transparent; border-radius: 5px; cursor: pointer;
+    font-family: 'Montserrat'; transition: border-color .25s;
+  }
+  .cta-bottom-right button:hover { border-color: white; }
+
+  /* ---- SCROLL REVEAL ---- */
+  .reveal {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1);
+  }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.08s; }
+  .reveal-delay-2 { transition-delay: 0.16s; }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 1024px) {
+    .nav-links { display: none; }
+    .svc-hero h1 { font-size: 40px; }
+    .svc-two-col { grid-template-columns: 1fr; gap: 36px; }
+    .svc-title-row h2 { font-size: 28px; }
+    .faq-title-row h2 { font-size: 34px; }
+    .svc-contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    .svc-contact-left { padding-top: 0; }
+    .footer-main { grid-template-columns: 1fr 1fr; gap: 30px; }
+    .nav-cta .btn { padding: 12px 10px; font-size: 12px; }
+  }
+  @media (max-width: 680px) {
+    .svc-hero h1 { font-size: 30px; }
+    .svc-hero-badges { gap: 8px; }
+    .faq-title-row h2 { font-size: 26px; }
+    .footer-main { grid-template-columns: 1fr; }
+    .footer-bottom-bar { flex-direction: column; gap: 16px; align-items: flex-start; padding-right: 0; }
+  }
+
+  /* -------- MOBILE MENU -------- */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 101;
+  }
+  .hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mob-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 98; opacity: 0; transition: opacity 0.3s ease; }
+  .mob-overlay.open { display: block; opacity: 1; }
+  .mob-menu { position: fixed; top: 0; right: -100%; width: min(300px, 88vw); height: 100dvh; background: var(--green); z-index: 99; display: flex; flex-direction: column; transition: right 0.35s cubic-bezier(0.22,1,0.36,1); overflow-y: auto; }
+  .mob-menu.open { right: 0; }
+  .mob-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+  .mob-logo { width: 50px; height: 50px; object-fit: contain; }
+  .mob-close { background: transparent; border: none; color: #fff; font-size: 22px; cursor: pointer; padding: 4px 8px; line-height: 1; }
+  .mob-body { flex: 1; padding: 12px 0; }
+  .mob-nav { list-style: none; margin: 0; padding: 0; }
+  .mob-nav > li > a, .mob-services-toggle { display: block; width: 100%; padding: 13px 22px; color: #fff; text-decoration: none; font-size: 15px; font-weight: 500; background: transparent; border: none; text-align: left; cursor: pointer; transition: background 0.2s; }
+  .mob-nav > li > a:hover, .mob-services-toggle:hover { background: rgba(255,255,255,0.08); }
+  .mob-services-toggle { display: flex; align-items: center; justify-content: space-between; }
+  .mob-chevron { transition: transform 0.3s ease; font-size: 12px; }
+  .mob-services-li.open .mob-chevron { transform: rotate(180deg); }
+  .mob-sub { list-style: none; margin: 0; padding: 0; max-height: 0; overflow: hidden; transition: max-height 0.35s ease; background: rgba(0,0,0,0.18); }
+  .mob-services-li.open .mob-sub { max-height: 400px; }
+  .mob-sub li a { display: block; padding: 10px 22px 10px 36px; color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; transition: background 0.2s; }
+  .mob-sub li a:hover { background: rgba(255,255,255,0.08); }
+  .mob-footer { padding: 16px 20px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; flex-direction: column; gap: 10px; }
+  .mob-call { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background: rgba(255,255,255,0.1); color: #fff; text-decoration: none; border-radius: 6px; font-size: 14px; font-weight: 600; }
+  .mob-estimate { padding: 13px; background: #fff; color: var(--green); border: none; border-radius: 6px; font-size: 14px; font-weight: 700; cursor: pointer; transition: opacity 0.2s; }
+  .mob-estimate:hover { opacity: 0.9; }
+  body { overflow-x: hidden; }
+  @media (max-width: 1024px) {
+    .hamburger { display: flex; }
+    .nav-links { display: none !important; }
+    .nav-cta .btn-primary { display: none; }
+    .footer-main { grid-template-columns: 1fr 1fr; gap: 30px; }
+    .footer-bottom-bar { padding-right: 0 !important; flex-wrap: wrap; }
+    .svc-hero { padding: 130px 20px 70px; }
+    .svc-hero h1 { font-size: clamp(28px, 5vw, 40px); }
+  }
+  @media (max-width: 640px) {
+    .footer-main { grid-template-columns: 1fr; }
+    .footer-bottom-bar { flex-direction: column; gap: 12px; align-items: flex-start; padding-right: 0 !important; }
+    .svc-hero { padding: 120px 20px 60px; }
+    .svc-hero h1 { font-size: clamp(22px, 6vw, 30px); }
+    .svc-hero-sub { font-size: 14px; }
+    .footer-map-frame { height: 180px; }
+  }
+
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="logo-wrapper" aria-label="Southern Pro-Vision Home">
+      <img src="../brand_assets/logo-circular.webp" alt="Southern Pro-Vision" style="width:120px;height:120px;object-fit:contain;display:block;" loading="eager" width="750" height="750" decoding="async">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li class="dropdown"><a href="#" class="active">Services</a>
+        <ul class="dropdown-menu">
+          <li><a href="landscape-design.html">Landscape Design</a></li>
+          <li><a href="irrigation-systems.html">Irrigation Systems</a></li>
+          <li><a href="outdoor-kitchens.html">Outdoor Kitchens</a></li>
+          <li><a href="hardscapes-masonry.html">Hardscapes &amp; Masonry</a></li>
+          <li><a href="landscape-lighting.html">Landscape Lighting</a></li>
+          <li><a href="drainage-solutions.html" class="current">Drainage Solutions</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Service Areas</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <button class="btn btn-primary" onclick="document.getElementById('estimate-form').scrollIntoView({behavior:'smooth'})">Get Free Estimate</button>
+      <a href="tel:+14693635551" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> (469) 363-5551</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- SERVICE HERO -->
+<section class="svc-hero" id="main">
+  <div class="svc-hero-inner">
+    <span class="svc-hero-eyebrow">Southern Pro-Vision &nbsp;·&nbsp; Drainage Solutions</span>
+    <h1>Drainage Solutions in DFW, Texas</h1>
+    <p class="svc-hero-sub">Custom drainage solutions designed to protect your yard, foundation, lawn, and outdoor spaces from standing water and runoff issues.</p>
+    <div class="svc-hero-badges">
+      <span class="svc-hero-badge"><i class="fa-solid fa-check"></i> Channel Drains</span>
+      <span class="svc-hero-badge"><i class="fa-solid fa-check"></i> Yard Drainage</span>
+      <span class="svc-hero-badge"><i class="fa-solid fa-check"></i> Water Runoff Control</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="svc-why">
+  <div class="container svc-why-inner">
+    <div class="svc-two-col reveal">
+      <!-- Left: text -->
+      <div>
+        <span class="svc-eyebrow">Protect Your Property from Water Issues</span>
+        <div class="svc-title-row">
+          <h2>Why Choose Southern Pro-Vision for Drainage Solutions?</h2>
+        </div>
+        <div class="svc-divider"></div>
+        <p class="svc-body-text">Drainage problems can damage your lawn, create muddy areas, affect hardscapes, and cause water to collect near your home. A properly planned drainage solution helps move water away from problem areas and keeps your outdoor space cleaner, safer, and easier to maintain.</p>
+        <ul class="svc-check-list">
+          <li class="svc-check-item">
+            <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
+            <div>
+              <span class="svc-check-title">Water Runoff Control</span>
+              <p class="svc-check-text">We help redirect water away from areas where it can collect, damage landscaping, or create ongoing yard problems.</p>
+            </div>
+          </li>
+          <li class="svc-check-item">
+            <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
+            <div>
+              <span class="svc-check-title">Clean Drainage Installation</span>
+              <p class="svc-check-text">From channel drains to yard drainage systems, we focus on neat installations that blend into the property and function properly.</p>
+            </div>
+          </li>
+          <li class="svc-check-item">
+            <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
+            <div>
+              <span class="svc-check-title">Designed Around Your Yard</span>
+              <p class="svc-check-text">We consider slope, soil, concrete edges, lawn areas, garden beds, and water flow so the solution fits your property.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Right: image -->
+      <div class="svc-img-wrap reveal reveal-delay-1">
+        <img src="../brand_assets/drainage-card.webp" alt="Drainage Solutions by Southern Pro-Vision" decoding="async" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECOND CONTENT SECTION -->
+<section class="svc-detail">
+  <div class="container svc-detail-inner">
+    <div class="svc-two-col flip">
+      <!-- Left: image -->
+      <div class="svc-img-wrap reveal">
+        <img src="../brand_assets/drainage-card.webp" alt="Channel drain and yard drainage by Southern Pro-Vision" decoding="async" loading="lazy">
+      </div>
+      <!-- Right: text -->
+      <div class="reveal reveal-delay-1">
+        <span class="svc-eyebrow">Solutions for Standing Water and Runoff</span>
+        <div class="svc-title-row">
+          <h2>Drainage That Helps Your Yard Stay Dry and Usable</h2>
+        </div>
+        <div class="svc-divider"></div>
+        <p class="svc-body-text">Standing water and poor runoff can make a yard difficult to use and can slowly damage landscaping, patios, walkways, and planting areas. We help plan drainage solutions that move water more effectively and reduce the issues caused by pooling, muddy spots, and water flowing in the wrong direction.</p>
+        <ul class="svc-check-list">
+          <li class="svc-check-item">
+            <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
+            <div>
+              <span class="svc-check-title">Channel Drains</span>
+              <p class="svc-check-text">Install clean channel drains along concrete edges, patios, driveways, or problem areas to collect and move water away.</p>
+            </div>
+          </li>
+          <li class="svc-check-item">
+            <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
+            <div>
+              <span class="svc-check-title">Yard Drainage Systems</span>
+              <p class="svc-check-text">Improve wet or muddy lawn areas with drainage solutions planned around the natural flow of your yard.</p>
+            </div>
+          </li>
+          <li class="svc-check-item">
+            <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
+            <div>
+              <span class="svc-check-title">Foundation &amp; Landscape Protection</span>
+              <p class="svc-check-text">Help reduce water collection near the home, planting beds, hardscapes, and outdoor living areas.</p>
+            </div>
+          </li>
+        </ul>
+        <a href="#estimate-form" class="svc-cta-inline">Get a Free Estimate <i class="fa-solid fa-arrow-right" style="font-size:11px;"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="svc-faq">
+  <div class="container">
+    <div class="svc-faq-inner reveal">
+      <div class="faq-header">
+        <span class="faq-eyebrow">FAQs &nbsp;·&nbsp; Drainage Solution Questions</span>
+        <div class="faq-title-row">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-title-divider"></div>
+        </div>
+        <p class="faq-sub">Answering common questions about drainage solutions in DFW, Texas.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-btn"><span>How do I know if my yard needs drainage work?</span><span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="faq-ans"><p>Common signs include standing water, muddy areas, water collecting near the house, soggy grass, erosion, or runoff flowing across patios, walkways, or driveways. If water is not moving away properly, a drainage solution may be needed.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn"><span>What type of drainage solution is best for my property?</span><span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="faq-ans"><p>The best solution depends on where the water is coming from, how your yard slopes, the soil conditions, and where the water needs to go. Options may include channel drains, yard drains, grading adjustments, or other water management solutions.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn"><span>Can drainage solutions protect my landscaping and hardscapes?</span><span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="faq-ans"><p>Yes. Proper drainage can help protect lawns, garden beds, patios, walkways, retaining walls, and other outdoor features from water damage, erosion, muddy areas, and long-term wear caused by poor runoff.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / ESTIMATE FORM -->
+<section class="svc-contact" id="estimate-form">
+  <div class="container">
+    <div class="svc-contact-inner">
+
+      <!-- Left: info -->
+      <div class="svc-contact-left reveal">
+        <span class="contact-info-eyebrow">Get In Touch</span>
+        <h2 class="contact-info-heading">Get a Free Drainage Solution Estimate</h2>
+        <div class="contact-info-divider"></div>
+        <p class="contact-info-desc">Ready to fix standing water, runoff, or drainage problems around your property? Fill out the form or contact us directly, and our team will get back to you as soon as possible.</p>
+        <p class="contact-info-note">Whether you need channel drains, yard drainage, runoff control, or a custom water management solution, Southern Pro-Vision Landscape &amp; Irrigation is here to help.</p>
+        <div class="contact-info-links">
+          <a href="mailto:info@southernprovisionlandscape.com" class="contact-info-link">
+            <div class="contact-info-link-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <span class="contact-info-link-label">Email Us</span>
+              <span class="contact-info-link-value">info@southernprovisionlandscape.com</span>
+            </div>
+          </a>
+          <a href="tel:+14693635551" class="contact-info-link">
+            <div class="contact-info-link-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <span class="contact-info-link-label">Call Us</span>
+              <span class="contact-info-link-value">(469) 363-5551</span>
+            </div>
+          </a>
+          <div class="contact-info-link" style="cursor:default;">
+            <div class="contact-info-link-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <span class="contact-info-link-label">Service Area</span>
+              <span class="contact-info-link-value">DFW Metroplex, Texas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="svc-contact-right reveal reveal-delay-1">
+        <form class="quote-form" id="svc-form" novalidate aria-label="Get a free drainage solution estimate">
+          <img class="form-logo" src="../brand_assets/logo-circular.webp" alt="Southern Pro-Vision" loading="lazy" width="750" height="750" decoding="async">
+          <h2>GET A FREE ESTIMATE</h2>
+          <div class="field">
+            <label for="sf-name">Full Name <span class="req">*</span></label>
+            <input id="sf-name" name="name" type="text" placeholder="John Smith" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="sf-phone">Phone <span class="req">*</span></label>
+            <input id="sf-phone" name="phone" type="tel" placeholder="(808) 555-1234" required autocomplete="tel" inputmode="tel">
+          </div>
+          <div class="field">
+            <label for="sf-msg">Tell us about your project <span class="req">*</span></label>
+            <textarea id="sf-msg" name="message" placeholder="Describe your drainage issue — standing water, muddy areas, runoff problems, channel drain needs, etc." required></textarea>
+          </div>
+          <div class="checkbox-row">
+            <input type="checkbox" id="sf-terms" required>
+            <label for="sf-terms" style="font-weight:400;font-size:13px;">I agree to <a href="#">terms &amp; conditions</a> provided by the company. By providing my phone number, I agree to receive text messages from the business.</label>
+          </div>
+          <button class="submit-btn" type="submit">SEND</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <div>
+        <img src="../brand_assets/logo-circular.webp" alt="Southern Pro-Vision" loading="lazy" width="750" height="750" class="footer-brand-logo" decoding="async">
+        <span class="footer-license-label">Licensed &amp; Insured</span>
+        <strong class="footer-license-num">(469) 363-5551</strong>
+      </div>
+      <div>
+        <h4 class="footer-col-heading">Services</h4>
+        <ul class="footer-col-links">
+          <li><a href="landscape-design.html">Landscape Design</a></li>
+          <li><a href="irrigation-systems.html">Irrigation Systems</a></li>
+          <li><a href="outdoor-kitchens.html">Outdoor Kitchens</a></li>
+          <li><a href="hardscapes-masonry.html">Hardscapes &amp; Masonry</a></li>
+          <li><a href="landscape-lighting.html">Landscape Lighting</a></li>
+          <li><a href="drainage-solutions.html">Drainage Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-heading">Service Areas</h4>
+        <ul class="footer-col-links">
+          <li><a href="#">Dallas, TX</a></li>
+          <li><a href="#">Fort Worth, TX</a></li>
+          <li><a href="#">Plano, TX</a></li>
+          <li><a href="#">Frisco, TX</a></li>
+          <li><a href="#">McKinney, TX</a></li>
+          <li><a href="#">View All Areas</a></li>
+        </ul>
+      </div>
+      <div>
+        <iframe class="footer-map-frame"
+          src="https://maps.google.com/maps?q=Dallas+Fort+Worth+TX&t=m&z=10&ie=UTF8&iwloc=&output=embed"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <hr class="footer-hr">
+
+    <div class="footer-rating">
+      <svg class="footer-g-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" fill="#FFC107"/>
+        <path d="M6.306 14.691l6.571 4.819C14.655 15.108 19.000 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z" fill="#FF3D00"/>
+        <path d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" fill="#4CAF50"/>
+        <path d="M43.611 20.083H42V20H24v8h11.303a11.946 11.946 0 01-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" fill="#1976D2"/>
+      </svg>
+      <div class="footer-stars">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-left">
+        <span>&copy; 2025 Southern Pro-Vision Landscape &amp; Irrigation. All rights reserved.</span>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="footer-social-icons">
+        <a href="#" aria-label="Google Business Profile">
+          <img src="../brand_assets/gbp-icon.svg" alt="Google Business Profile" decoding="async" loading="lazy">
+        </a>
+        <a href="#" aria-label="Instagram">
+          <img src="../brand_assets/instagram-icon.svg" alt="Instagram" decoding="async" loading="lazy">
+        </a>
+        <a href="#" aria-label="YouTube">
+          <img src="../brand_assets/youtube-icon.svg" alt="YouTube" decoding="async" loading="lazy">
+        </a>
+        <a href="#" aria-label="Facebook">
+          <img src="../brand_assets/facebook-green-icon.svg" alt="Facebook" decoding="async" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating CTA -->
+<div class="cta-bottom-right">
+  <button onclick="document.getElementById('estimate-form').scrollIntoView({behavior:'smooth'})">get free quote</button>
+</div>
+
+<script>
+  /* Scroll reveal */
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('is-visible'); revealObserver.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  /* Scrolled class for floating CTA */
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) document.body.classList.add('scrolled');
+    else document.body.classList.remove('scrolled');
+  }, { passive: true });
+
+  /* FAQ accordion */
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  /* Form validation */
+  const form = document.getElementById('svc-form');
+  const status = form.querySelector('.form-status');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    status.classList.remove('is-error', 'is-success', 'is-visible');
+    const name = form.querySelector('#sf-name').value.trim();
+    const phone = form.querySelector('#sf-phone').value.trim();
+    const msg = form.querySelector('#sf-msg').value.trim();
+    const terms = form.querySelector('#sf-terms').checked;
+    if (!name || !phone || !msg) {
+      status.textContent = 'Please fill in your name, phone, and message.';
+      status.classList.add('is-error', 'is-visible'); return;
+    }
+    if (!terms) {
+      status.textContent = 'Please agree to the terms before sending.';
+      status.classList.add('is-error', 'is-visible'); return;
+    }
+    status.textContent = `Thanks, ${name.split(' ')[0]}. We'll be in touch shortly.`;
+    status.classList.add('is-success', 'is-visible');
+    form.reset();
+  });
+
+  /* Mobile menu JS */
+  (function() {
+    var ham = document.getElementById('hamburger');
+    var menu = document.getElementById('mob-menu');
+    var overlay = document.getElementById('mob-overlay');
+    var closeBtn = document.getElementById('mob-close');
+    var servicesToggle = document.getElementById('mob-services-toggle');
+    var servicesLi = document.getElementById('mob-services-li');
+    function openMenu() { ham.classList.add('open'); menu.classList.add('open'); overlay.classList.add('open'); ham.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+    function closeMenu() { ham.classList.remove('open'); menu.classList.remove('open'); overlay.classList.remove('open'); ham.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+    ham.addEventListener('click', function(){ menu.classList.contains('open') ? closeMenu() : openMenu(); });
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+    servicesToggle.addEventListener('click', function(){ servicesLi.classList.toggle('open'); });
+  })();
+
+</script>
+
+
+<!-- Mobile menu overlay -->
+<div class="mob-overlay" id="mob-overlay"></div>
+<nav class="mob-menu" id="mob-menu" aria-label="Mobile navigation">
+  <div class="mob-header">
+    <img class="mob-logo" src="../brand_assets/logo-circular.webp" alt="Southern Pro-Vision" loading="lazy" width="750" height="750" decoding="async">
+    <button class="mob-close" id="mob-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="mob-body">
+    <ul class="mob-nav">
+      <li><a href="../index.html">Home</a></li>
+      <li class="mob-services-li" id="mob-services-li">
+        <button class="mob-services-toggle" id="mob-services-toggle">Services <i class="fa-solid fa-chevron-down mob-chevron"></i></button>
+        <ul class="mob-sub" id="mob-services-sub">
+          <li><a href="landscape-design.html">Landscape Design</a></li>
+          <li><a href="irrigation-systems.html">Irrigation Systems</a></li>
+          <li><a href="outdoor-kitchens.html">Outdoor Kitchens</a></li>
+          <li><a href="hardscapes-masonry.html">Hardscapes &amp; Masonry</a></li>
+          <li><a href="landscape-lighting.html">Landscape Lighting</a></li>
+          <li><a href="drainage-solutions.html">Drainage Solutions</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Service Areas</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="mob-footer">
+    <a href="tel:+14693635551" class="mob-call"><i class="fa-solid fa-phone"></i> (469) 363-5551</a>
+    <button class="mob-estimate" onclick="document.getElementById('mob-overlay').classList.remove('open');document.getElementById('mob-menu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';document.getElementById('estimate-form')?.scrollIntoView({behavior:'smooth'});">Get Free Estimate</button>
+  </div>
+</nav>
+
+</body>
+</html>

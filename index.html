@@ -1,0 +1,2281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Southern Pro-Vision Landscape & Irrigation | DFW Metroplex</title>
+<meta name="description" content="Owner-operated, licensed and insured landscaping company serving the DFW Metroplex. Landscape design, irrigation systems, outdoor kitchens, hardscapes, and more — 10+ years of excellence." />
+<meta property="og:title" content="Southern Pro-Vision Landscape & Irrigation | DFW Metroplex" />
+<meta property="og:description" content="Owner-operated, licensed and insured landscaping company serving the DFW Metroplex. Landscape design, irrigation systems, outdoor kitchens, hardscapes, and more — 10+ years of excellence." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://assets.cdn.filesafe.space/Eq2dpCqcs3qkFVgmbkxb/media/67ad161c131931114ba343ce.jpeg" />
+<link rel="icon" href="brand_assets/logo-circular.webp" type="image/webp" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root {
+    --green: #004E05;
+    --green-dark: #003204;
+    --green-primary: #008037;
+    --green-hover: #006a2e;
+    --green-light: #e8f4ec;
+    --green-tint: rgba(0, 78, 5, 0.35);
+    --white: #ffffff;
+    --black: #0d0d0d;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --shadow-md: 0 12px 30px -10px rgba(0, 128, 55, 0.25);
+    --shadow-lg: 0 24px 48px -16px rgba(0, 128, 55, 0.35);
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  h1, h2, h3 { text-wrap: balance; letter-spacing: -0.01em; }
+  p { text-wrap: pretty; }
+
+  /* Accessibility */
+  .skip-link {
+    position: absolute; top: -100px; left: 16px;
+    background: var(--green); color: white;
+    padding: 12px 18px; border-radius: 6px;
+    font-weight: 700; z-index: 999;
+    transition: top .2s var(--ease);
+  }
+  .skip-link:focus { top: 16px; }
+
+  :focus-visible {
+    outline: 2px solid var(--green-primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---------------- HERO + NAV ---------------- */
+  .top-wrap {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background:
+      linear-gradient(125deg, rgba(0,20,10,0.72) 0%, rgba(0,30,15,0.55) 45%, rgba(0,10,5,0.65) 100%),
+      url('brand_assets/hero.webp') center/cover no-repeat;
+  }
+
+  header.nav {
+    position: absolute; top: 0; left: 0; right: 0;
+    z-index: 20;
+    padding: 15px 0;
+    transition: background .3s ease;
+  }
+  body.scrolled header.nav {
+    position: fixed;
+    background: var(--green);
+    padding: 10px 0;
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px;
+    max-width: 1400px; margin: 0 auto; padding: 0 20px;
+  }
+  .logo-wrapper {
+    width: 160px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+  }
+  .logo-southern {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.3px;
+    transition: color .3s;
+  }
+  .logo-provision {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.75);
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.2px;
+    transition: color .3s;
+  }
+  body:not(.scrolled) .logo-southern { color: #ffffff; }
+  body:not(.scrolled) .logo-provision { color: rgba(255,255,255,0.75); }
+  body.scrolled .logo-southern { color: #ffffff; }
+  body.scrolled .logo-provision { color: rgba(255,255,255,0.65); }
+
+  .nav-links {
+    display: flex; gap: 0;
+    list-style: none;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .nav-links > li { position: relative; }
+  .nav-links > li > a {
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 8px 12px;
+    white-space: nowrap;
+    display: flex; align-items: center; gap: 4px;
+    transition: color .2s;
+    position: relative;
+  }
+  .nav-links > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px; left: 12px; right: 12px;
+    height: 2px;
+    background: var(--green-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s var(--ease);
+    border-radius: 2px;
+  }
+  .nav-links > li > a:hover { color: white; }
+  .nav-links > li > a:hover::after { transform: scaleX(1); }
+  .nav-links .dropdown > a::after {
+    content: "\f078";
+    font-family: "Font Awesome 6 Free"; font-weight: 900;
+    font-size: 10px; margin-left: 4px;
+    /* reset underline styles */
+    position: static;
+    height: auto; width: auto;
+    background: none;
+    transform: none;
+    transform-origin: center;
+    border-radius: 0;
+    transition: transform .25s;
+  }
+  .nav-links .dropdown:hover > a::after { transform: rotate(180deg); }
+  .dropdown-menu {
+    position: absolute; top: calc(100% + 6px); left: 0;
+    background: white;
+    min-width: 230px;
+    padding: 6px;
+    box-shadow: 0 16px 48px -8px rgba(0,40,10,0.22), 0 2px 8px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    border-top: 3px solid var(--green-primary);
+    opacity: 0; visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity .2s var(--ease), transform .2s var(--ease), visibility .2s;
+    list-style: none;
+    z-index: 30;
+  }
+  .dropdown-menu li { margin: 0; padding: 0; }
+  .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+  .dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 13px;
+    color: #1a1a1a;
+    font-size: 13px; font-weight: 600;
+    border-radius: 6px;
+    transition: background .15s, color .15s, padding-left .2s var(--ease);
+    text-transform: capitalize;
+    line-height: 1.3;
+  }
+  .dropdown-menu li a::before {
+    content: '';
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--green-primary);
+    flex-shrink: 0;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .15s, transform .2s var(--ease);
+  }
+  .dropdown-menu li a:hover {
+    background: var(--green-primary);
+    color: white;
+    padding-left: 18px;
+  }
+  .dropdown-menu li a:hover::before {
+    opacity: 1;
+    transform: scale(1);
+    background: white;
+  }
+
+  .nav-cta { display: flex; gap: 10px; align-items: center; flex-shrink: 0; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 8px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-family: 'Montserrat';
+    font-weight: 900; font-size: 14px;
+    text-transform: uppercase; cursor: pointer; border: 2px solid transparent;
+    transition: transform .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease), box-shadow .25s var(--ease);
+    white-space: nowrap;
+    will-change: transform;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:active { transform: translateY(0) scale(0.98); }
+  .btn-primary { background: var(--green-primary); color: white; box-shadow: 0 6px 18px -6px rgba(0, 128, 55, 0.5); }
+  .btn-primary:hover { border-color: white; box-shadow: 0 10px 24px -8px rgba(0, 128, 55, 0.7); }
+  .btn-secondary { background: white; color: var(--green-primary); border-color: var(--green-primary); font-variant-numeric: tabular-nums; }
+  .btn-secondary:hover { border-color: var(--black); }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    z-index: 5;
+    flex: 1;
+    padding: 110px 0 40px;
+    display: grid;
+    grid-template-columns: 48.2% 51.8%;
+    gap: 40px;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .hero-text { color: white; }
+  .hero-text h1 {
+    font-family: 'Montserrat';
+    font-size: 52px;
+    line-height: 1.0;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin-bottom: 22px;
+    text-shadow: 0 4px 40px rgba(0,0,0,0.45);
+  }
+  .hero-text h1 span {
+    color: var(--green-primary);
+  }
+  .hero-text p { max-width: 52ch; font-size: 16px; line-height: 1.6; }
+  .hero-text p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+    font-weight: 600;
+  }
+
+  /* Quote form */
+  .quote-form {
+    position: relative;
+    background: var(--green);
+    color: white;
+    padding: 78px 28px 26px;
+    border-radius: 10px;
+    box-shadow: 0 30px 70px -20px rgba(0,0,0,0.5);
+    max-width: 510px;
+    width: 100%;
+    margin: 0 0 0 auto;
+  }
+  .quote-form .form-logo {
+    position: absolute;
+    top: -55px; left: 50%;
+    transform: translateX(-50%);
+    width: 110px; height: 110px;
+    border-radius: 50%;
+    background: white;
+    padding: 8px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.3);
+    object-fit: contain;
+    display: block;
+  }
+  .quote-form h2 {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 18px;
+    color: white;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+  }
+  .field { margin-bottom: 14px; }
+  .field label {
+    display: block;
+    font-size: 14px; font-weight: 900;
+    margin-bottom: 6px;
+    color: white;
+  }
+  .field label .req { color: white; margin-left: 2px; }
+  .field input, .field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ACACAC;
+    border-radius: 5px;
+    font-family: 'Montserrat'; font-size: 14px; font-weight: 600;
+    background: white; color: #000;
+    line-height: 1.4;
+  }
+  .field input { height: 44px; }
+  .field input::placeholder, .field textarea::placeholder { color: #8c8c8c; }
+  .field textarea { resize: vertical; height: 90px; min-height: 90px; }
+  .checkbox-row {
+    display: flex; gap: 10px; font-size: 13px;
+    margin: 12px 0 14px;
+    line-height: 1.45;
+    color: white;
+    align-items: flex-start;
+  }
+  .checkbox-row input { margin-top: 3px; flex-shrink: 0; width: 15px; height: 15px; accent-color: var(--green-primary); }
+  .checkbox-row a { text-decoration: underline; color: #335dff; }
+  .checkbox-row label { font-size: 13px !important; line-height: 1.45; }
+  .submit-btn {
+    width: 100%; padding: 13px; border-radius: 5px; border: none;
+    background: var(--green-primary); color: white; font-weight: 900; font-size: 24px;
+    font-family: 'Montserrat';
+    cursor: pointer; transition: all .25s;
+    margin-top: 4px;
+    letter-spacing: 0.03em;
+  }
+  .submit-btn:hover { background: var(--green-hover); transform: translateY(-1px); }
+  .submit-btn:active { transform: scale(0.99); }
+  .submit-btn { transition: background .2s var(--ease), transform .15s var(--ease); }
+
+  .form-status {
+    margin-top: 12px;
+    font-size: 13px;
+    color: white;
+    min-height: 1.2em;
+    opacity: 0;
+    transition: opacity .25s var(--ease);
+  }
+  .form-status.is-visible { opacity: 1; }
+  .form-status.is-error { color: #FFD3D3; }
+  .form-status.is-success { color: #B7F2C9; }
+
+  /* ---------------- TRUST BAR ---------------- */
+  .trust-bar {
+    background: #ffffff;
+    color: var(--text);
+    padding: 0;
+    border-bottom: 2px solid rgba(0,128,55,0.1);
+    overflow: hidden;
+    position: relative;
+  }
+  .trust-bar::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 160px,
+      rgba(0,128,55,0.03) 160px,
+      rgba(0,128,55,0.03) 161px
+    );
+    pointer-events: none;
+  }
+  .trust-inner {
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 0;
+    font-size: 13px; font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    position: relative;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 10px;
+    line-height: 1.2; color: var(--green);
+    padding: 20px 32px;
+    position: relative;
+  }
+  .trust-item + .trust-item::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 20%; height: 60%;
+    width: 1px;
+    background: rgba(0,128,55,0.15);
+  }
+  .trust-item i {
+    color: var(--green-primary);
+    font-size: 18px;
+  }
+
+  /* ---------------- ABOUT ---------------- */
+  .about {
+    background-color: #f7f5f0;
+    background-image: url('brand_assets/about-bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--text);
+    padding: 56px 0 64px;
+  }
+  .about-grid {
+    display: grid; grid-template-columns: 55% 1fr; gap: 36px;
+    align-items: stretch;
+  }
+  .about-text-content {
+    background: transparent;
+    padding: 0 0 0 80px;
+    display: flex;
+    flex-direction: column;
+  }
+  .section-title-block {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 22px;
+  }
+  .section-title-block h2 {
+    font-family: 'Montserrat';
+    text-transform: none;
+    font-size: 48px;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+    color: var(--green);
+    text-align: left;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .section-divider {
+    flex: 1;
+    border-top: 2px solid var(--green-primary);
+    width: auto;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    transform: translateY(2px);
+  }
+  .about p {
+    font-size: 16px; line-height: 1.85;
+    color: #4a4a4a;
+    font-weight: 400;
+    margin: 0;
+    max-width: 48ch;
+    padding-left: 20px;
+    border-left: 3px solid var(--green-primary);
+  }
+  .social-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: auto;
+    padding-top: 44px;
+  }
+  .social-row a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .social-row a img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    border-radius: 28px;
+  }
+  .about-img {
+    display: block;
+    align-self: stretch;
+    overflow: hidden;
+    min-height: 500px;
+  }
+  .about-img img {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+    display: block;
+  }
+
+  /* ---------------- SERVICES (card grid) ---------------- */
+  .spv-services {
+    background-color: #fafaf7;
+    padding: 56px 0 64px;
+    color: var(--text);
+    position: relative;
+  }
+  .spv-services::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('brand_assets/FAQ Background image.webp');
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .spv-services-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+  }
+  /* Header row — matches the rest of the site */
+  .spv-services-header {
+    margin-bottom: 32px;
+  }
+  .spv-services-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .spv-services-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 26px;
+    height: 2px;
+    background: var(--green-primary);
+    flex-shrink: 0;
+  }
+  .spv-services-title-row {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 16px;
+  }
+  .spv-services-title-row h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--green);
+    letter-spacing: -0.005em;
+    line-height: 1;
+    flex-shrink: 0;
+    text-transform: uppercase;
+  }
+  .spv-services-divider {
+    flex: 1;
+    border-top: 2px solid var(--green-primary);
+    transform: translateY(2px);
+  }
+  .spv-services-sub {
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0;
+    font-weight: 400;
+  }
+  .spv-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+  }
+  .spv-card {
+    background: #ffffff;
+    border: 1.5px solid rgba(0,78,5,0.14);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px -2px rgba(0,78,5,0.08), 0 8px 24px -8px rgba(0,78,5,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow .25s var(--ease), transform .25s var(--ease);
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+  .spv-card:hover {
+    box-shadow: 0 4px 16px -4px rgba(0,78,5,0.12), 0 16px 40px -8px rgba(0,78,5,0.18);
+    transform: translateY(-3px);
+  }
+  .spv-card:hover .spv-card-link {
+    background: var(--green-primary);
+    color: #fff;
+    box-shadow: 0 6px 18px -6px rgba(0,128,55,0.5);
+  }
+  .spv-card-img-wrap {
+    overflow: hidden;
+    flex-shrink: 0;
+    height: 200px;
+  }
+  .spv-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .4s var(--ease);
+  }
+  .spv-card:hover .spv-card-img { transform: scale(1.04); }
+  .spv-card-body {
+    padding: 20px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-top: 2px solid var(--green-primary);
+  }
+  .spv-card-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--green);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .spv-card-desc {
+    font-size: 14px;
+    color: #5a5a5a;
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 18px;
+  }
+  .spv-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    border: 2px solid var(--green-primary);
+    background: white;
+    color: var(--green-primary);
+    width: fit-content;
+    transition: transform .2s var(--ease), background .2s var(--ease), color .2s var(--ease), box-shadow .25s var(--ease);
+  }
+  .spv-card-link:hover {
+    background: var(--green-primary);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px -6px rgba(0,128,55,0.5);
+  }
+  .spv-services-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,78,5,0.1);
+  }
+  .spv-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 24px;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background: var(--green-primary);
+    color: white;
+    box-shadow: 0 6px 18px -6px rgba(0,128,55,0.5);
+    transition: transform .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease), box-shadow .25s var(--ease);
+    flex-shrink: 0;
+  }
+  .spv-cta-btn:hover {
+    border-color: white;
+    box-shadow: 0 10px 24px -8px rgba(0,128,55,0.7);
+    transform: translateY(-1px);
+  }
+  .spv-trust-badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 4px;
+    flex: 1;
+  }
+  .spv-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+  }
+  .spv-badge i {
+    color: var(--green-primary);
+    font-size: 12px;
+  }
+  .spv-badge-sep {
+    width: 1px;
+    height: 14px;
+    background: rgba(0,78,5,0.2);
+    flex-shrink: 0;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    color: rgba(255,255,255,0.65);
+    padding: 0;
+    font-size: 11px; font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 26px;
+    height: 2px;
+    background: var(--green-primary);
+    flex-shrink: 0;
+  }
+  .gallery-eyebrow .eyebrow,
+  .reviews-eyebrow .eyebrow { color: rgba(255,255,255,0.65); }
+  .gallery-eyebrow .eyebrow::before,
+  .reviews-eyebrow .eyebrow::before { background: rgba(255,255,255,0.5); }
+  .yellow-divider {
+    flex: 1;
+    border-top: 2px solid var(--green-primary);
+    transform: translateY(2px);
+  }
+
+  /* ---------------- PROCESS ---------------- */
+  .process {
+    background: var(--green-light);
+    padding: 30px 0 0;
+    color: var(--text);
+    position: relative;
+  }
+  .process::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('brand_assets/background image of process section.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.42;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .process .container {
+    position: relative;
+    z-index: 1;
+  }
+  .process-head {
+    display: flex; align-items: center; gap: 22px;
+    padding: 0;
+  }
+  .process-head .title-col { flex: 0 0 auto; }
+  .process-head h2 {
+    font-family: 'Montserrat'; font-size: 48px;
+    text-transform: none;
+    font-weight: 800;
+    text-align: left;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--green);
+  }
+  .process-head .divider-col {
+    flex: 1;
+    border-top: 2px solid var(--green-primary);
+    margin-top: 0;
+    transform: translateY(2px);
+  }
+  .process-sub {
+    color: var(--text);
+    font-size: 16px;
+    margin: 8px 0 0;
+    padding: 0;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  .process-image {
+    background: url('https://assets.cdn.filesafe.space/Eq2dpCqcs3qkFVgmbkxb/media/671fc4d7389e21756b012d35.png') center center no-repeat;
+    background-size: contain;
+    height: 360px;
+    margin-top: 40px;
+    padding: 16px 0 24px;
+  }
+  .process-image.mobile { display: none; }
+
+  /* ---------------- GALLERY ---------------- */
+  .gallery {
+    background: #0e1a10;
+    padding: 50px 0 0;
+    color: white;
+  }
+  .gallery-eyebrow { padding: 10px 0; }
+  .gallery-head {
+    display: flex; align-items: center; gap: 20px;
+    margin: 0 0 0;
+  }
+  .gallery-head h2 {
+    font-family: 'Montserrat'; font-size: 48px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    flex-shrink: 0;
+  }
+  .gallery-head .divider {
+    flex: 1;
+    border-top: 2px solid rgba(255,255,255,0.4);
+  }
+  .see-all {
+    background: white;
+    color: black;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center; gap: 8px;
+    flex-shrink: 0;
+  }
+  .see-all:hover { border: 2px solid black; }
+  .gallery-grid {
+    columns: 4;
+    column-gap: 10px;
+    padding: 10px 20px 0;
+  }
+  .gallery-grid img {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    break-inside: avoid;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: transform 0.3s ease;
+  }
+  .gallery-grid img:hover { transform: scale(1.02); }
+
+  /* ---------------- REVIEWS ---------------- */
+  .reviews-wrap {
+    position: relative;
+    background:
+      linear-gradient(rgba(0,78,5,0.55), rgba(0,78,5,0.55)),
+      url('brand_assets/hero.webp') center/cover no-repeat;
+    color: white;
+    padding: 0 0 0;
+  }
+  .reviews-content { padding: 40px 0; }
+  .reviews-eyebrow { padding: 10px 0; }
+  .reviews-head {
+    display: flex; align-items: center; gap: 20px;
+  }
+  .reviews-head h2 {
+    font-family: 'Montserrat'; font-size: 48px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    flex-shrink: 0;
+  }
+  .reviews-head .divider {
+    flex: 1;
+    border-top: 2px solid rgba(255,255,255,0.4);
+  }
+  .contact-now {
+    background: white;
+    color: black;
+    padding: 15px 20px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center; gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .reviews-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    margin-top: 30px;
+  }
+  .review-card {
+    background: white;
+    color: var(--text);
+    padding: 28px 24px 24px;
+    border-radius: 10px;
+    box-shadow: 0 16px 40px -12px rgba(0, 78, 5, 0.45);
+    transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+    border-top: 3px solid var(--green-primary);
+    position: relative;
+  }
+  .review-card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px -14px rgba(0, 78, 5, 0.6); }
+  .stars { color: var(--green-primary); margin-bottom: 12px; font-size: 16px; letter-spacing: 2px; display: flex; gap: 2px; }
+  .review-text {
+    font-size: 14px; line-height: 1.6;
+    color: #333;
+    margin-bottom: 18px;
+    min-height: 100px;
+  }
+  .review-foot {
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 13px; color: var(--muted); font-weight: 600;
+  }
+  .g-badge {
+    width: 32px; height: 32px; border-radius: 50%;
+    display: grid; place-items: center;
+    font-weight: 800; font-size: 16px;
+    background: white;
+    border: 1px solid #ddd;
+  }
+  .g-badge span {
+    background: linear-gradient(45deg, #4285F4 0%, #34A853 33%, #FBBC05 66%, #EA4335 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .review-google-cta {
+    background: var(--black); color: white;
+    margin: 40px auto 0; max-width: 320px;
+    padding: 20px 40px; border-radius: 10px; text-align: center;
+    border: 2px solid white;
+  }
+  .review-google-cta h3 {
+    font-family: 'Montserrat'; text-transform: uppercase;
+    font-size: 32px; font-weight: 900;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .review-google-cta .stars { justify-content: center; font-size: 24px; margin-bottom: 16px; }
+  .review-google-cta a {
+    display: inline-block;
+    background: var(--green-primary);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-weight: 900; font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  /* ---------------- FAQ ---------------- */
+  .faq-section {
+    background-color: #f8f9f6;
+    padding: 64px 0 64px;
+    color: var(--text);
+    position: relative;
+  }
+  /* Botanical image at low opacity — fixed to width so height changes don't shift it */
+  .faq-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('brand_assets/FAQ Background image.webp');
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .faq-new-wrapper {
+    max-width: 1060px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  /* FAQ header — left-aligned, matching Services section pattern */
+  .faq-header {
+    margin-bottom: 52px;
+  }
+  .faq-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .faq-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 26px;
+    height: 2px;
+    background: var(--green-primary);
+    flex-shrink: 0;
+  }
+  .faq-title-row {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 16px;
+  }
+  .faq-title-row h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--green);
+    letter-spacing: -0.005em;
+    line-height: 1;
+    flex-shrink: 0;
+    text-transform: uppercase;
+  }
+  .faq-title-divider {
+    flex: 1;
+    border-top: 2px solid var(--green-primary);
+    transform: translateY(2px);
+  }
+  .faq-new-sub {
+    font-size: 16px;
+    color: #4a4a4a;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 0;
+    max-width: 560px;
+  }
+  .faq-new-list {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  .faq-new-item {
+    border-top: 1px solid rgba(0,78,5,0.15);
+  }
+  .faq-new-item:last-child {
+    border-bottom: 1px solid rgba(0,78,5,0.15);
+  }
+  .faq-new-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 24px 0;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--green);
+    text-align: left;
+    gap: 32px;
+    line-height: 1.35;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    transition: color .2s;
+  }
+  .faq-new-btn:hover { color: var(--green-primary); }
+  .faq-new-item.open .faq-new-btn { color: var(--green-primary); }
+  .faq-new-icon {
+    font-size: 18px;
+    color: var(--green);
+    flex-shrink: 0;
+    transition: transform .3s var(--ease), color .2s;
+    line-height: 1;
+    font-weight: 900;
+  }
+  .faq-new-item.open .faq-new-icon {
+    transform: rotate(45deg);
+    color: var(--green-primary);
+  }
+  .faq-new-ans {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .38s var(--ease);
+  }
+  .faq-new-ans p {
+    color: #4a4a4a;
+    font-size: 15px;
+    line-height: 1.75;
+    padding-bottom: 24px;
+    font-weight: 400;
+    border-left: 3px solid var(--green-primary);
+    padding-left: 16px;
+    max-width: none;
+  }
+  .faq-new-item.open .faq-new-ans { max-height: 400px; }
+  .faq-cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-top: 32px;
+  }
+  .faq-new-note {
+    font-size: 15px;
+    color: #5a5a5a;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: left;
+  }
+  .faq-new-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    border: 2px solid var(--green);
+    background: var(--green);
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 6px 18px -6px rgba(0,78,5,0.4);
+    transition: transform .2s var(--ease), background .2s var(--ease), box-shadow .25s var(--ease);
+    flex-shrink: 0;
+  }
+  .faq-new-link:hover {
+    background: var(--green-hover);
+    border-color: var(--green-hover);
+    box-shadow: 0 10px 24px -8px rgba(0,78,5,0.5);
+    transform: translateY(-1px);
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  /* ---------------- SERVICE AREAS ---------------- */
+  .areas {
+    background: var(--green-light);
+    padding: 20px 0 50px;
+    color: var(--text);
+  }
+  .areas-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 30px;
+    align-items: start;
+    padding-top: 15px;
+  }
+  .areas-map iframe {
+    width: 100%; aspect-ratio: 1 / 1; border: 0;
+    border-radius: 8px;
+  }
+  .areas h2 {
+    font-family: 'Montserrat'; font-size: 48px;
+    text-transform: none;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--green);
+  }
+  .areas-list {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    list-style: none;
+    font-family: 'Montserrat';
+    padding: 20px 20px 20px 0;
+    line-height: 1.75;
+  }
+  .areas-list li {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 16px; font-weight: 600;
+    color: var(--text);
+    text-transform: capitalize;
+    padding: 10px 14px;
+    list-style: none;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid rgba(0,128,55,0.15);
+    transition: border-color .2s, transform .2s var(--ease), box-shadow .2s var(--ease);
+  }
+  .areas-list li:hover {
+    border-color: var(--green-primary);
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px -4px rgba(0,128,55,0.2);
+  }
+  .areas-list li::before {
+    content: "\f041";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--green-primary);
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  /* ---------------- BIG CTA ---------------- */
+  .big-cta {
+    position: relative;
+    background:
+      linear-gradient(rgba(0,78,5,0.6), rgba(0,128,55,0.5)),
+      url('brand_assets/hero.webp') center/cover no-repeat;
+    padding: 0;
+    text-align: center;
+    color: white;
+  }
+  .big-cta-content { padding: 60px 0; }
+  .big-cta h2 {
+    font-family: 'Montserrat';
+    font-size: 48px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    line-height: 1.1;
+    font-weight: 900;
+    letter-spacing: -0.015em;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+  .big-cta .btn-primary { font-size: 20px; }
+
+  /* ---------------- FOOTER ---------------- */
+  /* ---- FOOTER ---- */
+  footer {
+    background-color: #fdfcf8;
+    color: #1a1a1a;
+    border-top: 1px solid #e5e7eb;
+    position: relative;
+  }
+  footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('brand_assets/footer background image.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 0;
+  }
+  footer .container {
+    position: relative;
+    z-index: 1;
+  }
+  .footer-main {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 320px;
+    gap: 56px;
+    padding: 60px 0 52px;
+    align-items: start;
+  }
+  .footer-brand-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .footer-license-label {
+    font-size: 14px;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .footer-license-num {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .footer-col-heading {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .footer-col-links {
+    list-style: none;
+  }
+  .footer-col-links li {
+    margin-bottom: 13px;
+  }
+  .footer-col-links li a {
+    font-size: 14px;
+    color: #6b7280;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    transition: color .2s;
+    line-height: 1.4;
+  }
+  .footer-col-links li a:hover { color: #111827; }
+  .footer-map-frame {
+    width: 100%;
+    height: 250px;
+    border: 0;
+    border-radius: 6px;
+    display: block;
+  }
+  .footer-hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 0;
+  }
+  .footer-rating {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 22px 0;
+  }
+  .footer-g-svg {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+  }
+  .footer-stars {
+    display: flex;
+    gap: 4px;
+    color: #FBBF24;
+    font-size: 22px;
+  }
+  .footer-bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-top: 1px solid #e5e7eb;
+  }
+  .footer-bottom-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .footer-bottom-left span {
+    font-size: 13px;
+    color: #6b7280;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .footer-bottom-left a {
+    font-size: 13px;
+    color: #6b7280;
+    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    transition: color .2s;
+    width: fit-content;
+  }
+  .footer-bottom-left a:hover { color: #111827; }
+  .footer-social-icons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .footer-social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .footer-social-icons a img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+  }
+  /* Ensure social icons are never covered by fixed floating CTA */
+  .footer-bottom-bar { padding-right: 180px; }
+
+  /* ---------------- FLOATING CTA ---------------- */
+  .cta-bottom-right {
+    position: fixed; bottom: 20px; right: 100px;
+    opacity: 0; transform: translateX(100%);
+    transition: all .5s ease;
+    z-index: 50;
+  }
+  body.scrolled .cta-bottom-right { opacity: 1; transform: translateX(0); }
+  .cta-bottom-right button {
+    background: var(--green-primary);
+    color: white;
+    padding: 17px 20px;
+    font-weight: 900;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    transition: border-color .25s;
+  }
+  .cta-bottom-right button:hover { border-color: white; }
+
+  /* ---------------- RESPONSIVE ---------------- */
+  @media (max-width: 1024px) {
+    .nav-links { display: none; }
+    .top-wrap { min-height: auto; }
+    .hero { grid-template-columns: 1fr; gap: 40px; padding: 120px 0 50px; align-items: start; }
+    .hero-text { text-align: center; }
+    .hero-text h1 { font-size: 40px; }
+    .hero-text p { font-size: 14px; margin: 0 auto; }
+    .quote-form { margin: 60px auto 0; max-width: 100%; }
+    .quote-form h2 { font-size: 28px; }
+    .about-grid, .faq-grid, .areas-grid { grid-template-columns: 1fr; }
+    .about-img img { min-height: 280px; }
+    .about-text-content { padding: 0; }
+    .trust-inner { justify-content: center; }
+    .spv-cards-grid { grid-template-columns: 1fr 1fr; }
+    .spv-services-title-row h2 { font-size: 34px; }
+    .spv-services-cta { flex-direction: column; align-items: flex-start; }
+    .gallery-grid { columns: 3; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .reviews-head, .gallery-head, .process-head { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .yellow-divider, .gallery-head .divider, .reviews-head .divider, .process-head .divider-col, .section-divider { width: 100%; flex: none; }
+    .footer-main { grid-template-columns: 1fr 1fr; }
+    .section-title-block h2, .gallery-head h2, .reviews-head h2, .faq-grid h2, .areas h2, .big-cta h2, .process-head h2 { font-size: 28px; letter-spacing: -0.01em; }
+    .process-image { display: none; }
+    .process-image.mobile { display: block; height: 200px; }
+    .trust-inner { font-size: 14px; }
+    .footer-logo-block { margin-right: 0; }
+  }
+  @media (max-width: 560px) {
+    .gallery-grid { columns: 2; }
+    .footer-main { grid-template-columns: 1fr; }
+    .footer-bottom-bar { flex-direction: column; gap: 8px; align-items: flex-start; padding-right: 0; }
+    .nav-cta .btn { padding: 12px 8px; font-size: 13px; }
+    .logo-wrapper { width: 140px; }
+    .logo-southern { font-size: 16px; }
+    .logo-provision { font-size: 10px; }
+  }
+
+  /* ---------------- SCROLL REVEAL ---------------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.08s; }
+  .reveal-delay-2 { transition-delay: 0.16s; }
+  .reveal-delay-3 { transition-delay: 0.24s; }
+  .reveal-delay-4 { transition-delay: 0.32s; }
+
+  /* ---------------- DESIGN POLISH ---------------- */
+  /* Improved section heading weight on light sections */
+  .faq-grid h2 {
+    color: var(--green);
+    font-size: 42px;
+  }
+  .areas h2 {
+    color: var(--green);
+  }
+  .section-title-block h2 {
+    color: var(--green);
+    font-size: 42px;
+  }
+
+  /* Better FAQ open state */
+  .faq-item.open { background: rgba(0,128,55,0.04); padding-left: 12px; padding-right: 8px; border-radius: 6px; }
+  .faq-item.open .faq-q { color: var(--green); }
+
+  /* Quote form field improvements */
+  .field input:focus, .field textarea:focus {
+    outline: none;
+    border-color: var(--green-primary);
+    box-shadow: 0 0 0 3px rgba(0,128,55,0.15);
+  }
+
+
+
+  /* Dropdown hover — handled in base dropdown rules above */
+
+  /* Footer logo block link color */
+  .footer-logo-block .img-text .info a { color: var(--green-primary); }
+
+  /* Big CTA button — cream on green for contrast */
+  .big-cta .btn-primary {
+    padding: 18px 36px;
+    font-size: 18px;
+    background: #f7f5f0;
+    color: var(--green);
+    box-shadow: 0 8px 28px -8px rgba(0,0,0,0.4);
+    border-color: transparent;
+  }
+  .big-cta .btn-primary:hover {
+    background: white;
+    border-color: transparent;
+    box-shadow: 0 12px 32px -8px rgba(0,0,0,0.5);
+  }
+
+  /* Services card grid responsive */
+  @media (max-width: 560px) {
+    .spv-cards-grid { grid-template-columns: 1fr; }
+    .spv-services-heading { font-size: 28px; }
+  }
+
+  /* Process section eyebrow */
+  .process .eyebrow { color: var(--green); }
+  .process .eyebrow::before { background: var(--green-primary); }
+
+  /* About section heading */
+  .about .section-title-block h2 { color: var(--green); }
+
+  .about .social-row a {
+    border: none;
+    box-shadow: none;
+    background: none;
+  }
+
+  /* Improved quote form card */
+  .quote-form {
+    background: #005c0a;
+    border: none;
+    border-top: 4px solid var(--green-primary);
+  }
+
+  /* Better scrolled nav text visibility */
+  body.scrolled .nav-links > li > a { color: rgba(255,255,255,0.9); }
+  body.scrolled .nav-links > li > a:hover { color: white; }
+
+
+
+  /* -------- MOBILE MENU -------- */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 101;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mob-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 98;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .mob-overlay.open { display: block; opacity: 1; }
+
+  .mob-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(300px, 88vw);
+    height: 100dvh;
+    background: var(--green);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.35s cubic-bezier(0.22,1,0.36,1);
+    overflow-y: auto;
+  }
+  .mob-menu.open { right: 0; }
+
+  .mob-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .mob-logo { width: 50px; height: 50px; object-fit: contain; }
+  .mob-close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 4px 8px;
+    line-height: 1;
+  }
+
+  .mob-body { flex: 1; padding: 12px 0; }
+  .mob-nav { list-style: none; margin: 0; padding: 0; }
+  .mob-nav > li > a,
+  .mob-services-toggle {
+    display: block;
+    width: 100%;
+    padding: 13px 22px;
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .mob-nav > li > a:hover,
+  .mob-services-toggle:hover { background: rgba(255,255,255,0.08); }
+
+  .mob-services-toggle { display: flex; align-items: center; justify-content: space-between; }
+  .mob-chevron { transition: transform 0.3s ease; font-size: 12px; }
+  .mob-services-li.open .mob-chevron { transform: rotate(180deg); }
+
+  .mob-sub {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    background: rgba(0,0,0,0.18);
+  }
+  .mob-services-li.open .mob-sub { max-height: 400px; }
+  .mob-sub li a {
+    display: block;
+    padding: 10px 22px 10px 36px;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.2s;
+  }
+  .mob-sub li a:hover { background: rgba(255,255,255,0.08); }
+
+  .mob-footer {
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .mob-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .mob-estimate {
+    padding: 13px;
+    background: #fff;
+    color: var(--green);
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .mob-estimate:hover { opacity: 0.9; }
+
+  /* Mobile breakpoints */
+  body { overflow-x: hidden; }
+
+  @media (max-width: 1024px) {
+    .hamburger { display: flex; }
+    .nav-links { display: none !important; }
+    .nav-cta .btn-primary { display: none; }
+  }
+  @media (max-width: 1024px) {
+    .footer-main { grid-template-columns: 1fr 1fr; gap: 30px; }
+    .footer-bottom-bar { padding-right: 0 !important; flex-wrap: wrap; }
+    .cta-bottom-right { right: 16px; }
+    .big-cta h2 { font-size: 34px; }
+    .hero { flex-direction: column; gap: 30px; padding-top: 120px; }
+    .hero-text { max-width: 100%; }
+    .quote-form { width: 100%; max-width: 500px; margin: 0 auto; }
+  }
+  @media (max-width: 640px) {
+    .cta-bottom-right { display: none; }
+    .hero-text h1 { font-size: clamp(24px, 7vw, 32px); }
+    .footer-main { grid-template-columns: 1fr; }
+    .footer-bottom-bar { flex-direction: column; gap: 12px; align-items: flex-start; padding-right: 0 !important; }
+    .big-cta h2 { font-size: 26px; }
+    .areas-list { grid-template-columns: 1fr 1fr; }
+    .spv-cards-grid { grid-template-columns: 1fr; }
+    .gallery-grid { columns: 2; }
+    .process-steps { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .footer-map-frame { height: 180px; }
+  }
+
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- HERO + NAV -->
+<div class="top-wrap" id="main">
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo-wrapper" aria-label="Southern Pro-Vision Home">
+        <img src="brand_assets/logo-circular.webp" alt="Southern Pro-Vision" style="width:120px;height:120px;object-fit:contain;display:block;" loading="eager" width="750" height="750" decoding="async">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown"><a href="#">Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="services/landscape-design.html">Landscape Design</a></li>
+            <li><a href="services/irrigation-systems.html">Irrigation Systems</a></li>
+            <li><a href="services/outdoor-kitchens.html">Outdoor Kitchens</a></li>
+            <li><a href="services/hardscapes-masonry.html">Hardscapes &amp; Masonry</a></li>
+            <li><a href="services/landscape-lighting.html">Landscape Lighting</a></li>
+            <li><a href="services/drainage-solutions.html">Drainage Solutions</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Service Areas</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <button class="btn btn-primary">Get Free Estimate</button>
+        <a href="tel:+14693635551" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> (469) 363-5551</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero container">
+    <div class="hero-text">
+      <h1>Southern Pro-Vision Landscape & Irrigation</h1>
+      <p>Southern Pro-Vision is an owner-operated, licensed and insured landscaping company serving the DFW Metroplex. From landscape design and irrigation to outdoor kitchens and hardscapes, we bring sustainable, elegant outdoor spaces to life, backed by over 10 years of experience and 1,000+ satisfied clients.</p>
+    </div>
+
+    <form class="quote-form" id="quote-form" novalidate aria-label="Get a free quote">
+      <img class="form-logo" src="brand_assets/logo-circular.webp" alt="Southern Pro-Vision badge" loading="eager" width="750" height="750" decoding="async">
+      <h2>GET A FREE ESTIMATE</h2>
+      <div class="field">
+        <label for="qf-name">Full Name <span class="req" aria-hidden="true">*</span></label>
+        <input id="qf-name" name="name" type="text" placeholder="John Smith" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="qf-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+        <input id="qf-phone" name="phone" type="tel" placeholder="(808) 555-1234" required autocomplete="tel" inputmode="tel">
+      </div>
+      <div class="field">
+        <label for="qf-msg">Short message about your needs <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="qf-msg" name="message" placeholder="**Your message goes straight to us. We'll get back to you as soon as possible.**" required></textarea>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="terms" required>
+        <label for="terms" style="font-weight:400;font-size:14px;">I agree to <a href="#">terms &amp; conditions</a> provided by the company. By providing my phone number, I agree to receive text messages from the business.</label>
+      </div>
+      <button class="submit-btn" type="submit">SEND</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container trust-inner reveal">
+    <div class="trust-item"><i class="fa-solid fa-users"></i> Owner Operated</div>
+    <div class="trust-item"><i class="fa-solid fa-location-dot"></i> 100% Local</div>
+    <div class="trust-item"><i class="fa-solid fa-clock"></i> 10+ Years Experience</div>
+    <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Insured</div>
+    <div class="trust-item"><i class="fa-solid fa-file-lines"></i> Licensed in Texas</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="container about-grid">
+    <div class="about-text-content reveal">
+      <div class="section-title-block">
+        <h2>About Us</h2>
+        <div class="section-divider"></div>
+      </div>
+      <p>At Southern Pro-Vision, we combine over a decade of landscaping expertise with a genuine commitment to our community. Our journey started with a simple belief: that every outdoor space deserves to be beautiful, functional, and built to last. Today, we're proud to be DFW's trusted name for landscape design, irrigation, and outdoor living, delivering personalized service and exceptional results on every project, large or small.</p>
+      <div class="social-row">
+        <a href="#" aria-label="Google">
+          <img src="brand_assets/Google Icon FINAL.webp" alt="Google" style="width:85px;height:85px;" decoding="async" loading="lazy">
+        </a>
+        <a href="#" aria-label="Facebook">
+          <img src="brand_assets/facebook icon FINAL.webp" alt="Facebook" style="width:140px;height:140px;margin-left:12px;" decoding="async" loading="lazy">
+        </a>
+      </div>
+    </div>
+    <div class="about-img">
+      <img src="brand_assets/about image .webp" alt="Southern Pro-Vision team" decoding="async" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="spv-services">
+  <div class="spv-services-inner">
+    <div class="spv-services-header reveal">
+      <span class="spv-services-eyebrow">WHAT WE ARE BEST AT</span>
+      <div class="spv-services-title-row">
+        <h2>OUR SERVICES</h2>
+        <div class="spv-services-divider"></div>
+      </div>
+      <p class="spv-services-sub">From design to installation, we handle every detail — so you can enjoy a beautiful outdoor space without the stress.</p>
+    </div>
+    <div class="spv-cards-grid reveal reveal-delay-1">
+      <!-- Landscape Design -->
+      <a href="services/landscape-design.html" class="spv-card">
+        <div class="spv-card-img-wrap">
+          <img class="spv-card-img" src="brand_assets/landscape-design-card.webp" alt="Landscape Design" loading="lazy" width="1448" height="1086" decoding="async">
+        </div>
+        <div class="spv-card-body">
+          <div class="spv-card-title">Landscape Design</div>
+          <p class="spv-card-desc">Custom outdoor layouts crafted around your property, lifestyle, and vision — from concept to final blueprint.</p>
+          <span class="spv-card-link">Explore service <i class="fa-solid fa-arrow-right" style="font-size:11px;"></i></span>
+        </div>
+      </a>
+      <!-- Irrigation Systems -->
+      <a href="services/irrigation-systems.html" class="spv-card">
+        <div class="spv-card-img-wrap">
+          <img class="spv-card-img" src="brand_assets/irrigation-card.webp" alt="Irrigation Systems" loading="lazy" width="1448" height="1086" decoding="async">
+        </div>
+        <div class="spv-card-body">
+          <div class="spv-card-title">Irrigation Systems</div>
+          <p class="spv-card-desc">Keep your lawn lush year-round with a professionally installed irrigation system tailored to your property's specific needs.</p>
+          <span class="spv-card-link">Explore service <i class="fa-solid fa-arrow-right" style="font-size:11px;"></i></span>
+        </div>
+      </a>
+      <!-- Outdoor Kitchens -->
+      <a href="services/outdoor-kitchens.html" class="spv-card">
+        <div class="spv-card-img-wrap">
+          <img class="spv-card-img" src="brand_assets/outdoor-kitchens-card.webp" alt="Outdoor Kitchens" loading="lazy" width="1448" height="1086" decoding="async">
+        </div>
+        <div class="spv-card-body">
+          <div class="spv-card-title">Outdoor Kitchens</div>
+          <p class="spv-card-desc">Extend your living space outdoors with a fully custom kitchen — built-in grills, countertops, and more for the perfect backyard.</p>
+          <span class="spv-card-link">Explore service <i class="fa-solid fa-arrow-right" style="font-size:11px;"></i></span>
+        </div>
+      </a>
+      <!-- Hardscapes & Masonry -->
+      <a href="services/hardscapes-masonry.html" class="spv-card">
+        <div class="spv-card-img-wrap">
+          <img class="spv-card-img" src="brand_assets/hardscapes-card.webp" alt="Hardscapes & Masonry" loading="lazy" decoding="async">
+        </div>
+        <div class="spv-card-body">
+          <div class="spv-card-title">Hardscapes &amp; Masonry</div>
+          <p class="spv-card-desc">Patios, walkways, retaining walls, and stone features built with precision — enhancing both beauty and function.</p>
+          <span class="spv-card-link">Explore service <i class="fa-solid fa-arrow-right" style="font-size:11px;"></i></span>
+        </div>
+      </a>
+      <!-- Landscape Lighting -->
+      <a href="services/landscape-lighting.html" class="spv-card">
+        <div class="spv-card-img-wrap">
+          <img class="spv-card-img" src="brand_assets/landscape-lighting-card.webp" alt="Landscape Lighting" loading="lazy" width="1448" height="1086" decoding="async">
+        </div>
+        <div class="spv-card-body">
+          <div class="spv-card-title">Landscape Lighting</div>
+          <p class="spv-card-desc">Showcase your landscape after dark with professionally designed outdoor lighting that adds safety, drama, and curb appeal.</p>
+          <span class="spv-card-link">Explore service <i class="fa-solid fa-arrow-right" style="font-size:11px;"></i></span>
+        </div>
+      </a>
+      <!-- Drainage Solutions -->
+      <a href="services/drainage-solutions.html" class="spv-card">
+        <div class="spv-card-img-wrap">
+          <img class="spv-card-img" src="brand_assets/drainage-card.webp" alt="Drainage Solutions" loading="lazy" width="1448" height="1086" decoding="async">
+        </div>
+        <div class="spv-card-body">
+          <div class="spv-card-title">Drainage Solutions</div>
+          <p class="spv-card-desc">Protect your property from water damage with custom drainage systems designed to manage runoff and keep your yard healthy.</p>
+          <span class="spv-card-link">Explore service <i class="fa-solid fa-arrow-right" style="font-size:11px;"></i></span>
+        </div>
+      </a>
+    </div>
+    <!-- CTA + Trust Badges -->
+    <div class="spv-services-cta reveal">
+      <div class="spv-trust-badges">
+        <span class="spv-badge"><i class="fa-solid fa-check-circle"></i> Owner Operated</span>
+        <span class="spv-badge-sep"></span>
+        <span class="spv-badge"><i class="fa-solid fa-check-circle"></i> 100% Local</span>
+        <span class="spv-badge-sep"></span>
+        <span class="spv-badge"><i class="fa-solid fa-check-circle"></i> 10+ Years Experience</span>
+        <span class="spv-badge-sep"></span>
+        <span class="spv-badge"><i class="fa-solid fa-check-circle"></i> Insured</span>
+        <span class="spv-badge-sep"></span>
+        <span class="spv-badge"><i class="fa-solid fa-check-circle"></i> Licensed in Texas</span>
+      </div>
+      <a href="#contact" class="spv-cta-btn">Get Free Estimate <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="container reveal">
+    <div class="process-head">
+      <div class="title-col"><h2>Our Process</h2></div>
+      <div class="divider-col"></div>
+    </div>
+    <p class="process-sub">Getting started is simple. Just a few easy steps.</p>
+    <div class="process-image"></div>
+    <img class="process-image mobile" src="https://assets.cdn.filesafe.space/Eq2dpCqcs3qkFVgmbkxb/media/671fc4d7d05eb84005c64978.png" alt="Our Process" style="width:100%;height:auto;object-fit:contain;" decoding="async" loading="lazy">
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="container">
+    <div class="gallery-eyebrow reveal">
+      <span class="eyebrow">SEE WHY OUR CLIENTS LOVE US</span>
+    </div>
+    <div class="gallery-head reveal reveal-delay-1">
+      <h2>See Our Work</h2>
+      <div class="divider"></div>
+      <a href="#" class="see-all">see all photos <i class="fa-solid fa-image"></i></a>
+    </div>
+  </div>
+  <div class="gallery-grid">
+    <img src="brand_assets/our-work-1.webp" alt="Southern Pro-Vision landscaping project" loading="eager" width="1636" height="1230" decoding="async">
+    <img src="brand_assets/our-work-2.webp" alt="Southern Pro-Vision landscaping project" loading="lazy" width="1632" height="1236" decoding="async">
+    <img src="brand_assets/our-work-3.webp" alt="Southern Pro-Vision landscaping project" loading="lazy" width="1636" height="1220" decoding="async">
+    <img src="brand_assets/our-work-4.webp" alt="Southern Pro-Vision landscaping project" loading="lazy" width="1624" height="1232" decoding="async">
+    <img src="brand_assets/our-work-5.webp" alt="Southern Pro-Vision landscaping project" loading="lazy" width="1630" height="1222" decoding="async">
+    <img src="brand_assets/our-work-6.webp" alt="Southern Pro-Vision landscaping project" loading="lazy" width="1630" height="1218" decoding="async">
+    <img src="brand_assets/our-work-7.webp" alt="Southern Pro-Vision landscaping project" loading="lazy" width="762" height="570" decoding="async">
+    <img src="brand_assets/our-work-8.webp" alt="Southern Pro-Vision landscaping project" loading="lazy" width="1220" height="910" decoding="async">
+    <img src="brand_assets/our-work-9.webp" alt="Southern Pro-Vision landscaping project" loading="lazy" width="2092" height="1506" decoding="async">
+    <img src="brand_assets/our-work-10.webp" alt="Southern Pro-Vision landscaping project" loading="lazy" width="2086" height="1508" decoding="async">
+    <img src="brand_assets/our-work-11.webp" alt="Southern Pro-Vision landscaping project" loading="lazy" width="1214" height="914" decoding="async">
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-wrap">
+  <div class="reviews-content">
+    <div class="container">
+      <div class="reviews-eyebrow reveal"><span class="eyebrow">DISCOVER WHAT OUR CLIENTS HAVE TO SAY ABOUT US</span></div>
+      <div class="reviews-head reveal reveal-delay-1">
+        <h2>REVIEWS</h2>
+        <div class="divider"></div>
+        <a class="contact-now" href="#">contact us now <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="reviews-grid reveal reveal-delay-2">
+        <article class="review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-text">Southern Pro-Vision transformed our backyard completely. The crew was professional, on time every day, and left everything spotless. Couldn't be happier with the results.</p>
+          <div class="review-foot"><span>Wanay H.</span><div class="g-badge"><span>G</span></div></div>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-text">Craig and his team were an absolute pleasure to work with. Very knowledgeable, responsive, and the quality of work on our irrigation system was top-notch. Highly recommend.</p>
+          <div class="review-foot"><span>Jeremy M.</span><div class="g-badge"><span>G</span></div></div>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-text">They designed and installed our front yard landscape in just a few days. The crew was considerate, cleaned up after themselves, and the finished product is stunning.</p>
+          <div class="review-foot"><span>Bretta A.</span><div class="g-badge"><span>G</span></div></div>
+        </article>
+      </div>
+
+      <div class="review-google-cta">
+        <h3>Review Us on Google</h3>
+        <div class="stars">★★★★★</div>
+        <a href="#">leave us a review</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="faq-new-wrapper reveal">
+      <div class="faq-header">
+        <span class="faq-eyebrow">FAQ's &nbsp;·&nbsp; WHAT CLIENTS ASK US</span>
+        <div class="faq-title-row">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-title-divider"></div>
+        </div>
+        <p class="faq-new-sub">Answering your questions about landscaping and irrigation.</p>
+      </div>
+      <div class="faq-new-list">
+        <div class="faq-new-item">
+          <button class="faq-new-btn"><span>How long does a landscaping project take in Texas?</span><span class="faq-new-icon"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="faq-new-ans"><p>Project timelines vary depending on size and scope. Most residential landscaping installations are completed within a few days, while larger or more complex projects may take one to two weeks. We'll provide a clear timeline during your free on-site estimate so you always know what to expect.</p></div>
+        </div>
+        <div class="faq-new-item">
+          <button class="faq-new-btn"><span>Do you offer irrigation system installation and repairs?</span><span class="faq-new-icon"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="faq-new-ans"><p>Yes! We specialize in full irrigation system design, installation, and repair. Whether you need a brand-new system or maintenance on an existing one, our team ensures your lawn and plants receive the right amount of water efficiently — saving you money and keeping everything green.</p></div>
+        </div>
+        <div class="faq-new-item">
+          <button class="faq-new-btn"><span>What areas in the DFW Metroplex do you serve?</span><span class="faq-new-icon"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="faq-new-ans"><p>We proudly serve the entire DFW Metroplex, including Dallas, Fort Worth, Plano, Frisco, McKinney, Allen, Garland, Arlington, and surrounding communities. Not sure if we cover your area? Give us a call and we'll let you know right away.</p></div>
+        </div>
+        <div class="faq-new-item">
+          <button class="faq-new-btn"><span>Is the estimate really free with no obligation?</span><span class="faq-new-icon"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="faq-new-ans"><p>Absolutely — our estimates are 100% free and come with zero obligation. We'll visit your property, assess your outdoor space, and walk you through our recommended plan and pricing. There's no pressure and no strings attached.</p></div>
+        </div>
+        <div class="faq-new-item">
+          <button class="faq-new-btn"><span>Can you provide references from past landscaping clients?</span><span class="faq-new-icon"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="faq-new-ans"><p>Of course. We're happy to connect you with past clients so you can hear directly about their experience working with Southern Pro-Vision. You can also read verified reviews from our satisfied customers on our website and Google Business profile.</p></div>
+        </div>
+      </div>
+      <div class="faq-cta-row">
+        <p class="faq-new-note">For expert landscaping advice in DFW, contact us today for a free estimate!</p>
+        <a href="#contact" class="faq-new-link">Get a Free Estimate <i class="fa-solid fa-arrow-right" style="font-size:11px;"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BIG CTA -->
+<section class="big-cta">
+  <div class="big-cta-content container reveal">
+    <h2>Ready to Transform Your Outdoor Space?<br/>Get a Free Estimate Today!</h2>
+    <button class="btn btn-primary">Get a Free Estimate</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-main">
+
+      <!-- Col 1: Logo + License -->
+      <div>
+        <img src="brand_assets/circular logo 2.webp" alt="Southern Pro-Vision Landscape & Irrigation" class="footer-brand-logo" decoding="async" loading="lazy">
+        <span class="footer-license-label">Licensed &amp; Insured</span>
+        <strong class="footer-license-num">(469) 363-5551</strong>
+      </div>
+
+      <!-- Col 2: Services -->
+      <div>
+        <h4 class="footer-col-heading">Services</h4>
+        <ul class="footer-col-links">
+          <li><a href="services/landscape-design.html">Landscape Design</a></li>
+          <li><a href="services/irrigation-systems.html">Irrigation Systems</a></li>
+          <li><a href="services/outdoor-kitchens.html">Outdoor Kitchens</a></li>
+          <li><a href="services/hardscapes-masonry.html">Hardscapes &amp; Masonry</a></li>
+          <li><a href="services/landscape-lighting.html">Landscape Lighting</a></li>
+          <li><a href="services/drainage-solutions.html">Drainage Solutions</a></li>
+          <li><a href="#">View All Services</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Service Areas -->
+      <div>
+        <h4 class="footer-col-heading">Service Areas</h4>
+        <ul class="footer-col-links">
+          <li><a href="#">Dallas, TX</a></li>
+          <li><a href="#">Fort Worth, TX</a></li>
+          <li><a href="#">Plano, TX</a></li>
+          <li><a href="#">Frisco, TX</a></li>
+          <li><a href="#">McKinney, TX</a></li>
+          <li><a href="#">View All Areas</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Google Map -->
+      <div>
+        <iframe class="footer-map-frame"
+          src="https://maps.google.com/maps?q=Dallas+Fort+Worth+TX&t=m&z=10&ie=UTF8&iwloc=&output=embed"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+
+    <hr class="footer-hr">
+
+    <!-- Google Rating Row -->
+    <div class="footer-rating">
+      <svg class="footer-g-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" fill="#FFC107"/>
+        <path d="M6.306 14.691l6.571 4.819C14.655 15.108 19.000 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z" fill="#FF3D00"/>
+        <path d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" fill="#4CAF50"/>
+        <path d="M43.611 20.083H42V20H24v8h11.303a11.946 11.946 0 01-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" fill="#1976D2"/>
+      </svg>
+      <div class="footer-stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="footer-bottom-left">
+        <span>&copy; 2025 Southern Pro-Vision Landscape &amp; Irrigation. All rights reserved.</span>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div class="footer-social-icons">
+        <a href="#" aria-label="Google Business Profile">
+          <img src="brand_assets/gbp-icon.svg" alt="Google Business Profile" decoding="async" loading="lazy">
+        </a>
+        <a href="#" aria-label="Instagram">
+          <img src="brand_assets/instagram-icon.svg" alt="Instagram" decoding="async" loading="lazy">
+        </a>
+        <a href="#" aria-label="YouTube">
+          <img src="brand_assets/youtube-icon.svg" alt="YouTube" decoding="async" loading="lazy">
+        </a>
+        <a href="#" aria-label="Facebook">
+          <img src="brand_assets/facebook-green-icon.svg" alt="Facebook" decoding="async" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating CTA -->
+<div class="cta-bottom-right">
+  <button>get free quote</button>
+</div>
+
+<script>
+  document.querySelectorAll('.faq-new-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-new-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-new-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) document.body.classList.add('scrolled');
+    else document.body.classList.remove('scrolled');
+  }, { passive: true });
+
+  const form = document.getElementById('quote-form');
+  const status = form.querySelector('.form-status');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    status.classList.remove('is-error', 'is-success', 'is-visible');
+    const name = form.querySelector('#qf-name').value.trim();
+    const phone = form.querySelector('#qf-phone').value.trim();
+    const msg = form.querySelector('#qf-msg').value.trim();
+    const terms = form.querySelector('#terms').checked;
+    if (!name || !phone || !msg) {
+      status.textContent = 'Please fill in your name, phone, and message.';
+      status.classList.add('is-error', 'is-visible');
+      return;
+    }
+    if (!terms) {
+      status.textContent = 'Please agree to the terms before sending.';
+      status.classList.add('is-error', 'is-visible');
+      return;
+    }
+    status.textContent = `Thanks, ${name.split(' ')[0]}. We'll text you back shortly.`;
+    status.classList.add('is-success', 'is-visible');
+    form.reset();
+  });
+
+  /* Scroll reveal */
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  /* Mobile menu JS */
+  (function() {
+    var ham = document.getElementById('hamburger');
+    var menu = document.getElementById('mob-menu');
+    var overlay = document.getElementById('mob-overlay');
+    var closeBtn = document.getElementById('mob-close');
+    var servicesToggle = document.getElementById('mob-services-toggle');
+    var servicesLi = document.getElementById('mob-services-li');
+
+    function openMenu() {
+      ham.classList.add('open');
+      menu.classList.add('open');
+      overlay.classList.add('open');
+      ham.setAttribute('aria-expanded','true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      ham.classList.remove('open');
+      menu.classList.remove('open');
+      overlay.classList.remove('open');
+      ham.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';
+    }
+    ham.addEventListener('click', function() {
+      menu.classList.contains('open') ? closeMenu() : openMenu();
+    });
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+    servicesToggle.addEventListener('click', function() {
+      servicesLi.classList.toggle('open');
+    });
+  })();
+
+</script>
+
+
+<!-- Mobile menu overlay -->
+<div class="mob-overlay" id="mob-overlay"></div>
+<nav class="mob-menu" id="mob-menu" aria-label="Mobile navigation">
+  <div class="mob-header">
+    <img class="mob-logo" src="brand_assets/logo-circular.webp" alt="Southern Pro-Vision" loading="lazy" width="750" height="750" decoding="async">
+    <button class="mob-close" id="mob-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="mob-body">
+    <ul class="mob-nav">
+      <li><a href="index.html">Home</a></li>
+      <li class="mob-services-li" id="mob-services-li">
+        <button class="mob-services-toggle" id="mob-services-toggle">
+          Services <i class="fa-solid fa-chevron-down mob-chevron"></i>
+        </button>
+        <ul class="mob-sub" id="mob-services-sub">
+          <li><a href="services/landscape-design.html">Landscape Design</a></li>
+          <li><a href="services/irrigation-systems.html">Irrigation Systems</a></li>
+          <li><a href="services/outdoor-kitchens.html">Outdoor Kitchens</a></li>
+          <li><a href="services/hardscapes-masonry.html">Hardscapes &amp; Masonry</a></li>
+          <li><a href="services/landscape-lighting.html">Landscape Lighting</a></li>
+          <li><a href="services/drainage-solutions.html">Drainage Solutions</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Service Areas</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="mob-footer">
+    <a href="tel:+14693635551" class="mob-call"><i class="fa-solid fa-phone"></i> (469) 363-5551</a>
+    <button class="mob-estimate" onclick="document.getElementById('mob-overlay').classList.remove('open');document.getElementById('mob-menu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';document.querySelector('#quote-form')?.scrollIntoView({behavior:'smooth'});">Get Free Estimate</button>
+  </div>
+</nav>
+
+</body>
+</html>
