@@ -860,19 +860,25 @@
   }
   .see-all:hover { border: 2px solid black; }
   .gallery-grid {
-    columns: 4;
-    column-gap: 10px;
-    padding: 10px 20px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 12px 20px 0;
   }
   .gallery-grid img {
     width: 100%;
+    height: auto;
     display: block;
-    margin-bottom: 10px;
-    break-inside: avoid;
     border-radius: 8px;
-    object-fit: cover;
     border: 1px solid rgba(255,255,255,0.06);
     transition: transform 0.3s ease;
+  }
+  /* Last image spans the final 2 columns to fill the row — object-fit:cover crops to match row height */
+  .gallery-grid img:last-child {
+    grid-column: span 2;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
   .gallery-grid img:hover { transform: scale(1.02); }
 
@@ -1433,7 +1439,7 @@
     .spv-cards-grid { grid-template-columns: 1fr 1fr; }
     .spv-services-title-row h2 { font-size: 34px; }
     .spv-services-cta { flex-direction: column; align-items: flex-start; }
-    .gallery-grid { columns: 3; }
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
     .reviews-grid { grid-template-columns: 1fr; }
     .reviews-head, .gallery-head, .process-head { flex-direction: column; align-items: flex-start; gap: 15px; }
     .yellow-divider, .gallery-head .divider, .reviews-head .divider, .process-head .divider-col, .section-divider { width: 100%; flex: none; }
@@ -1445,7 +1451,7 @@
     .footer-logo-block { margin-right: 0; }
   }
   @media (max-width: 560px) {
-    .gallery-grid { columns: 2; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-main { grid-template-columns: 1fr; }
     .footer-bottom-bar { flex-direction: column; gap: 8px; align-items: flex-start; padding-right: 0; }
     .nav-cta .btn { padding: 12px 8px; font-size: 13px; }
@@ -1722,7 +1728,7 @@
     .big-cta h2 { font-size: 26px; }
     .areas-list { grid-template-columns: 1fr 1fr; }
     .spv-cards-grid { grid-template-columns: 1fr; }
-    .gallery-grid { columns: 2; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     .process-steps { grid-template-columns: 1fr; }
     .reviews-grid { grid-template-columns: 1fr; }
     .footer-map-frame { height: 180px; }
