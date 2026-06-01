@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Landscape Lighting in DFW, Texas | Southern Pro-Vision</title>
-<meta name="description" content="Outdoor lighting designed to highlight your home, improve safety, and make your landscape look beautiful after dark. DFW, Texas. Free estimate." />
+<title>Outdoor Living Spaces in DFW, Texas | Southern Pro-Vision</title>
+<meta name="description" content="Custom outdoor living spaces in DFW, Texas. Patios, pergolas, outdoor kitchens, seating areas, fire features, and complete backyard transformations. Free estimate." />
 <link rel="icon" href="../brand_assets/logo-circular.webp" type="image/webp" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,10 +28,8 @@
   html { scroll-behavior: smooth; }
   body {
     font-family: 'Montserrat', system-ui, sans-serif;
-    color: var(--text);
-    background: var(--white);
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+    color: var(--text); background: var(--white);
+    line-height: 1.5; -webkit-font-smoothing: antialiased;
   }
   img { max-width: 100%; display: block; }
   a { color: inherit; text-decoration: none; }
@@ -42,8 +40,7 @@
     position: absolute; top: -100px; left: 16px;
     background: var(--green); color: white;
     padding: 12px 18px; border-radius: 6px;
-    font-weight: 700; z-index: 999;
-    transition: top .2s var(--ease);
+    font-weight: 700; z-index: 999; transition: top .2s var(--ease);
   }
   .skip-link:focus { top: 16px; }
   :focus-visible { outline: 2px solid var(--green-primary); outline-offset: 3px; border-radius: 4px; }
@@ -52,18 +49,14 @@
   /* ---- NAVBAR ---- */
   header.nav {
     position: fixed; top: 0; left: 0; right: 0;
-    z-index: 20; padding: 10px 0;
-    background: var(--green);
-    transition: background .3s ease;
+    z-index: 20; padding: 10px 0; background: var(--green);
   }
   .nav-inner {
     display: flex; align-items: center; justify-content: space-between;
     gap: 24px; max-width: 1400px; margin: 0 auto; padding: 0 20px;
   }
   .logo-wrapper { width: 160px; flex-shrink: 0; display: flex; align-items: center; }
-  .nav-links {
-    display: flex; gap: 0; list-style: none; flex-wrap: nowrap; align-items: center;
-  }
+  .nav-links { display: flex; gap: 0; list-style: none; flex-wrap: nowrap; align-items: center; }
   .nav-links > li { position: relative; }
   .nav-links > li > a {
     color: white; font-size: 13px; font-weight: 800; text-transform: uppercase;
@@ -72,9 +65,8 @@
   }
   .nav-links > li > a::after {
     content: ''; position: absolute; bottom: 2px; left: 12px; right: 12px;
-    height: 2px; background: var(--green-primary);
-    transform: scaleX(0); transform-origin: left;
-    transition: transform .25s var(--ease); border-radius: 2px;
+    height: 2px; background: var(--green-primary); transform: scaleX(0);
+    transform-origin: left; transition: transform .25s var(--ease); border-radius: 2px;
   }
   .nav-links > li > a:hover::after,
   .nav-links > li > a.active::after { transform: scaleX(1); }
@@ -127,15 +119,13 @@
 
   /* ---- SERVICE HERO ---- */
   .svc-hero {
-    position: relative;
-    min-height: 520px;
+    position: relative; min-height: 520px;
     display: flex; flex-direction: column;
     justify-content: center; align-items: center; text-align: center;
     background:
       linear-gradient(135deg, rgba(0,20,10,0.80) 0%, rgba(0,50,20,0.68) 50%, rgba(0,20,10,0.82) 100%),
-      url('../brand_assets/landscape-lighting-card.webp') center/cover no-repeat;
-    padding: 160px 20px 90px;
-    color: white;
+      url('../brand_assets/outdoor-kitchens-card.webp') center/cover no-repeat;
+    padding: 160px 20px 90px; color: white;
   }
   .svc-hero-inner { position: relative; z-index: 1; max-width: 960px; }
   .svc-hero-eyebrow {
@@ -149,29 +139,23 @@
     background: var(--green-primary); flex-shrink: 0;
   }
   .svc-hero h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(38px, 5vw, 64px); font-weight: 900; text-transform: uppercase;
-    letter-spacing: -0.03em; line-height: 0.95;
-    color: white; margin-bottom: 20px;
-    text-shadow: 0 4px 40px rgba(0,0,0,0.4);
+    font-family: 'Montserrat', sans-serif; font-size: clamp(38px, 5vw, 64px); font-weight: 900;
+    text-transform: uppercase; letter-spacing: -0.03em; line-height: 0.95;
+    color: white; margin-bottom: 20px; text-shadow: 0 4px 40px rgba(0,0,0,0.4);
     max-width: 900px;
   }
   .svc-hero-sub {
-    font-size: 17px; line-height: 1.65;
-    color: rgba(255,255,255,0.88); font-weight: 400;
-    max-width: 540px; margin: 0 auto 28px;
+    font-size: 17px; line-height: 1.65; color: rgba(255,255,255,0.88);
+    font-weight: 400; max-width: 540px; margin: 0 auto 28px;
   }
   .svc-hero-badges {
-    display: flex; flex-wrap: wrap; justify-content: center;
-    gap: 10px; margin-top: 4px;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 4px;
   }
   .svc-hero-badge {
     display: inline-flex; align-items: center; gap: 7px;
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.22);
-    color: white; font-size: 12px; font-weight: 700;
-    letter-spacing: 0.06em; text-transform: uppercase;
-    padding: 8px 16px; border-radius: 100px;
+    background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22);
+    color: white; font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 8px 16px; border-radius: 100px;
     backdrop-filter: blur(4px);
   }
   .svc-hero-badge i { color: var(--green-primary); font-size: 11px; }
@@ -189,100 +173,72 @@
   .svc-title-row { margin-bottom: 20px; }
   .svc-title-row h2 {
     font-family: 'Montserrat', sans-serif; font-size: 34px; font-weight: 900;
-    color: var(--green); letter-spacing: -0.02em; line-height: 1.15;
-    margin-bottom: 14px;
+    color: var(--green); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 14px;
   }
   .svc-divider {
     width: 48px; height: 3px; background: var(--green-primary);
     border: none; border-radius: 2px; margin-bottom: 22px;
   }
   .svc-body-text {
-    font-size: 16px; color: #4a4a4a; line-height: 1.75; font-weight: 400;
-    margin-bottom: 28px;
+    font-size: 16px; color: #4a4a4a; line-height: 1.75; font-weight: 400; margin-bottom: 28px;
   }
   .svc-check-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
   .svc-check-item { display: flex; gap: 14px; align-items: flex-start; }
   .svc-check-icon {
     width: 26px; height: 26px; background: var(--green-light); border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0; margin-top: 2px;
-    color: var(--green-primary); font-size: 12px;
+    flex-shrink: 0; margin-top: 2px; color: var(--green-primary); font-size: 12px;
   }
-  .svc-check-title {
-    font-size: 15px; font-weight: 800; color: var(--green);
-    margin-bottom: 3px; display: block;
-  }
+  .svc-check-title { font-size: 15px; font-weight: 800; color: var(--green); margin-bottom: 3px; display: block; }
   .svc-check-text { font-size: 14px; color: #5a5a5a; line-height: 1.65; }
   .svc-cta-inline {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 14px 24px; border-radius: 6px; font-family: 'Montserrat', sans-serif;
     font-weight: 900; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em;
     cursor: pointer; border: 2px solid transparent;
-    background: var(--green-primary); color: white;
-    box-shadow: 0 6px 18px -6px rgba(0,128,55,0.5);
+    background: var(--green-primary); color: white; box-shadow: 0 6px 18px -6px rgba(0,128,55,0.5);
     transition: transform .2s var(--ease), box-shadow .25s var(--ease), border-color .2s var(--ease);
     margin-top: 32px;
   }
-  .svc-cta-inline:hover {
-    border-color: white; transform: translateY(-1px);
-    box-shadow: 0 10px 24px -8px rgba(0,128,55,0.7);
-  }
+  .svc-cta-inline:hover { border-color: white; transform: translateY(-1px); box-shadow: 0 10px 24px -8px rgba(0,128,55,0.7); }
 
-  /* ---- WHY CHOOSE US SECTION ---- */
-  .svc-why {
-    background-color: #fafaf7;
-    padding: 80px 0;
-    position: relative;
-  }
+  /* ---- WHY CHOOSE US ---- */
+  .svc-why { background-color: #fafaf7; padding: 80px 0; position: relative; }
   .svc-why::before {
     content: ''; position: absolute; inset: 0;
     background-image: url('../brand_assets/faq-bg.webp');
     background-size: 100% auto; background-position: center top;
-    background-repeat: no-repeat; opacity: 0.07;
-    pointer-events: none; z-index: 0;
+    background-repeat: no-repeat; opacity: 0.07; pointer-events: none; z-index: 0;
   }
   .svc-why-inner { position: relative; z-index: 1; }
-  .svc-two-col {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
-  }
+  .svc-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
   .svc-img-wrap {
     border-radius: 10px; overflow: hidden;
     box-shadow: 0 16px 48px -12px rgba(0,78,5,0.22), 0 4px 12px -4px rgba(0,78,5,0.1);
   }
   .svc-img-wrap img {
     width: 100%; height: 100%; min-height: 380px;
-    object-fit: cover; display: block;
-    transition: transform .5s var(--ease);
+    object-fit: cover; display: block; transition: transform .5s var(--ease);
   }
   .svc-img-wrap:hover img { transform: scale(1.03); }
 
   /* ---- SECOND CONTENT SECTION ---- */
-  .svc-detail {
-    background: var(--green-light);
-    padding: 80px 0;
-    position: relative;
-  }
+  .svc-detail { background: var(--green-light); padding: 80px 0; position: relative; }
   .svc-detail::before {
     content: ''; position: absolute; inset: 0;
     background-image: url('../brand_assets/process-bg.webp');
     background-size: cover; background-position: center;
-    background-repeat: no-repeat; opacity: 0.3;
-    pointer-events: none; z-index: 0;
+    background-repeat: no-repeat; opacity: 0.3; pointer-events: none; z-index: 0;
   }
   .svc-detail-inner { position: relative; z-index: 1; }
 
   /* ---- FAQ SECTION ---- */
-  .svc-faq {
-    background-color: #f8f9f6;
-    padding: 72px 0;
-    position: relative;
-  }
+  .svc-faq { background-color: #f8f9f6; padding: 72px 0; position: relative; }
   .svc-faq::before {
     content: ''; position: absolute; inset: 0;
     background-image: url('../brand_assets/faq-bg.webp');
     background-size: 100% auto; background-position: center top;
-    background-repeat: no-repeat; opacity: 0.18;
-    pointer-events: none; z-index: 0;
+    background-repeat: no-repeat; opacity: 0.18; pointer-events: none; z-index: 0;
   }
   .svc-faq-inner { max-width: 1060px; margin: 0 auto; position: relative; z-index: 1; }
   .faq-header { margin-bottom: 48px; }
@@ -290,7 +246,6 @@
     display: inline-flex; align-items: center; gap: 10px;
     color: var(--muted); font-size: 11px; font-weight: 800;
     letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px;
-    font-family: 'Montserrat', sans-serif;
   }
   .faq-eyebrow::before {
     content: ''; display: inline-block; width: 26px; height: 2px;
@@ -309,11 +264,10 @@
   .faq-item:last-child { border-bottom: 1px solid rgba(0,78,5,0.15); }
   .faq-btn {
     display: flex; justify-content: space-between; align-items: center;
-    width: 100%; background: none; border: none; padding: 24px 0;
-    cursor: pointer; font-family: 'Montserrat', sans-serif;
-    font-size: 15px; font-weight: 800; color: var(--green);
-    text-align: left; gap: 32px; line-height: 1.35; letter-spacing: 0.01em;
-    text-transform: uppercase; transition: color .2s;
+    width: 100%; background: none; border: none; padding: 24px 0; cursor: pointer;
+    font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 800;
+    color: var(--green); text-align: left; gap: 32px; line-height: 1.35;
+    letter-spacing: 0.01em; text-transform: uppercase; transition: color .2s;
   }
   .faq-btn:hover { color: var(--green-primary); }
   .faq-item.open .faq-btn { color: var(--green-primary); }
@@ -330,17 +284,12 @@
   .faq-item.open .faq-ans { max-height: 400px; }
 
   /* ---- CONTACT FORM SECTION ---- */
-  .svc-contact {
-    background-color: #fafaf7;
-    padding: 80px 0;
-    position: relative;
-  }
+  .svc-contact { background-color: #fafaf7; padding: 80px 0; position: relative; }
   .svc-contact::before {
     content: ''; position: absolute; inset: 0;
     background-image: url('../brand_assets/faq-bg.webp');
     background-size: 100% auto; background-position: center top;
-    background-repeat: no-repeat; opacity: 0.07;
-    pointer-events: none; z-index: 0;
+    background-repeat: no-repeat; opacity: 0.07; pointer-events: none; z-index: 0;
   }
   .svc-contact-inner {
     position: relative; z-index: 1;
@@ -367,19 +316,13 @@
   }
   .contact-info-desc {
     font-size: 16px; color: #4a4a4a; line-height: 1.75; font-weight: 400;
-    margin-bottom: 14px;
-    border-left: 3px solid var(--green-primary); padding-left: 16px;
+    margin-bottom: 14px; border-left: 3px solid var(--green-primary); padding-left: 16px;
   }
-  .contact-info-note {
-    font-size: 14px; color: #6b6b6b; line-height: 1.65;
-    font-style: italic; margin-bottom: 36px;
-  }
+  .contact-info-note { font-size: 14px; color: #6b6b6b; line-height: 1.65; font-style: italic; margin-bottom: 36px; }
   .contact-info-links { display: flex; flex-direction: column; gap: 16px; }
   .contact-info-link {
-    display: flex; align-items: center; gap: 18px;
-    text-decoration: none; color: var(--text);
-    padding: 16px 20px; background: white;
-    border: 1.5px solid rgba(0,78,5,0.14); border-radius: 8px;
+    display: flex; align-items: center; gap: 18px; text-decoration: none; color: var(--text);
+    padding: 16px 20px; background: white; border: 1.5px solid rgba(0,78,5,0.14); border-radius: 8px;
     box-shadow: 0 2px 8px -2px rgba(0,78,5,0.06), 0 6px 20px -6px rgba(0,78,5,0.07);
     transition: border-color .2s var(--ease), box-shadow .2s var(--ease), transform .2s var(--ease);
   }
@@ -399,7 +342,6 @@
   }
   .contact-info-link-value { font-size: 15px; font-weight: 700; color: var(--green); }
 
-  /* Quote form */
   .svc-contact-right { padding-top: 20px; }
   .quote-form {
     position: relative; background: #005c0a; color: white;
@@ -409,10 +351,8 @@
   }
   .quote-form .form-logo {
     position: absolute; top: -55px; left: 50%; transform: translateX(-50%);
-    width: 110px; height: 110px; border-radius: 50%;
-    background: white; padding: 8px;
-    box-shadow: 0 10px 24px rgba(0,0,0,0.3);
-    object-fit: contain; display: block;
+    width: 110px; height: 110px; border-radius: 50%; background: white; padding: 8px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.3); object-fit: contain; display: block;
   }
   .quote-form h2 {
     font-family: 'Montserrat'; text-transform: uppercase; text-align: center;
@@ -420,9 +360,7 @@
     font-weight: 800; line-height: 1.2; letter-spacing: -0.005em;
   }
   .field { margin-bottom: 14px; }
-  .field label {
-    display: block; font-size: 14px; font-weight: 900; margin-bottom: 6px; color: white;
-  }
+  .field label { display: block; font-size: 14px; font-weight: 900; margin-bottom: 6px; color: white; }
   .field label .req { color: white; margin-left: 2px; }
   .field input, .field textarea {
     width: 100%; padding: 12px 14px; border: 1px solid #ACACAC; border-radius: 5px;
@@ -433,8 +371,7 @@
   .field input::placeholder, .field textarea::placeholder { color: #8c8c8c; }
   .field textarea { resize: vertical; height: 90px; min-height: 90px; }
   .field input:focus, .field textarea:focus {
-    outline: none; border-color: var(--green-primary);
-    box-shadow: 0 0 0 3px rgba(0,128,55,0.15);
+    outline: none; border-color: var(--green-primary); box-shadow: 0 0 0 3px rgba(0,128,55,0.15);
   }
   .checkbox-row {
     display: flex; gap: 10px; font-size: 13px;
@@ -450,24 +387,20 @@
   }
   .submit-btn:hover { background: var(--green-hover); transform: translateY(-1px); }
   .form-status {
-    margin-top: 12px; font-size: 13px; color: white;
-    min-height: 1.2em; opacity: 0; transition: opacity .25s var(--ease);
+    margin-top: 12px; font-size: 13px; color: white; min-height: 1.2em;
+    opacity: 0; transition: opacity .25s var(--ease);
   }
   .form-status.is-visible { opacity: 1; }
   .form-status.is-error { color: #FFD3D3; }
   .form-status.is-success { color: #B7F2C9; }
 
   /* ---- FOOTER ---- */
-  footer {
-    background-color: #fdfcf8; color: #1a1a1a;
-    border-top: 1px solid #e5e7eb; position: relative;
-  }
+  footer { background-color: #fdfcf8; color: #1a1a1a; border-top: 1px solid #e5e7eb; position: relative; }
   footer::before {
     content: ''; position: absolute; inset: 0;
     background-image: url('../brand_assets/footer-bg.webp');
     background-size: cover; background-position: center;
-    background-repeat: no-repeat; opacity: 0.35;
-    pointer-events: none; z-index: 0;
+    background-repeat: no-repeat; opacity: 0.35; pointer-events: none; z-index: 0;
   }
   footer .container { position: relative; z-index: 1; }
   .footer-main {
@@ -480,10 +413,7 @@
   .footer-col-heading { font-size: 15px; font-weight: 700; color: #111827; margin-bottom: 20px; text-transform: none; }
   .footer-col-links { list-style: none; }
   .footer-col-links li { margin-bottom: 13px; }
-  .footer-col-links li a {
-    font-size: 14px; color: #6b7280; font-weight: 400;
-    transition: color .2s; line-height: 1.4;
-  }
+  .footer-col-links li a { font-size: 14px; color: #6b7280; font-weight: 400; transition: color .2s; line-height: 1.4; }
   .footer-col-links li a:hover { color: #111827; }
   .footer-map-frame { width: 100%; height: 250px; border: 0; border-radius: 6px; display: block; }
   .footer-hr { border: none; border-top: 1px solid #e5e7eb; margin: 0; }
@@ -623,9 +553,9 @@
         <ul class="dropdown-menu">
           <li><a href="landscape-design.html">Landscape Design</a></li>
           <li><a href="landscape-construction.html">Landscape Construction</a></li>
-          <li><a href="outdoor-living.html">Outdoor Living</a></li>
+          <li><a href="outdoor-living.html" class="current">Outdoor Living</a></li>
           <li><a href="irrigation-systems.html">Irrigation</a></li>
-          <li><a href="landscape-lighting.html" class="current">Landscape Lighting</a></li>
+          <li><a href="landscape-lighting.html">Landscape Lighting</a></li>
           <li><a href="hardscape.html">Hardscape</a></li>
           <li style="border-top:1px solid rgba(0,78,5,0.12);margin-top:4px;padding-top:4px;"><a href="index.html" style="font-weight:700;color:var(--green-primary);">View All Services <i class="fa-solid fa-arrow-right" style="font-size:10px;"></i></a></li>
         </ul>
@@ -646,13 +576,13 @@
 <!-- SERVICE HERO -->
 <section class="svc-hero" id="main">
   <div class="svc-hero-inner">
-    <span class="svc-hero-eyebrow">Southern Pro-Vision &nbsp;·&nbsp; Landscape Lighting</span>
-    <h1>Landscape Lighting in DFW, Texas</h1>
-    <p class="svc-hero-sub">Outdoor lighting designed to highlight your home, improve safety, and make your landscape look beautiful after dark.</p>
+    <span class="svc-hero-eyebrow">Southern Pro-Vision &nbsp;·&nbsp; Outdoor Living</span>
+    <h1>Outdoor Living Spaces in DFW, Texas</h1>
+    <p class="svc-hero-sub">Custom outdoor spaces designed for relaxing, cooking, hosting, and enjoying your backyard with family and guests.</p>
     <div class="svc-hero-badges">
-      <span class="svc-hero-badge"><i class="fa-solid fa-check"></i> Pathway Lighting</span>
-      <span class="svc-hero-badge"><i class="fa-solid fa-check"></i> Tree &amp; Accent Lighting</span>
-      <span class="svc-hero-badge"><i class="fa-solid fa-check"></i> Outdoor Ambience</span>
+      <span class="svc-hero-badge"><i class="fa-solid fa-check"></i> Outdoor Kitchens</span>
+      <span class="svc-hero-badge"><i class="fa-solid fa-check"></i> Patios &amp; Seating Areas</span>
+      <span class="svc-hero-badge"><i class="fa-solid fa-check"></i> Pergolas &amp; Backyard Features</span>
     </div>
   </div>
 </section>
@@ -663,80 +593,80 @@
     <div class="svc-two-col reveal">
       <!-- Left: text -->
       <div>
-        <span class="svc-eyebrow">Designed for Beauty and Safety</span>
+        <span class="svc-eyebrow">Built for Backyard Living</span>
         <div class="svc-title-row">
-          <h2>Why Choose Southern Pro-Vision for Landscape Lighting?</h2>
+          <h2>Why Choose Southern Pro-Vision for Outdoor Living?</h2>
         </div>
         <div class="svc-divider"></div>
-        <p class="svc-body-text">Good landscape lighting does more than make your property look nice at night. It improves visibility, adds curb appeal, highlights key features, and creates a warm outdoor atmosphere around your home.</p>
+        <p class="svc-body-text">A well-designed outdoor living space turns your backyard into an extension of your home. From patios and seating areas to outdoor kitchens, pergolas, and landscape features, we help create spaces that feel useful, comfortable, and complete.</p>
         <ul class="svc-check-list">
           <li class="svc-check-item">
             <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
             <div>
-              <span class="svc-check-title">Better Nighttime Curb Appeal</span>
-              <p class="svc-check-text">We use lighting to highlight trees, pathways, garden beds, architectural details, and outdoor features so your home stands out after dark.</p>
+              <span class="svc-check-title">Custom Backyard Layouts</span>
+              <p class="svc-check-text">We plan the space around how you want to relax, cook, host, and spend time outside.</p>
             </div>
           </li>
           <li class="svc-check-item">
             <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
             <div>
-              <span class="svc-check-title">Improved Safety and Visibility</span>
-              <p class="svc-check-text">Pathway and entry lighting can make walkways, steps, driveways, and outdoor spaces easier and safer to use at night.</p>
+              <span class="svc-check-title">Connected Outdoor Features</span>
+              <p class="svc-check-text">Outdoor kitchens, patios, pergolas, lighting, landscaping, and seating areas can be planned together so the space feels intentional.</p>
             </div>
           </li>
           <li class="svc-check-item">
             <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
             <div>
-              <span class="svc-check-title">Designed Around Your Landscape</span>
-              <p class="svc-check-text">We plan lighting placement around your yard layout, plants, trees, hardscapes, and outdoor living areas so the final look feels natural and balanced.</p>
+              <span class="svc-check-title">Built for Everyday Use</span>
+              <p class="svc-check-text">We focus on function, flow, comfort, and long-term use so your backyard looks good and works well.</p>
             </div>
           </li>
         </ul>
       </div>
       <!-- Right: image -->
       <div class="svc-img-wrap reveal reveal-delay-1">
-        <img src="../brand_assets/landscape-lighting-card.webp" alt="Landscape Lighting by Southern Pro-Vision" decoding="async" loading="lazy">
+        <img src="../brand_assets/outdoor-kitchens-card.webp" alt="Custom outdoor kitchen by Southern Pro-Vision" decoding="async" loading="lazy">
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECOND CONTENT SECTION -->
+<!-- SECOND CONTENT SECTION — image left, text right -->
 <section class="svc-detail">
   <div class="container svc-detail-inner">
-    <div class="svc-two-col flip">
+    <div class="svc-two-col">
       <!-- Left: image -->
       <div class="svc-img-wrap reveal">
-        <img src="../brand_assets/landscape-lighting-card.webp" alt="Evening outdoor lighting by Southern Pro-Vision" decoding="async" loading="lazy">
+        <img src="../brand_assets/hardscapes-card.webp" alt="Outdoor kitchen and patio space" decoding="async" loading="lazy">
       </div>
       <!-- Right: text -->
       <div class="reveal reveal-delay-1">
-        <span class="svc-eyebrow">Lighting That Transforms the Space</span>
+        <span class="svc-eyebrow">Designed for Relaxing and Hosting</span>
         <div class="svc-title-row">
-          <h2>Outdoor Lighting That Makes Your Landscape Shine After Dark</h2>
+          <h2>Outdoor Living Spaces That Bring Your Backyard Together</h2>
         </div>
         <div class="svc-divider"></div>
-        <p class="svc-body-text">The right lighting can completely change how your outdoor space feels at night. From soft pathway lighting to dramatic tree uplighting, we help create a clean, warm, and inviting look that works with the rest of your landscape design.</p>
+        <p class="svc-body-text">Whether you want a simple seating area, a covered pergola, a patio, an outdoor kitchen, or a complete backyard transformation, the right layout makes the space easier to enjoy. We help connect each feature into one clean outdoor living design.</p>
         <ul class="svc-check-list">
           <li class="svc-check-item">
             <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
             <div>
-              <span class="svc-check-title">Pathway &amp; Walkway Lights</span>
-              <p class="svc-check-text">Add lighting along walkways, driveways, patios, and entry areas to make your property easier to navigate at night.</p>
+              <span class="svc-check-title">Patios &amp; Seating Areas</span>
+              <p class="svc-check-text">Create comfortable outdoor areas for relaxing, dining, and spending time with family or guests.</p>
             </div>
           </li>
           <li class="svc-check-item">
             <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
             <div>
-              <span class="svc-check-title">Tree &amp; Accent Lighting</span>
-              <p class="svc-check-text">Highlight trees, shrubs, stonework, walls, and architectural features with lighting that adds depth and visual interest.</p>
+              <span class="svc-check-title">Outdoor Kitchens &amp; Cooking Spaces</span>
+              <p class="svc-check-text">Add built-in grills, countertops, serving areas, and cooking zones that make hosting easier.</p>
             </div>
           </li>
           <li class="svc-check-item">
             <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
             <div>
-              <span class="svc-check-title">Outdoor Living Ambience</span>
-              <p class="svc-check-text">Create a warmer atmosphere around patios, outdoor kitchens, seating areas, and backyard spaces for evening use.</p>
+              <span class="svc-check-title">Pergolas &amp; Backyard Features</span>
+              <p class="svc-check-text">Add shade, structure, and visual interest with pergolas, lighting, landscaping, and other outdoor upgrades.</p>
             </div>
           </li>
         </ul>
@@ -751,25 +681,25 @@
   <div class="container">
     <div class="svc-faq-inner reveal">
       <div class="faq-header">
-        <span class="faq-eyebrow">FAQs &nbsp;·&nbsp; Landscape Lighting Questions</span>
+        <span class="faq-eyebrow">FAQs &nbsp;·&nbsp; Outdoor Living Questions</span>
         <div class="faq-title-row">
           <h2>Frequently Asked Questions</h2>
           <div class="faq-title-divider"></div>
         </div>
-        <p class="faq-sub">Answering common questions about landscape lighting services in DFW, Texas.</p>
+        <p class="faq-sub">Answering common questions about outdoor living spaces in DFW, Texas.</p>
       </div>
       <div class="faq-list">
         <div class="faq-item">
-          <button class="faq-btn"><span>Where should landscape lighting be placed?</span><span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
-          <div class="faq-ans"><p>Landscape lighting is commonly placed along walkways, entry areas, trees, garden beds, patios, driveways, and architectural features. The best placement depends on what you want to highlight and how you use the outdoor space at night.</p></div>
+          <button class="faq-btn"><span>What can be included in an outdoor living space?</span><span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="faq-ans"><p>An outdoor living space can include patios, seating areas, pergolas, outdoor kitchens, fire features, walkways, landscape lighting, planting areas, and other backyard upgrades. The right setup depends on how you want to use the space.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-btn"><span>Can landscape lighting improve safety around my home?</span><span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
-          <div class="faq-ans"><p>Yes. Proper lighting can improve visibility around walkways, steps, driveways, entrances, and outdoor living areas. This makes the property easier to use at night while also improving the overall look of the landscape.</p></div>
+          <button class="faq-btn"><span>Can outdoor living spaces be designed for small backyards?</span><span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="faq-ans"><p>Yes. Even a smaller backyard can be planned with a patio, seating area, pergola, or compact outdoor kitchen. A good layout helps the space feel useful without making it feel crowded.</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-btn"><span>Can lighting be added to an existing landscape?</span><span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
-          <div class="faq-ans"><p>Yes. Landscape lighting can often be added to an existing yard, patio, walkway, or outdoor living space. We can plan the lighting around your current layout and highlight the best features of your property.</p></div>
+          <button class="faq-btn"><span>Can you combine outdoor kitchens, patios, lighting, and landscaping together?</span><span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="faq-ans"><p>Yes. Outdoor living projects work best when all features are planned together. We can help connect kitchens, patios, pergolas, lighting, landscaping, irrigation, and hardscapes into one complete backyard design.</p></div>
         </div>
       </div>
     </div>
@@ -780,14 +710,13 @@
 <section class="svc-contact" id="estimate-form">
   <div class="container">
     <div class="svc-contact-inner">
-
       <!-- Left: info -->
       <div class="svc-contact-left reveal">
         <span class="contact-info-eyebrow">Get In Touch</span>
-        <h2 class="contact-info-heading">Get a Free Landscape Lighting Estimate</h2>
+        <h2 class="contact-info-heading">Get a Free Outdoor Living Estimate</h2>
         <div class="contact-info-divider"></div>
-        <p class="contact-info-desc">Ready to make your outdoor space look better and feel safer at night? Fill out the form or contact us directly, and our team will get back to you as soon as possible.</p>
-        <p class="contact-info-note">Whether you need pathway lights, tree uplighting, accent lighting, or lighting for patios and outdoor living areas, Southern Pro-Vision Landscape &amp; Irrigation is here to help.</p>
+        <p class="contact-info-desc">Ready to create a better backyard for relaxing, cooking, and hosting? Fill out the form or contact us directly, and our team will get back to you as soon as possible.</p>
+        <p class="contact-info-note">Whether you want a patio, pergola, outdoor kitchen, seating area, or complete backyard living space, Southern Pro-Vision Landscape &amp; Irrigation is here to help.</p>
         <div class="contact-info-links">
           <a href="mailto:info@southernprovisionlandscape.com" class="contact-info-link">
             <div class="contact-info-link-icon"><i class="fa-solid fa-envelope"></i></div>
@@ -812,10 +741,9 @@
           </div>
         </div>
       </div>
-
       <!-- Right: form -->
       <div class="svc-contact-right reveal reveal-delay-1">
-        <form class="quote-form" id="svc-form" novalidate aria-label="Get a free landscape lighting estimate">
+        <form class="quote-form" id="svc-form" novalidate aria-label="Get a free outdoor kitchen estimate">
           <img class="form-logo" src="../brand_assets/logo-circular.webp" alt="Southern Pro-Vision" loading="lazy" width="750" height="750" decoding="async">
           <h2>GET A FREE ESTIMATE</h2>
           <div class="field">
@@ -828,7 +756,7 @@
           </div>
           <div class="field">
             <label for="sf-msg">Tell us about your project <span class="req">*</span></label>
-            <textarea id="sf-msg" name="message" placeholder="Describe your lighting needs, such as pathway lights, tree uplighting, accent lighting, or patio ambience." required></textarea>
+            <textarea id="sf-msg" name="message" placeholder="Describe your outdoor living vision, such as a patio, pergola, outdoor kitchen, or seating area." required></textarea>
           </div>
           <div class="checkbox-row">
             <input type="checkbox" id="sf-terms" required>
@@ -838,7 +766,6 @@
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
-
     </div>
   </div>
 </section>
@@ -853,7 +780,6 @@
 </div>
 
 <script>
-  /* Scroll reveal */
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('is-visible'); revealObserver.unobserve(e.target); }
@@ -861,13 +787,11 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-  /* Scrolled class for floating CTA */
   window.addEventListener('scroll', () => {
     if (window.scrollY > 200) document.body.classList.add('scrolled');
     else document.body.classList.remove('scrolled');
   }, { passive: true });
 
-  /* FAQ accordion */
   document.querySelectorAll('.faq-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.faq-item');
@@ -877,7 +801,6 @@
     });
   });
 
-  /* Form validation */
   const form = document.getElementById('svc-form');
   const status = form.querySelector('.form-status');
   form.addEventListener('submit', (e) => {

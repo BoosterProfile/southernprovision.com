@@ -9,6 +9,8 @@
 - Screenshot your output, compare against reference, fix mismatches, re-screenshot. Do at least 2 comparison rounds. Stop only when no visible differences remain or user says so.
 
 ## Local Server
+- **Before starting any local server, always confirm the current working directory and project name.** Never reuse an old server from another cloned project. If localhost shows the wrong website, kill the old dev server and restart from the current project folder.
+- This project is **Southern Pro-Vision** (green branding). It must serve from `/Users/mohamedalhammadi/Downloads/Southern Pro Vision - FINAL DESIGN 2`. When asked to "host", kill whatever is bound to port 3000 and start a fresh server from THIS folder.
 - **Always serve on localhost** — never screenshot a `file:///` URL.
 - Start the dev server: `node serve.mjs` (serves the project root at `http://localhost:3000`)
 - `serve.mjs` lives in the project root. Start it in the background before taking any screenshots.
@@ -53,15 +55,7 @@
 - Do not use `transition-all`
 - Do not use default Tailwind blue/indigo as primary color
 
-
-## Image Compression
-
-- **Whenever a new image is added to the project, always run `node compress-all-images.js` immediately after to compress it to WebP before using it in the website.**
-- All images in `brand_assets/` are `.webp`. Never add raw `.png`, `.jpg`, or `.jpeg` files directly to HTML without running the compression script first.
-- The script converts to WebP at 75% quality, updates all HTML references automatically, and deletes the originals.
-
 ## Screenshot Management
-
 At the start of every new task, run a cleanup check on the "Temporary Screenshots" folder and delete any screenshots that are older than 7 days. Do not delete screenshots that are less than 7 days old.
 
 Never rely on existing screenshots to assess the current state of the website. Always take a fresh screenshot when you need to see how something looks. Old screenshots do not reflect the current state of the code.

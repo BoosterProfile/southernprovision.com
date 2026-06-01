@@ -106,7 +106,7 @@
     background: var(--green-primary); flex-shrink: 0;
     opacity: 0; transform: scale(0); transition: opacity .15s, transform .2s var(--ease);
   }
-  .dropdown-menu li a:hover { background: var(--green-primary); color: white; padding-left: 18px; }
+  .dropdown-menu li a:hover { background: var(--green-primary); color: #fff !important; padding-left: 18px; }
   .dropdown-menu li a:hover::before { opacity: 1; transform: scale(1); background: white; }
   .dropdown-menu li a.current { font-weight: 800; color: var(--green); }
 
@@ -128,7 +128,7 @@
   /* ---- SERVICE HERO ---- */
   .svc-hero {
     position: relative;
-    min-height: 460px;
+    min-height: 520px;
     display: flex; flex-direction: column;
     justify-content: center; align-items: center; text-align: center;
     background:
@@ -137,7 +137,7 @@
     padding: 160px 20px 90px;
     color: white;
   }
-  .svc-hero-inner { position: relative; z-index: 1; max-width: 760px; }
+  .svc-hero-inner { position: relative; z-index: 1; max-width: 960px; }
   .svc-hero-eyebrow {
     display: inline-flex; align-items: center; gap: 10px;
     color: rgba(255,255,255,0.65); font-size: 11px; font-weight: 800;
@@ -150,11 +150,11 @@
   }
   .svc-hero h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(32px, 4vw, 48px); font-weight: 900; text-transform: uppercase;
+    font-size: clamp(38px, 5vw, 64px); font-weight: 900; text-transform: uppercase;
     letter-spacing: -0.03em; line-height: 0.95;
     color: white; margin-bottom: 20px;
     text-shadow: 0 4px 40px rgba(0,0,0,0.4);
-    max-width: 700px;
+    max-width: 900px;
   }
   .svc-hero-sub {
     font-size: 17px; line-height: 1.65;
@@ -528,7 +528,7 @@
   /* ---- RESPONSIVE ---- */
   @media (max-width: 1024px) {
     .nav-links { display: none; }
-    .svc-hero h1 { font-size: 40px; }
+    .svc-hero h1 { font-size: clamp(32px, 5vw, 48px); }
     .svc-two-col { grid-template-columns: 1fr; gap: 36px; }
     .svc-title-row h2 { font-size: 28px; }
     .faq-title-row h2 { font-size: 34px; }
@@ -538,7 +538,7 @@
     .nav-cta .btn { padding: 12px 10px; font-size: 12px; }
   }
   @media (max-width: 680px) {
-    .svc-hero h1 { font-size: 30px; }
+    .svc-hero h1 { font-size: clamp(26px, 5vw, 38px); }
     .svc-hero-badges { gap: 8px; }
     .faq-title-row h2 { font-size: 26px; }
     .footer-main { grid-template-columns: 1fr; }
@@ -594,13 +594,13 @@
     .footer-main { grid-template-columns: 1fr 1fr; gap: 30px; }
     .footer-bottom-bar { padding-right: 0 !important; flex-wrap: wrap; }
     .svc-hero { padding: 130px 20px 70px; }
-    .svc-hero h1 { font-size: clamp(28px, 5vw, 40px); }
+    .svc-hero h1 { font-size: clamp(32px, 5vw, 48px); }
   }
   @media (max-width: 640px) {
     .footer-main { grid-template-columns: 1fr; }
     .footer-bottom-bar { flex-direction: column; gap: 12px; align-items: flex-start; padding-right: 0 !important; }
     .svc-hero { padding: 120px 20px 60px; }
-    .svc-hero h1 { font-size: clamp(22px, 6vw, 30px); }
+    .svc-hero h1 { font-size: clamp(24px, 6vw, 36px); }
     .svc-hero-sub { font-size: 14px; }
     .footer-map-frame { height: 180px; }
   }
@@ -622,16 +622,17 @@
       <li class="dropdown"><a href="#" class="active">Services</a>
         <ul class="dropdown-menu">
           <li><a href="landscape-design.html">Landscape Design</a></li>
-          <li><a href="irrigation-systems.html">Irrigation Systems</a></li>
-          <li><a href="outdoor-kitchens.html">Outdoor Kitchens</a></li>
-          <li><a href="hardscapes-masonry.html">Hardscapes &amp; Masonry</a></li>
+          <li><a href="landscape-construction.html">Landscape Construction</a></li>
+          <li><a href="outdoor-living.html">Outdoor Living</a></li>
+          <li><a href="irrigation-systems.html">Irrigation</a></li>
           <li><a href="landscape-lighting.html">Landscape Lighting</a></li>
-          <li><a href="drainage-solutions.html" class="current">Drainage Solutions</a></li>
+          <li><a href="hardscape.html">Hardscape</a></li>
+          <li style="border-top:1px solid rgba(0,78,5,0.12);margin-top:4px;padding-top:4px;"><a href="index.html" style="font-weight:700;color:var(--green-primary);">View All Services <i class="fa-solid fa-arrow-right" style="font-size:10px;"></i></a></li>
         </ul>
       </li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Service Areas</a></li>
-      <li><a href="#">Blog</a></li>
+      <li><a href="/gallery/">Gallery</a></li>
+      <li><a href="/service-areas/">Service Areas</a></li>
+      <li><a href="/blog/">Blog</a></li>
       <li><a href="../contact.html">Contact</a></li>
     </ul>
     <div class="nav-cta">
@@ -827,7 +828,7 @@
           </div>
           <div class="field">
             <label for="sf-msg">Tell us about your project <span class="req">*</span></label>
-            <textarea id="sf-msg" name="message" placeholder="Describe your drainage issue — standing water, muddy areas, runoff problems, channel drain needs, etc." required></textarea>
+            <textarea id="sf-msg" name="message" placeholder="Describe your drainage issue, such as standing water, muddy areas, runoff problems, or channel drain needs." required></textarea>
           </div>
           <div class="checkbox-row">
             <input type="checkbox" id="sf-terms" required>
@@ -843,81 +844,8 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-main">
-      <div>
-        <img src="../brand_assets/logo-circular.webp" alt="Southern Pro-Vision" loading="lazy" width="750" height="750" class="footer-brand-logo" decoding="async">
-        <span class="footer-license-label">Licensed &amp; Insured</span>
-        <strong class="footer-license-num">(469) 363-5551</strong>
-      </div>
-      <div>
-        <h4 class="footer-col-heading">Services</h4>
-        <ul class="footer-col-links">
-          <li><a href="landscape-design.html">Landscape Design</a></li>
-          <li><a href="irrigation-systems.html">Irrigation Systems</a></li>
-          <li><a href="outdoor-kitchens.html">Outdoor Kitchens</a></li>
-          <li><a href="hardscapes-masonry.html">Hardscapes &amp; Masonry</a></li>
-          <li><a href="landscape-lighting.html">Landscape Lighting</a></li>
-          <li><a href="drainage-solutions.html">Drainage Solutions</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-col-heading">Service Areas</h4>
-        <ul class="footer-col-links">
-          <li><a href="#">Dallas, TX</a></li>
-          <li><a href="#">Fort Worth, TX</a></li>
-          <li><a href="#">Plano, TX</a></li>
-          <li><a href="#">Frisco, TX</a></li>
-          <li><a href="#">McKinney, TX</a></li>
-          <li><a href="#">View All Areas</a></li>
-        </ul>
-      </div>
-      <div>
-        <iframe class="footer-map-frame"
-          src="https://maps.google.com/maps?q=Dallas+Fort+Worth+TX&t=m&z=10&ie=UTF8&iwloc=&output=embed"
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-
-    <hr class="footer-hr">
-
-    <div class="footer-rating">
-      <svg class="footer-g-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" fill="#FFC107"/>
-        <path d="M6.306 14.691l6.571 4.819C14.655 15.108 19.000 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z" fill="#FF3D00"/>
-        <path d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" fill="#4CAF50"/>
-        <path d="M43.611 20.083H42V20H24v8h11.303a11.946 11.946 0 01-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" fill="#1976D2"/>
-      </svg>
-      <div class="footer-stars">
-        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-      </div>
-    </div>
-
-    <div class="footer-bottom-bar">
-      <div class="footer-bottom-left">
-        <span>&copy; 2025 Southern Pro-Vision Landscape &amp; Irrigation. All rights reserved.</span>
-        <a href="#">Privacy Policy</a>
-      </div>
-      <div class="footer-social-icons">
-        <a href="#" aria-label="Google Business Profile">
-          <img src="../brand_assets/gbp-icon.svg" alt="Google Business Profile" decoding="async" loading="lazy">
-        </a>
-        <a href="#" aria-label="Instagram">
-          <img src="../brand_assets/instagram-icon.svg" alt="Instagram" decoding="async" loading="lazy">
-        </a>
-        <a href="#" aria-label="YouTube">
-          <img src="../brand_assets/youtube-icon.svg" alt="YouTube" decoding="async" loading="lazy">
-        </a>
-        <a href="#" aria-label="Facebook">
-          <img src="../brand_assets/facebook-green-icon.svg" alt="Facebook" decoding="async" loading="lazy">
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
+<div id="site-footer"></div>
+<script src="/components/footer.js"></script>
 
 <!-- Floating CTA -->
 <div class="cta-bottom-right">
@@ -1005,16 +933,17 @@
         <button class="mob-services-toggle" id="mob-services-toggle">Services <i class="fa-solid fa-chevron-down mob-chevron"></i></button>
         <ul class="mob-sub" id="mob-services-sub">
           <li><a href="landscape-design.html">Landscape Design</a></li>
-          <li><a href="irrigation-systems.html">Irrigation Systems</a></li>
-          <li><a href="outdoor-kitchens.html">Outdoor Kitchens</a></li>
-          <li><a href="hardscapes-masonry.html">Hardscapes &amp; Masonry</a></li>
+          <li><a href="landscape-construction.html">Landscape Construction</a></li>
+          <li><a href="outdoor-living.html">Outdoor Living</a></li>
+          <li><a href="irrigation-systems.html">Irrigation</a></li>
           <li><a href="landscape-lighting.html">Landscape Lighting</a></li>
-          <li><a href="drainage-solutions.html">Drainage Solutions</a></li>
+          <li><a href="hardscape.html">Hardscape</a></li>
+          <li style="border-top:1px solid rgba(255,255,255,0.15);margin-top:4px;padding-top:4px;"><a href="index.html" style="font-weight:700;color:#6fcf97;">View All Services <i class="fa-solid fa-arrow-right" style="font-size:10px;"></i></a></li>
         </ul>
       </li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Service Areas</a></li>
-      <li><a href="#">Blog</a></li>
+      <li><a href="/gallery/">Gallery</a></li>
+      <li><a href="/service-areas/">Service Areas</a></li>
+      <li><a href="/blog/">Blog</a></li>
       <li><a href="../contact.html">Contact</a></li>
     </ul>
   </div>

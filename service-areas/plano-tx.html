@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Landscaping Services in Plano, TX | Southern Pro-Vision</title>
+<meta name="description" content="Southern Pro-Vision provides landscape design, landscape construction, irrigation, outdoor living, lighting, hardscape, sod installation, masonry, patios, pergolas, and retaining wall services in Plano, TX." />
+<link rel="icon" href="/brand_assets/logo-circular.webp" type="image/webp" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root {
+    --green: #004E05; --green-dark: #003204; --green-primary: #008037; --green-hover: #006a2e;
+    --green-light: #e8f4ec; --white: #ffffff; --black: #0d0d0d; --text: #1a1a1a;
+    --muted: #6b6b6b; --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Montserrat', system-ui, sans-serif; color: var(--text); background: var(--white); line-height: 1.5; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+
+  .skip-link { position: absolute; top: -100px; left: 16px; background: var(--green); color: white; padding: 12px 18px; border-radius: 6px; font-weight: 700; z-index: 999; transition: top .2s var(--ease); }
+  .skip-link:focus { top: 16px; }
+  :focus-visible { outline: 2px solid var(--green-primary); outline-offset: 3px; border-radius: 4px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+  /* NAVBAR */
+  header.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 20; padding: 10px 0; background: var(--green); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+  .logo-wrapper { width: 160px; flex-shrink: 0; display: flex; align-items: center; }
+  .nav-links { display: flex; gap: 0; list-style: none; flex-wrap: nowrap; align-items: center; }
+  .nav-links > li { position: relative; }
+  .nav-links > li > a { color: white; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; padding: 8px 12px; white-space: nowrap; display: flex; align-items: center; gap: 4px; transition: color .2s; position: relative; }
+  .nav-links > li > a::after { content: ''; position: absolute; bottom: 2px; left: 12px; right: 12px; height: 2px; background: var(--green-primary); transform: scaleX(0); transform-origin: left; transition: transform .25s var(--ease); border-radius: 2px; }
+  .nav-links > li > a:hover::after, .nav-links > li > a.active::after { transform: scaleX(1); }
+  .nav-links .dropdown > a::after { content: "\f078"; font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 10px; margin-left: 4px; position: static; height: auto; width: auto; background: none; transform: none; border-radius: 0; }
+  .nav-links .dropdown:hover > a::after { transform: rotate(180deg); }
+  .dropdown-menu { position: absolute; top: calc(100% + 6px); left: 0; background: white; min-width: 230px; padding: 6px; box-shadow: 0 16px 48px -8px rgba(0,40,10,0.22), 0 2px 8px rgba(0,0,0,0.06); border-radius: 10px; border-top: 3px solid var(--green-primary); opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity .2s var(--ease), transform .2s var(--ease), visibility .2s; list-style: none; z-index: 30; }
+  .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+  .dropdown-menu li a { display: flex; align-items: center; gap: 10px; padding: 9px 13px; color: #1a1a1a; font-size: 13px; font-weight: 600; border-radius: 6px; transition: background .15s, color .15s, padding-left .2s var(--ease); text-transform: capitalize; }
+  .dropdown-menu li a::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--green-primary); flex-shrink: 0; opacity: 0; transform: scale(0); transition: opacity .15s, transform .2s var(--ease); }
+  .dropdown-menu li a:hover { background: var(--green-primary); color: #fff !important; padding-left: 18px; }
+  .dropdown-menu li a:hover::before { opacity: 1; transform: scale(1); background: white; }
+  .nav-cta { display: flex; gap: 10px; align-items: center; flex-shrink: 0; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 15px 20px; border-radius: 6px; font-family: 'Montserrat'; font-weight: 900; font-size: 14px; text-transform: uppercase; cursor: pointer; border: 2px solid transparent; transition: transform .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease), box-shadow .25s var(--ease); white-space: nowrap; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--green-primary); color: white; box-shadow: 0 6px 18px -6px rgba(0,128,55,0.5); }
+  .btn-primary:hover { border-color: white; box-shadow: 0 10px 24px -8px rgba(0,128,55,0.7); }
+  .btn-secondary { background: white; color: var(--green-primary); border-color: var(--green-primary); }
+  .btn-secondary:hover { border-color: var(--black); }
+
+  /* HERO */
+  .svc-hero { position: relative; min-height: 520px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, rgba(0,20,10,0.80) 0%, rgba(0,50,20,0.68) 50%, rgba(0,20,10,0.82) 100%), url('/brand_assets/Our Work/our-work-4.webp') center/cover no-repeat; padding: 160px 20px 100px; color: white; }
+  .svc-hero-inner { position: relative; z-index: 1; max-width: 960px; }
+  .svc-hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.65); font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 18px; }
+  .svc-hero-eyebrow::before, .svc-hero-eyebrow::after { content: ''; display: inline-block; width: 26px; height: 2px; background: var(--green-primary); flex-shrink: 0; }
+  .svc-hero h1 { font-size: clamp(38px, 5vw, 64px); font-weight: 900; text-transform: uppercase; letter-spacing: -0.03em; line-height: 0.95; color: white; margin-bottom: 20px; text-shadow: 0 4px 40px rgba(0,0,0,0.4); max-width: 900px; font-family: 'Montserrat', sans-serif; }
+  .svc-hero-sub { font-size: 17px; line-height: 1.65; color: rgba(255,255,255,0.88); font-weight: 400; max-width: 600px; margin: 0 auto 28px; }
+  .svc-hero-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 4px; }
+  .svc-hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22); color: white; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 8px 16px; border-radius: 100px; backdrop-filter: blur(4px); }
+  .svc-hero-badge i { color: var(--green-primary); font-size: 11px; }
+
+  /* SHARED SECTION */
+  .svc-eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px; }
+  .svc-eyebrow::before { content: ''; display: inline-block; width: 26px; height: 2px; background: var(--green-primary); flex-shrink: 0; }
+  .svc-title-row { margin-bottom: 20px; }
+  .svc-title-row h2 { font-family: 'Montserrat', sans-serif; font-size: 34px; font-weight: 900; color: var(--green); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 14px; }
+  .svc-divider { width: 48px; height: 3px; background: var(--green-primary); border: none; border-radius: 2px; margin-bottom: 22px; }
+  .svc-body-text { font-size: 16px; color: #4a4a4a; line-height: 1.75; font-weight: 400; margin-bottom: 28px; }
+  .svc-check-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+  .svc-check-item { display: flex; gap: 14px; align-items: flex-start; }
+  .svc-check-icon { width: 26px; height: 26px; background: var(--green-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: var(--green-primary); font-size: 12px; }
+  .svc-check-title { font-size: 15px; font-weight: 800; color: var(--green); margin-bottom: 3px; display: block; }
+  .svc-check-text { font-size: 14px; color: #5a5a5a; line-height: 1.65; }
+
+  /* WHY SECTION */
+  .svc-why { background-color: #fafaf7; padding: 80px 0; position: relative; }
+  .svc-why::before { content: ''; position: absolute; inset: 0; background-image: url('/brand_assets/faq-bg.webp'); background-size: 100% auto; background-position: center top; background-repeat: no-repeat; opacity: 0.07; pointer-events: none; z-index: 0; }
+  .svc-why-inner { position: relative; z-index: 1; }
+  .svc-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+  .svc-img-wrap { border-radius: 10px; overflow: hidden; box-shadow: 0 16px 48px -12px rgba(0,78,5,0.22), 0 4px 12px -4px rgba(0,78,5,0.1); }
+  .svc-img-wrap img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; transition: transform .5s var(--ease); }
+  .svc-img-wrap:hover img { transform: scale(1.03); }
+
+  /* SERVICES SECTION */
+  .svc-detail { background: var(--green-light); padding: 80px 0; position: relative; }
+  .svc-detail::before { content: ''; position: absolute; inset: 0; background-image: url('/brand_assets/process-bg.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0.3; pointer-events: none; z-index: 0; }
+  .svc-detail-inner { position: relative; z-index: 1; }
+  .sa-services-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 28px; }
+  .sa-service-item { display: flex; align-items: center; gap: 10px; padding: 12px 16px; background: white; border-radius: 8px; border: 1px solid rgba(0,78,5,0.12); box-shadow: 0 2px 8px -2px rgba(0,78,5,0.06); }
+  .sa-service-item i { color: var(--green-primary); font-size: 12px; flex-shrink: 0; }
+  .sa-service-item span { font-size: 13px; font-weight: 700; color: var(--green); }
+
+  /* BIG CTA */
+  .big-cta { position: relative; background: linear-gradient(rgba(0,78,5,0.6), rgba(0,128,55,0.5)), url('/brand_assets/hero.webp') center/cover no-repeat; text-align: center; color: white; }
+  .big-cta-content { padding: 80px 20px; }
+  .big-cta h2 { font-family: 'Montserrat'; font-size: clamp(26px, 4vw, 48px); text-transform: uppercase; margin-bottom: 28px; line-height: 1.1; font-weight: 900; letter-spacing: -0.015em; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+  .big-cta .btn-primary { font-size: 18px; padding: 16px 36px; }
+
+  /* CONTACT */
+  .svc-contact { background-color: #fafaf7; padding: 80px 0; position: relative; }
+  .svc-contact::before { content: ''; position: absolute; inset: 0; background-image: url('/brand_assets/faq-bg.webp'); background-size: 100% auto; background-position: center top; background-repeat: no-repeat; opacity: 0.07; pointer-events: none; z-index: 0; }
+  .svc-contact-inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .svc-contact-left { padding-top: 56px; }
+  .contact-info-eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px; }
+  .contact-info-eyebrow::before { content: ''; display: inline-block; width: 26px; height: 2px; background: var(--green-primary); flex-shrink: 0; }
+  .contact-info-heading { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; color: var(--green); letter-spacing: -0.02em; line-height: 1.15; text-transform: uppercase; margin-bottom: 16px; }
+  .contact-info-divider { width: 48px; height: 3px; background: var(--green-primary); border: none; margin-bottom: 24px; border-radius: 2px; }
+  .contact-info-desc { font-size: 16px; color: #4a4a4a; line-height: 1.75; font-weight: 400; margin-bottom: 14px; border-left: 3px solid var(--green-primary); padding-left: 16px; }
+  .contact-info-note { font-size: 14px; color: #6b6b6b; line-height: 1.65; font-style: italic; margin-bottom: 36px; }
+  .contact-info-links { display: flex; flex-direction: column; gap: 16px; }
+  .contact-info-link { display: flex; align-items: center; gap: 18px; text-decoration: none; color: var(--text); padding: 16px 20px; background: white; border: 1.5px solid rgba(0,78,5,0.14); border-radius: 8px; box-shadow: 0 2px 8px -2px rgba(0,78,5,0.06), 0 6px 20px -6px rgba(0,78,5,0.07); transition: border-color .2s var(--ease), box-shadow .2s var(--ease), transform .2s var(--ease); }
+  .contact-info-link:hover { border-color: var(--green-primary); box-shadow: 0 4px 16px -4px rgba(0,78,5,0.14), 0 10px 28px -6px rgba(0,78,5,0.14); transform: translateX(4px); }
+  .contact-info-link-icon { width: 42px; height: 42px; background: var(--green-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--green-primary); font-size: 17px; }
+  .contact-info-link-label { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); display: block; margin-bottom: 2px; }
+  .contact-info-link-value { font-size: 15px; font-weight: 700; color: var(--green); }
+  .svc-contact-right { padding-top: 20px; }
+  .quote-form { position: relative; background: #005c0a; color: white; padding: 78px 28px 26px; border-radius: 10px; box-shadow: 0 30px 70px -20px rgba(0,0,0,0.35); width: 100%; border-top: 4px solid var(--green-primary); }
+  .quote-form .form-logo { position: absolute; top: -55px; left: 50%; transform: translateX(-50%); width: 110px; height: 110px; border-radius: 50%; background: white; padding: 8px; box-shadow: 0 10px 24px rgba(0,0,0,0.3); object-fit: contain; display: block; }
+  .quote-form h2 { font-family: 'Montserrat'; text-transform: uppercase; text-align: center; font-size: 28px; margin-bottom: 18px; color: white; font-weight: 800; line-height: 1.2; }
+  .field { margin-bottom: 14px; }
+  .field label { display: block; font-size: 14px; font-weight: 900; margin-bottom: 6px; color: white; }
+  .field label .req { color: white; margin-left: 2px; }
+  .field input, .field textarea { width: 100%; padding: 12px 14px; border: 1px solid #ACACAC; border-radius: 5px; font-family: 'Montserrat'; font-size: 14px; font-weight: 600; background: white; color: #000; line-height: 1.4; }
+  .field input { height: 44px; }
+  .field input::placeholder, .field textarea::placeholder { color: #8c8c8c; }
+  .field textarea { resize: vertical; height: 90px; min-height: 90px; }
+  .field input:focus, .field textarea:focus { outline: none; border-color: var(--green-primary); box-shadow: 0 0 0 3px rgba(0,128,55,0.15); }
+  .checkbox-row { display: flex; gap: 10px; font-size: 13px; margin: 12px 0 14px; line-height: 1.45; color: white; align-items: flex-start; }
+  .checkbox-row input { margin-top: 3px; flex-shrink: 0; width: 15px; height: 15px; accent-color: var(--green-primary); }
+  .checkbox-row a { text-decoration: underline; color: #335dff; }
+  .submit-btn { width: 100%; padding: 13px; border-radius: 5px; border: none; background: var(--green-primary); color: white; font-weight: 900; font-size: 22px; font-family: 'Montserrat'; cursor: pointer; margin-top: 4px; transition: background .2s var(--ease), transform .15s var(--ease); }
+  .submit-btn:hover { background: var(--green-hover); transform: translateY(-1px); }
+  .form-status { margin-top: 12px; font-size: 13px; color: white; min-height: 1.2em; opacity: 0; transition: opacity .25s var(--ease); }
+  .form-status.is-visible { opacity: 1; }
+  .form-status.is-error { color: #FFD3D3; }
+  .form-status.is-success { color: #B7F2C9; }
+
+  /* MAP SECTION */
+  .sa-map-section { background: #f8f9f6; padding: 72px 0; }
+  .sa-map-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+  .sa-map-eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px; }
+  .sa-map-eyebrow::before { content: ''; display: inline-block; width: 26px; height: 2px; background: var(--green-primary); flex-shrink: 0; }
+  .sa-map-heading { font-family: 'Montserrat', sans-serif; font-size: 34px; font-weight: 900; color: var(--green); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 10px; }
+  .sa-map-divider { width: 48px; height: 3px; background: var(--green-primary); border: none; border-radius: 2px; margin-bottom: 18px; }
+  .sa-map-body { font-size: 16px; color: #4a4a4a; line-height: 1.75; max-width: 680px; margin-bottom: 32px; }
+  .sa-map-frame { width: 100%; height: 400px; border: 0; border-radius: 12px; display: block; box-shadow: 0 12px 40px -8px rgba(0,78,5,0.18); }
+
+  /* FOOTER CSS */
+  footer { background-color: #fdfcf8; color: #1a1a1a; border-top: 1px solid #e5e7eb; position: relative; }
+  footer::before { content: ''; position: absolute; inset: 0; background-image: url('/brand_assets/footer-bg.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0.35; pointer-events: none; z-index: 0; }
+  footer .container { position: relative; z-index: 1; }
+  .footer-main { display: grid; grid-template-columns: 200px 1fr 1fr 320px; gap: 56px; padding: 60px 0 52px; align-items: start; }
+  .footer-brand-logo { width: 100px; height: auto; object-fit: contain; display: block; margin-top: 10px; margin-left: 10px; margin-bottom: 14px; }
+  .footer-license-label { font-size: 13px; color: #6b7280; display: block; margin-bottom: 4px; }
+  .footer-license-num { font-size: 14px; font-weight: 700; color: #111827; display: block; }
+  .footer-col-heading { font-size: 15px; font-weight: 700; color: #111827; margin-bottom: 20px; }
+  .footer-col-links { list-style: none; }
+  .footer-col-links li { margin-bottom: 13px; }
+  .footer-col-links li a { font-size: 14px; color: #6b7280; font-weight: 400; transition: color .2s; }
+  .footer-col-links li a:hover { color: #111827; }
+  .footer-map-frame { width: 100%; height: 250px; border: 0; border-radius: 6px; display: block; }
+  .footer-hr { border: none; border-top: 1px solid #e5e7eb; }
+  .footer-rating { display: flex; align-items: center; gap: 14px; padding: 22px 0; }
+  .footer-g-svg { width: 42px; height: 42px; flex-shrink: 0; }
+  .footer-stars { display: flex; gap: 4px; color: #FBBF24; font-size: 22px; }
+  .footer-bottom-bar { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; border-top: 1px solid #e5e7eb; padding-right: 180px; }
+  .footer-bottom-left { display: flex; flex-direction: column; gap: 5px; }
+  .footer-bottom-left span { font-size: 13px; color: #6b7280; }
+  .footer-bottom-left a { font-size: 13px; color: #6b7280; text-decoration: underline; transition: color .2s; width: fit-content; }
+  .footer-bottom-left a:hover { color: #111827; }
+  .footer-social-icons { display: flex; gap: 16px; align-items: center; }
+  .footer-social-icons a { display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .footer-social-icons a img { width: 48px; height: 48px; object-fit: contain; display: block; }
+
+  /* REVEAL */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1), transform 0.65s cubic-bezier(0.22,1,0.36,1); }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.08s; }
+
+  /* MOBILE MENU */
+  .hamburger { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 40px; height: 40px; background: transparent; border: none; cursor: pointer; padding: 4px; z-index: 101; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mob-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 98; opacity: 0; transition: opacity 0.3s ease; }
+  .mob-overlay.open { display: block; opacity: 1; }
+  .mob-menu { position: fixed; top: 0; right: -100%; width: min(300px, 88vw); height: 100dvh; background: var(--green); z-index: 99; display: flex; flex-direction: column; transition: right 0.35s cubic-bezier(0.22,1,0.36,1); overflow-y: auto; }
+  .mob-menu.open { right: 0; }
+  .mob-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; border-bottom: 1px solid rgba(255,255,255,0.12); }
+  .mob-logo { width: 50px; height: 50px; object-fit: contain; }
+  .mob-close { background: transparent; border: none; color: #fff; font-size: 22px; cursor: pointer; padding: 4px 8px; }
+  .mob-body { flex: 1; padding: 12px 0; }
+  .mob-nav { list-style: none; margin: 0; padding: 0; }
+  .mob-nav > li > a, .mob-services-toggle { display: block; width: 100%; padding: 13px 22px; color: #fff; text-decoration: none; font-size: 15px; font-weight: 500; background: transparent; border: none; text-align: left; cursor: pointer; transition: background 0.2s; }
+  .mob-nav > li > a:hover, .mob-services-toggle:hover { background: rgba(255,255,255,0.08); }
+  .mob-services-toggle { display: flex; align-items: center; justify-content: space-between; }
+  .mob-chevron { transition: transform 0.3s ease; font-size: 12px; }
+  .mob-services-li.open .mob-chevron { transform: rotate(180deg); }
+  .mob-sub { list-style: none; margin: 0; padding: 0; max-height: 0; overflow: hidden; transition: max-height 0.35s ease; background: rgba(0,0,0,0.18); }
+  .mob-services-li.open .mob-sub { max-height: 400px; }
+  .mob-sub li a { display: block; padding: 10px 22px 10px 36px; color: rgba(255,255,255,0.85); text-decoration: none; font-size: 14px; transition: background 0.2s; }
+  .mob-sub li a:hover { background: rgba(255,255,255,0.08); }
+  .mob-footer { padding: 16px 20px; border-top: 1px solid rgba(255,255,255,0.12); display: flex; flex-direction: column; gap: 10px; }
+  .mob-call { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background: rgba(255,255,255,0.1); color: #fff; text-decoration: none; border-radius: 6px; font-size: 14px; font-weight: 600; }
+  .mob-estimate { padding: 13px; background: #fff; color: var(--green); border: none; border-radius: 6px; font-size: 14px; font-weight: 700; cursor: pointer; transition: opacity 0.2s; }
+  .mob-estimate:hover { opacity: 0.9; }
+
+  /* ---- FAQ SECTION ---- */
+  .svc-faq { background-color: #f8f9f6; padding: 72px 0; position: relative; }
+  .svc-faq::before { content: ''; position: absolute; inset: 0; background-image: url('/brand_assets/faq-bg.webp'); background-size: 100% auto; background-position: center top; background-repeat: no-repeat; opacity: 0.18; pointer-events: none; z-index: 0; }
+  .svc-faq-inner { max-width: 1060px; margin: 0 auto; position: relative; z-index: 1; }
+  .faq-header { margin-bottom: 48px; }
+  .faq-eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px; font-family: 'Montserrat', sans-serif; }
+  .faq-eyebrow::before { content: ''; display: inline-block; width: 26px; height: 2px; background: var(--green-primary); flex-shrink: 0; }
+  .faq-title-row { display: flex; align-items: center; gap: 22px; margin-bottom: 14px; }
+  .faq-title-row h2 { font-family: 'Montserrat', sans-serif; font-size: 48px; font-weight: 900; color: var(--green); letter-spacing: -0.005em; line-height: 1; flex-shrink: 0; text-transform: uppercase; }
+  .faq-title-divider { flex: 1; border-top: 2px solid var(--green-primary); transform: translateY(2px); }
+  .faq-sub { font-size: 16px; color: #4a4a4a; font-weight: 400; line-height: 1.7; max-width: 560px; }
+  .faq-list { margin-bottom: 0; }
+  .faq-item { border-top: 1px solid rgba(0,78,5,0.15); }
+  .faq-item:last-child { border-bottom: 1px solid rgba(0,78,5,0.15); }
+  .faq-btn { display: flex; justify-content: space-between; align-items: center; width: 100%; background: none; border: none; padding: 24px 0; cursor: pointer; font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 800; color: var(--green); text-align: left; gap: 32px; line-height: 1.35; letter-spacing: 0.01em; text-transform: uppercase; transition: color .2s; }
+  .faq-btn:hover { color: var(--green-primary); }
+  .faq-item.open .faq-btn { color: var(--green-primary); }
+  .faq-icon { font-size: 18px; color: var(--green); flex-shrink: 0; transition: transform .3s var(--ease), color .2s; line-height: 1; font-weight: 900; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--green-primary); }
+  .faq-ans { max-height: 0; overflow: hidden; transition: max-height .38s var(--ease); }
+  .faq-ans p { color: #4a4a4a; font-size: 15px; line-height: 1.75; padding-bottom: 24px; font-weight: 400; border-left: 3px solid var(--green-primary); padding-left: 16px; }
+  .faq-item.open .faq-ans { max-height: 400px; }
+  @media (max-width: 1024px) { .faq-title-row h2 { font-size: 34px; } }
+  @media (max-width: 640px) { .faq-title-row h2 { font-size: 26px; } }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .hamburger { display: flex; }
+    .nav-links { display: none !important; }
+    .nav-cta .btn-primary { display: none; }
+    .svc-hero h1 { font-size: clamp(32px, 5vw, 48px); }
+    .svc-two-col { grid-template-columns: 1fr; gap: 36px; }
+    .svc-title-row h2 { font-size: 28px; }
+    .svc-contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    .svc-contact-left { padding-top: 0; }
+    .footer-main { grid-template-columns: 1fr 1fr; gap: 30px; }
+    .footer-bottom-bar { padding-right: 0 !important; flex-wrap: wrap; }
+    .sa-services-list { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .svc-hero { padding: 120px 20px 70px; }
+    .svc-hero h1 { font-size: clamp(24px, 6vw, 36px); }
+    .svc-hero-sub { font-size: 15px; }
+    .footer-main { grid-template-columns: 1fr; }
+    .footer-bottom-bar { flex-direction: column; gap: 12px; align-items: flex-start; }
+    .footer-map-frame { height: 180px; }
+    .sa-services-list { grid-template-columns: 1fr; }
+    .contact-info-heading { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="/index.html" class="logo-wrapper" aria-label="Southern Pro-Vision Home">
+      <img src="/brand_assets/logo-circular.webp" alt="Southern Pro-Vision" style="width:120px;height:120px;object-fit:contain;display:block;" loading="eager" width="750" height="750" decoding="async">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li class="dropdown"><a href="#">Services</a>
+        <ul class="dropdown-menu">
+          <li><a href="/services/landscape-design.html">Landscape Design</a></li>
+          <li><a href="/services/landscape-construction.html">Landscape Construction</a></li>
+          <li><a href="/services/outdoor-living.html">Outdoor Living</a></li>
+          <li><a href="/services/irrigation-systems.html">Irrigation</a></li>
+          <li><a href="/services/landscape-lighting.html">Landscape Lighting</a></li>
+          <li><a href="/services/hardscape.html">Hardscape</a></li>
+          <li style="border-top:1px solid rgba(0,78,5,0.12);margin-top:4px;padding-top:4px;"><a href="/services/index.html" style="font-weight:700;color:var(--green-primary);">View All Services <i class="fa-solid fa-arrow-right" style="font-size:10px;"></i></a></li>
+        </ul>
+      </li>
+      <li><a href="/gallery/">Gallery</a></li>
+      <li><a href="/service-areas/" class="active">Service Areas</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <button class="btn btn-primary" onclick="document.getElementById('estimate-form').scrollIntoView({behavior:'smooth'})">Get Free Estimate</button>
+      <a href="tel:+14693635551" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> (469) 363-5551</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="svc-hero" id="main">
+  <div class="svc-hero-inner">
+    <span class="svc-hero-eyebrow">Southern Pro-Vision &nbsp;·&nbsp; Plano, TX</span>
+    <h1>Landscaping Services in Plano, TX</h1>
+    <p class="svc-hero-sub">Southern Pro-Vision provides custom landscape design, landscape construction, irrigation, outdoor living, landscape lighting, hardscape, and installation services for homeowners in Plano, TX.</p>
+    <div class="svc-hero-badges">
+      <span class="svc-hero-badge"><i class="fa-solid fa-check"></i> Plano Landscaping</span>
+      <span class="svc-hero-badge"><i class="fa-solid fa-check"></i> Outdoor Living Experts</span>
+      <span class="svc-hero-badge"><i class="fa-solid fa-check"></i> Free Estimates</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="svc-why">
+  <div class="container svc-why-inner">
+    <div class="svc-two-col reveal">
+      <div>
+        <span class="svc-eyebrow">Local Landscaping Experts</span>
+        <div class="svc-title-row">
+          <h2>Why Homeowners in Plano, TX Choose Southern Pro-Vision</h2>
+        </div>
+        <div class="svc-divider"></div>
+        <p class="svc-body-text">Your outdoor space should improve the way your home looks and feels every day. Southern Pro-Vision helps Plano homeowners create cleaner, more functional yards with landscape design, construction, irrigation, outdoor living, lighting, and hardscape services built around the property.</p>
+        <ul class="svc-check-list">
+          <li class="svc-check-item">
+            <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
+            <div><span class="svc-check-title">Custom Outdoor Planning</span><p class="svc-check-text">We plan landscaping and outdoor features around your yard layout, home style, lifestyle, and long-term outdoor goals.</p></div>
+          </li>
+          <li class="svc-check-item">
+            <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
+            <div><span class="svc-check-title">Complete Landscape Services</span><p class="svc-check-text">From design and construction to irrigation, lighting, sod, hardscape, patios, pergolas, and outdoor kitchens, we help connect every part of the outdoor space.</p></div>
+          </li>
+          <li class="svc-check-item">
+            <div class="svc-check-icon"><i class="fa-solid fa-check"></i></div>
+            <div><span class="svc-check-title">Built for Plano Properties</span><p class="svc-check-text">We consider Texas heat, watering needs, sunlight, drainage, soil conditions, and everyday use so your landscape works beyond the first day.</p></div>
+          </li>
+        </ul>
+      </div>
+      <div class="svc-img-wrap reveal reveal-delay-1">
+        <img src="/brand_assets/about-image.webp" alt="Landscaping in Plano TX by Southern Pro-Vision" decoding="async" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES AVAILABLE -->
+<section class="svc-detail">
+  <div class="container svc-detail-inner">
+    <div class="reveal">
+      <span class="svc-eyebrow">Services in Plano</span>
+      <div class="svc-title-row">
+        <h2>Outdoor Services We Offer in Plano, TX</h2>
+      </div>
+      <div class="svc-divider"></div>
+      <p class="svc-body-text">Southern Pro-Vision provides a full range of landscaping and outdoor improvement services for Plano homeowners. Whether you want to upgrade curb appeal, improve your backyard, install irrigation, add lighting, or build a complete outdoor living space, our team can help plan and create a landscape that fits your property.</p>
+      <p style="font-size:15px;color:#4a4a4a;line-height:1.7;margin-bottom:24px;">Our Plano services include landscape design, landscape construction, irrigation, landscape lighting, outdoor living, hardscape, sod installation, masonry work, retaining walls, outdoor kitchens, patio installation, and pergolas.</p>
+      <div class="sa-services-list">
+        <div class="sa-service-item"><i class="fa-solid fa-check"></i><span>Landscape Design</span></div>
+        <div class="sa-service-item"><i class="fa-solid fa-check"></i><span>Landscape Construction</span></div>
+        <div class="sa-service-item"><i class="fa-solid fa-check"></i><span>Outdoor Living</span></div>
+        <div class="sa-service-item"><i class="fa-solid fa-check"></i><span>Irrigation</span></div>
+        <div class="sa-service-item"><i class="fa-solid fa-check"></i><span>Landscape Lighting</span></div>
+        <div class="sa-service-item"><i class="fa-solid fa-check"></i><span>Hardscape</span></div>
+        <div class="sa-service-item"><i class="fa-solid fa-check"></i><span>Sod Installation</span></div>
+        <div class="sa-service-item"><i class="fa-solid fa-check"></i><span>Masonry Work</span></div>
+        <div class="sa-service-item"><i class="fa-solid fa-check"></i><span>Retaining Walls</span></div>
+        <div class="sa-service-item"><i class="fa-solid fa-check"></i><span>Outdoor Kitchens</span></div>
+        <div class="sa-service-item"><i class="fa-solid fa-check"></i><span>Patio Installation</span></div>
+        <div class="sa-service-item"><i class="fa-solid fa-check"></i><span>Pergolas</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="svc-faq">
+  <div class="container">
+    <div class="svc-faq-inner reveal">
+      <div class="faq-header">
+        <span class="faq-eyebrow">FAQs &nbsp;·&nbsp; Plano Landscaping Questions</span>
+        <div class="faq-title-row">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-title-divider"></div>
+        </div>
+        <p class="faq-sub">Answering common questions about landscaping services in Plano, TX.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-btn"><span>What landscaping services do you offer in Plano, TX?</span><span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="faq-ans"><p>Southern Pro-Vision offers landscape design, landscape construction, irrigation, outdoor living, landscape lighting, hardscape, sod installation, masonry work, retaining walls, outdoor kitchens, patio installation, and pergolas for homeowners in Plano, TX.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn"><span>Can you help improve curb appeal for homes in Plano, TX?</span><span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="faq-ans"><p>Yes. We can help Plano homeowners improve curb appeal with landscape design, planting, sod installation, irrigation, landscape lighting, hardscape borders, walkways, and clean front yard upgrades.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn"><span>Do you offer free landscaping estimates in Plano, TX?</span><span class="faq-icon"><i class="fa-solid fa-plus"></i></span></button>
+          <div class="faq-ans"><p>Yes. Homeowners in Plano, TX can request a free landscaping estimate. You can contact Southern Pro-Vision by phone, email, or the quote form, and our team will follow up to learn more about your outdoor project.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="big-cta">
+  <div class="big-cta-content container reveal">
+    <h2>Ready to Transform Your Outdoor Space?<br>Get a Free Estimate Today!</h2>
+    <button class="btn btn-primary" onclick="document.getElementById('estimate-form').scrollIntoView({behavior:'smooth'})">Get a Free Estimate</button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="svc-contact" id="estimate-form">
+  <div class="container">
+    <div class="svc-contact-inner">
+      <div class="svc-contact-left reveal">
+        <span class="contact-info-eyebrow">Get In Touch</span>
+        <h2 class="contact-info-heading">Contact Us for a Free Landscaping Quote in Plano, TX</h2>
+        <div class="contact-info-divider"></div>
+        <p class="contact-info-desc">Ready to improve your outdoor space in Plano? Fill out the form or contact us directly, and our team will get back to you as soon as possible.</p>
+        <p class="contact-info-note">Whether you need landscape design, construction, irrigation, outdoor living, lighting, hardscape, or a full yard transformation, Southern Pro-Vision is here to help.</p>
+        <div class="contact-info-links">
+          <a href="mailto:craig@southernpro-vision.com" class="contact-info-link">
+            <div class="contact-info-link-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div><span class="contact-info-link-label">Email Us</span><span class="contact-info-link-value">craig@southernpro-vision.com</span></div>
+          </a>
+          <a href="tel:+14693635551" class="contact-info-link">
+            <div class="contact-info-link-icon"><i class="fa-solid fa-phone"></i></div>
+            <div><span class="contact-info-link-label">Call Us</span><span class="contact-info-link-value">(469) 363-5551</span></div>
+          </a>
+          <div class="contact-info-link" style="cursor:default;">
+            <div class="contact-info-link-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div><span class="contact-info-link-label">Service Area</span><span class="contact-info-link-value">Plano, TX and the DFW Area</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="svc-contact-right reveal reveal-delay-1">
+        <form class="quote-form" id="svc-form" novalidate aria-label="Get a free landscaping estimate in Plano TX">
+          <img class="form-logo" src="/brand_assets/logo-circular.webp" alt="Southern Pro-Vision" loading="lazy" width="750" height="750" decoding="async">
+          <h2>Get a Free Estimate</h2>
+          <div class="field"><label for="sf-name">Full Name <span class="req">*</span></label><input id="sf-name" name="name" type="text" placeholder="John Smith" required autocomplete="name"></div>
+          <div class="field"><label for="sf-phone">Phone <span class="req">*</span></label><input id="sf-phone" name="phone" type="tel" placeholder="(469) 555-1234" required autocomplete="tel" inputmode="tel"></div>
+          <div class="field"><label for="sf-msg">Short message about your needs <span class="req">*</span></label><textarea id="sf-msg" name="message" placeholder="Describe your landscaping project in Plano, TX." required></textarea></div>
+          <div class="checkbox-row"><input type="checkbox" id="sf-terms" required><label for="sf-terms" style="font-weight:400;font-size:13px;">I agree to <a href="#">terms &amp; conditions</a> provided by the company. By providing my phone number, I agree to receive text messages from the business.</label></div>
+          <button class="submit-btn" type="submit">SEND</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP SECTION -->
+<section class="sa-map-section">
+  <div class="sa-map-inner reveal">
+    <span class="sa-map-eyebrow">Find Us</span>
+    <h2 class="sa-map-heading">Serving Plano, TX</h2>
+    <hr class="sa-map-divider">
+    <p class="sa-map-body">Southern Pro-Vision proudly serves homeowners in Plano, TX with landscaping, irrigation, lighting, hardscape, outdoor living, and installation services. Whether you are upgrading curb appeal, improving your backyard, or planning a complete outdoor transformation, our team is ready to help.</p>
+    <iframe class="sa-map-frame"
+      src="https://maps.google.com/maps?q=Plano+TX&t=m&z=13&ie=UTF8&iwloc=&output=embed"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Plano, TX"></iframe>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="/components/footer.js"></script>
+
+<script>
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); revealObserver.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  const form = document.getElementById('svc-form');
+  const status = form.querySelector('.form-status');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    status.classList.remove('is-error','is-success','is-visible');
+    const name = form.querySelector('#sf-name').value.trim();
+    const phone = form.querySelector('#sf-phone').value.trim();
+    const msg = form.querySelector('#sf-msg').value.trim();
+    const terms = form.querySelector('#sf-terms').checked;
+    if (!name || !phone || !msg) { status.textContent = 'Please fill in your name, phone, and message.'; status.classList.add('is-error','is-visible'); return; }
+    if (!terms) { status.textContent = 'Please agree to the terms before sending.'; status.classList.add('is-error','is-visible'); return; }
+    status.textContent = `Thanks, ${name.split(' ')[0]}. We'll be in touch shortly.`;
+    status.classList.add('is-success','is-visible');
+    form.reset();
+  });
+
+  /* FAQ accordion */
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  (function(){
+    var ham=document.getElementById('hamburger'),menu=document.getElementById('mob-menu'),overlay=document.getElementById('mob-overlay'),closeBtn=document.getElementById('mob-close'),servicesToggle=document.getElementById('mob-services-toggle'),servicesLi=document.getElementById('mob-services-li');
+    function openMenu(){ham.classList.add('open');menu.classList.add('open');overlay.classList.add('open');ham.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+    function closeMenu(){ham.classList.remove('open');menu.classList.remove('open');overlay.classList.remove('open');ham.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+    ham.addEventListener('click',function(){menu.classList.contains('open')?closeMenu():openMenu();});
+    closeBtn.addEventListener('click',closeMenu);overlay.addEventListener('click',closeMenu);
+    servicesToggle.addEventListener('click',function(){servicesLi.classList.toggle('open');});
+  })();
+</script>
+
+<div class="mob-overlay" id="mob-overlay"></div>
+<nav class="mob-menu" id="mob-menu" aria-label="Mobile navigation">
+  <div class="mob-header">
+    <img class="mob-logo" src="/brand_assets/logo-circular.webp" alt="Southern Pro-Vision" loading="lazy" width="750" height="750" decoding="async">
+    <button class="mob-close" id="mob-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="mob-body">
+    <ul class="mob-nav">
+      <li><a href="/index.html">Home</a></li>
+      <li class="mob-services-li" id="mob-services-li">
+        <button class="mob-services-toggle" id="mob-services-toggle">Services <i class="fa-solid fa-chevron-down mob-chevron"></i></button>
+        <ul class="mob-sub">
+          <li><a href="/services/landscape-design.html">Landscape Design</a></li>
+          <li><a href="/services/landscape-construction.html">Landscape Construction</a></li>
+          <li><a href="/services/outdoor-living.html">Outdoor Living</a></li>
+          <li><a href="/services/irrigation-systems.html">Irrigation</a></li>
+          <li><a href="/services/landscape-lighting.html">Landscape Lighting</a></li>
+          <li><a href="/services/hardscape.html">Hardscape</a></li>
+          <li style="border-top:1px solid rgba(255,255,255,0.15);margin-top:4px;padding-top:4px;"><a href="/services/index.html" style="font-weight:700;color:#6fcf97;">View All Services <i class="fa-solid fa-arrow-right" style="font-size:10px;"></i></a></li>
+        </ul>
+      </li>
+      <li><a href="/gallery/">Gallery</a></li>
+      <li><a href="/service-areas/">Service Areas</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="mob-footer">
+    <a href="tel:+14693635551" class="mob-call"><i class="fa-solid fa-phone"></i> (469) 363-5551</a>
+    <button class="mob-estimate" onclick="document.getElementById('mob-overlay').classList.remove('open');document.getElementById('mob-menu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';document.getElementById('estimate-form')?.scrollIntoView({behavior:'smooth'});">Get Free Estimate</button>
+  </div>
+</nav>
+
+</body>
+</html>
