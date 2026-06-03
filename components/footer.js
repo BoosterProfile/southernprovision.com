@@ -6,7 +6,7 @@
 
       <!-- Col 1: Logo + License -->
       <div>
-        <img src="/brand_assets/logo-circular.webp" alt="Southern Pro-Vision Landscape &amp; Irrigation" class="footer-brand-logo" decoding="async" loading="lazy">
+        <img src="/brand_assets/Southern Pro-Vision Landscape Construction Logo.png" alt="Southern Pro-Vision Landscape &amp; Construction" class="footer-brand-logo" decoding="async" loading="lazy">
         <span class="footer-license-label">Licensed &amp; Insured</span>
         <strong class="footer-license-num">(469) 363-5551</strong>
       </div>
@@ -69,7 +69,7 @@
     <!-- Bottom Bar -->
     <div class="footer-bottom-bar">
       <div class="footer-bottom-left">
-        <span>&copy; 2025 Southern Pro-Vision Landscape &amp; Irrigation. All rights reserved.</span>
+        <span>&copy; 2025 Southern Pro-Vision Landscape &amp; Construction. All rights reserved.</span>
         <a href="#">Privacy Policy</a>
       </div>
       <div class="footer-social-icons">
