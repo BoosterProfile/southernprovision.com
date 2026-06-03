@@ -15,13 +15,13 @@
       <div>
         <h4 class="footer-col-heading">Services</h4>
         <ul class="footer-col-links">
-          <li><a href="/services/landscape-design.html">Landscape Design</a></li>
-          <li><a href="/services/landscape-construction.html">Landscape Construction</a></li>
-          <li><a href="/services/outdoor-living.html">Outdoor Living</a></li>
-          <li><a href="/services/irrigation-systems.html">Irrigation</a></li>
-          <li><a href="/services/landscape-lighting.html">Landscape Lighting</a></li>
-          <li><a href="/services/hardscape.html">Hardscape</a></li>
-          <li><a href="/services/index.html">View All Services</a></li>
+          <li><a href="/services/landscape-design">Landscape Design</a></li>
+          <li><a href="/services/landscape-construction">Landscape Construction</a></li>
+          <li><a href="/services/outdoor-living">Outdoor Living</a></li>
+          <li><a href="/services/irrigation-systems">Irrigation</a></li>
+          <li><a href="/services/landscape-lighting">Landscape Lighting</a></li>
+          <li><a href="/services/hardscape">Hardscape</a></li>
+          <li><a href="/services">View All Services</a></li>
         </ul>
       </div>
 
@@ -29,12 +29,12 @@
       <div>
         <h4 class="footer-col-heading">Service Areas</h4>
         <ul class="footer-col-links">
-          <li><a href="/service-areas/dallas-tx.html">Dallas, TX</a></li>
-          <li><a href="/service-areas/fort-worth-tx.html">Fort Worth, TX</a></li>
-          <li><a href="/service-areas/plano-tx.html">Plano, TX</a></li>
-          <li><a href="/service-areas/frisco-tx.html">Frisco, TX</a></li>
-          <li><a href="/service-areas/mckinney-tx.html">McKinney, TX</a></li>
-          <li><a href="/service-areas/">View All Areas</a></li>
+          <li><a href="/service-areas/dallas-tx">Dallas, TX</a></li>
+          <li><a href="/service-areas/fort-worth-tx">Fort Worth, TX</a></li>
+          <li><a href="/service-areas/plano-tx">Plano, TX</a></li>
+          <li><a href="/service-areas/frisco-tx">Frisco, TX</a></li>
+          <li><a href="/service-areas/mckinney-tx">McKinney, TX</a></li>
+          <li><a href="/service-areas">View All Areas</a></li>
         </ul>
       </div>
 

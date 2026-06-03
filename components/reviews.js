@@ -9,7 +9,7 @@
       <div class="reviews-head">
         <h2>REVIEWS</h2>
         <div class="divider"></div>
-        <a class="contact-now" href="/contact.html">contact us now <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="contact-now" href="/contact">contact us now <i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
       <!-- GoHighLevel / ReputationHub review carousel -->
