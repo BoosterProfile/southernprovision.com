@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://southernpro-vision.com/sitemap.xml
