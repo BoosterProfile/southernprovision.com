@@ -29,11 +29,11 @@
       <div>
         <h4 class="footer-col-heading">Service Areas</h4>
         <ul class="footer-col-links">
-          <li><a href="#">Dallas, TX</a></li>
-          <li><a href="#">Fort Worth, TX</a></li>
-          <li><a href="#">Plano, TX</a></li>
-          <li><a href="#">Frisco, TX</a></li>
-          <li><a href="#">McKinney, TX</a></li>
+          <li><a href="/service-areas/dallas-tx.html">Dallas, TX</a></li>
+          <li><a href="/service-areas/fort-worth-tx.html">Fort Worth, TX</a></li>
+          <li><a href="/service-areas/plano-tx.html">Plano, TX</a></li>
+          <li><a href="/service-areas/frisco-tx.html">Frisco, TX</a></li>
+          <li><a href="/service-areas/mckinney-tx.html">McKinney, TX</a></li>
           <li><a href="/service-areas/">View All Areas</a></li>
         </ul>
       </div>
