@@ -1889,6 +1889,56 @@
     .quote-form .form-logo { width: 80px; height: 80px; top: -40px; }
   }
 
+
+  /* === Mobile menu themed to match the site (white panel, site font, header-style CTAs). Mobile-only. === */
+  @media (max-width: 1024px) {
+    .mob-menu { background: #fff; }
+    .mob-header { border-bottom: 1px solid rgba(0,78,5,0.12); }
+    .mob-close { color: var(--green); }
+    .mob-nav > li > a,
+    .mob-services-toggle {
+      color: var(--green);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+    .mob-nav > li > a:hover,
+    .mob-services-toggle:hover { background: var(--green-light); color: var(--green-primary); }
+    .mob-chevron { color: var(--green-primary); }
+    .mob-sub { background: var(--green-light); }
+    .mob-sub li a { color: var(--green); }
+    .mob-sub li a:hover { background: rgba(0,128,55,0.10); }
+    .mob-sub li[style*="border-top"] { border-top-color: rgba(0,78,5,0.15) !important; }
+    .mob-sub li a[style*="6fcf97"] { color: var(--green-primary) !important; }
+    .mob-footer { border-top: 1px solid rgba(0,78,5,0.12); }
+    /* Footer CTAs = header button pair: outlined phone + solid-green estimate */
+    .mob-call {
+      background: #fff;
+      color: var(--green-primary);
+      border: 2px solid var(--green-primary);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .mob-call:hover { border-color: var(--black); background: #fff; }
+    .mob-estimate {
+      background: var(--green-primary);
+      color: #fff;
+      border: 2px solid transparent;
+      box-shadow: 0 6px 18px -6px rgba(0,128,55,0.5);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      opacity: 1;
+    }
+    .mob-estimate:hover { opacity: 1; border-color: #fff; box-shadow: 0 10px 24px -8px rgba(0,128,55,0.7); }
+    .mob-nav > li > a:focus-visible,
+    .mob-services-toggle:focus-visible,
+    .mob-call:focus-visible,
+    .mob-estimate:focus-visible { outline: 2px solid var(--green-primary); outline-offset: 2px; }
+  }
 </style>
 <script type="application/ld+json">
 {
