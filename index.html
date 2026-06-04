@@ -1804,25 +1804,30 @@
     .nav-cta .btn { padding: 10px 11px; font-size: 12px; letter-spacing: 0; }
 
     /* HERO: natural stacked flow on mobile — NOT locked to 100vh.
-       Constrain the photo to the hero region (instead of covering the whole
-       tall wrapper incl. the form) so it frames cleanly and isn't blown up. */
+       The photo lives on the TEXT block so `cover` always sizes to exactly the
+       logo + H1 + full paragraph — the whole hero sits on the image at any wrap,
+       with nothing spilling onto a dark gap. */
     .top-wrap {
       min-height: auto;
-      background-color: #00390a;                 /* dark base below the photo */
-      background-image:
-        linear-gradient(rgba(0,18,8,0.58), rgba(0,18,8,0.58)),
-        url('brand_assets/hero.webp');
-      background-repeat: no-repeat, no-repeat;
-      background-size: cover, auto 460px;         /* photo sized to the hero, not the page */
-      background-position: center, center top;
+      background: #00390a;                          /* solid dark base; photo is on .hero-text */
     }
     .hero {
       grid-template-columns: 1fr;
       gap: 0;
-      padding: 88px 0 40px;                        /* clears the navbar */
+      padding: 0 0 40px;                            /* top spacing handled by .hero-text */
       align-items: start;
     }
-    .hero-text { text-align: center; max-width: 100%; }
+    .hero-text {
+      text-align: center;
+      max-width: 100%;
+      padding: 92px 22px 36px;                      /* top clears navbar; bottom = photo breathing room */
+      background-image:
+        linear-gradient(rgba(0,18,8,0.50) 0%, rgba(0,22,10,0.58) 55%, rgba(0,57,10,0.97) 100%),
+        url('brand_assets/hero.webp');
+      background-repeat: no-repeat, no-repeat;
+      background-size: cover, cover;                /* covers the full text block, adapts to wrap */
+      background-position: center, center 32%;       /* bottom fades into #00390a -> seamless into form area */
+    }
 
     /* Circular white logo badge centered at the top of the hero */
     .hero-mobile-badge {
