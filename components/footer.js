@@ -6,14 +6,14 @@
 
       <!-- Col 1: Logo + License -->
       <div>
-        <img src="/brand_assets/Southern Pro-Vision Landscape Construction Logo.png" alt="Southern Pro-Vision Landscape &amp; Construction" class="footer-brand-logo" decoding="async" loading="lazy">
+        <img src="/brand_assets/logo.webp" alt="Southern Pro-Vision Landscape &amp; Construction" class="footer-brand-logo" decoding="async" loading="lazy">
         <span class="footer-license-label">Licensed &amp; Insured</span>
         <strong class="footer-license-num">(469) 363-5551</strong>
       </div>
 
       <!-- Col 2: Services -->
       <div>
-        <h4 class="footer-col-heading">Services</h4>
+        <h3 class="footer-col-heading">Services</h3>
         <ul class="footer-col-links">
           <li><a href="/services/landscape-design">Landscape Design</a></li>
           <li><a href="/services/landscape-construction">Landscape Construction</a></li>
@@ -27,7 +27,7 @@
 
       <!-- Col 3: Service Areas -->
       <div>
-        <h4 class="footer-col-heading">Service Areas</h4>
+        <h3 class="footer-col-heading">Service Areas</h3>
         <ul class="footer-col-links">
           <li><a href="/service-areas/dallas-tx">Dallas, TX</a></li>
           <li><a href="/service-areas/fort-worth-tx">Fort Worth, TX</a></li>
@@ -40,7 +40,7 @@
 
       <!-- Col 4: Google Map -->
       <div>
-        <iframe class="footer-map-frame"
+        <iframe class="footer-map-frame" title="Service area map"
           src="https://maps.google.com/maps?q=Dallas+Fort+Worth+TX&t=m&z=10&ie=UTF8&iwloc=&output=embed"
           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
@@ -58,11 +58,11 @@
         <path d="M43.611 20.083H42V20H24v8h11.303a11.946 11.946 0 01-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" fill="#1976D2"/>
       </svg>
       <div class="footer-stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
+        <svg class="fa-solid fa-star" style="width:1em;height:1em;vertical-align:-0.125em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-67.5 128.3 67.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L433.6 329 537.8 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L376.4 150.3 316.9 18z"/></svg>
+        <svg class="fa-solid fa-star" style="width:1em;height:1em;vertical-align:-0.125em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-67.5 128.3 67.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L433.6 329 537.8 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L376.4 150.3 316.9 18z"/></svg>
+        <svg class="fa-solid fa-star" style="width:1em;height:1em;vertical-align:-0.125em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-67.5 128.3 67.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L433.6 329 537.8 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L376.4 150.3 316.9 18z"/></svg>
+        <svg class="fa-solid fa-star" style="width:1em;height:1em;vertical-align:-0.125em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-67.5 128.3 67.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L433.6 329 537.8 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L376.4 150.3 316.9 18z"/></svg>
+        <svg class="fa-solid fa-star" style="width:1em;height:1em;vertical-align:-0.125em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-67.5 128.3 67.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L433.6 329 537.8 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L376.4 150.3 316.9 18z"/></svg>
       </div>
     </div>
 
