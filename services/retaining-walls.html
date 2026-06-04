@@ -271,6 +271,9 @@
     .svc-hero-sub { font-size: 14px; }
     .footer-map-frame { height: 180px; }
   }
+
+  /* Mobile: prevent off-canvas menu / wide elements from causing horizontal overflow */
+  @media (max-width: 768px) { html { overflow-x: clip; } }
 </style>
 <script type="application/ld+json">
 [
@@ -674,6 +677,7 @@
     form.reset();
   });
   (function() {
+    function _spvMenuInit(){
     var ham = document.getElementById('hamburger'), menu = document.getElementById('mob-menu'), overlay = document.getElementById('mob-overlay'), closeBtn = document.getElementById('mob-close'), servicesToggle = document.getElementById('mob-services-toggle'), servicesLi = document.getElementById('mob-services-li');
     function openMenu() { ham.classList.add('open'); menu.classList.add('open'); overlay.classList.add('open'); ham.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
     function closeMenu() { ham.classList.remove('open'); menu.classList.remove('open'); overlay.classList.remove('open'); ham.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
@@ -681,6 +685,8 @@
     closeBtn && closeBtn.addEventListener('click', closeMenu);
     overlay && overlay.addEventListener('click', closeMenu);
     servicesToggle && servicesToggle.addEventListener('click', function(){ servicesLi.classList.toggle('open'); });
+    }
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',_spvMenuInit);else _spvMenuInit();
   })();
 </script>
 

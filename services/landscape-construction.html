@@ -609,6 +609,9 @@
     .footer-map-frame { height: 180px; }
   }
 
+
+  /* Mobile: prevent off-canvas menu / wide elements from causing horizontal overflow */
+  @media (max-width: 768px) { html { overflow-x: clip; } }
 </style>
 <script type="application/ld+json">
 [
@@ -1049,6 +1052,7 @@
 
   /* Mobile menu JS */
   (function() {
+    function _spvMenuInit(){
     var ham = document.getElementById('hamburger');
     var menu = document.getElementById('mob-menu');
     var overlay = document.getElementById('mob-overlay');
@@ -1061,6 +1065,8 @@
     closeBtn && closeBtn.addEventListener('click', closeMenu);
     overlay && overlay.addEventListener('click', closeMenu);
     servicesToggle && servicesToggle.addEventListener('click', function(){ servicesLi.classList.toggle('open'); });
+    }
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',_spvMenuInit);else _spvMenuInit();
   })();
 
 </script>

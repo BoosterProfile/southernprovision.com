@@ -1785,6 +1785,64 @@
     .footer-map-frame { height: 180px; }
   }
 
+  /* ============================================================
+     MOBILE OPTIMIZATION — phones & portrait tablets (<=768px).
+     Desktop (>768px) is intentionally untouched. Tested 360/390/430px.
+     ============================================================ */
+  @media (max-width: 768px) {
+    /* Kill horizontal overflow (off-canvas menu + wide headings) */
+    html { overflow-x: clip; }
+
+    /* HERO: natural stacked flow on mobile — NOT locked to 100vh */
+    .top-wrap { min-height: auto; }
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding: 100px 0 44px;
+      align-items: start;
+    }
+    .hero-text { text-align: center; max-width: 100%; }
+    .hero-text h1 {
+      font-size: clamp(27px, 7.6vw, 36px);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .hero-text p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0 auto;
+      max-width: 40ch;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.55); /* readability over image */
+    }
+    /* Form = its own separated block; circular badge clears the paragraph */
+    .quote-form {
+      max-width: 100%;
+      margin: 78px auto 0;       /* clears the upward badge + space from text */
+      padding: 60px 18px 22px;
+    }
+    .quote-form .form-logo { width: 88px; height: 88px; top: -44px; }
+    .quote-form h2 { font-size: 26px; margin-bottom: 16px; }
+
+    /* Comfortable, full-width, tappable controls (>=44px) */
+    .field input { height: 48px; }
+    .field textarea { height: 96px; }
+    .submit-btn { padding: 15px; font-size: 20px; min-height: 50px; }
+
+    /* FAQ heading: was 48px single-line (842px) -> wraps now, no overflow */
+    .faq-title-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .faq-title-row h2 { font-size: clamp(24px, 7vw, 30px); line-height: 1.12; flex-shrink: 1; }
+    .faq-title-divider { width: 100%; flex: none; }
+  }
+
+  @media (max-width: 480px) {
+    .hero { padding: 92px 0 36px; }
+    .hero-text h1 { font-size: clamp(25px, 8vw, 32px); }
+    .hero-text p { font-size: 14.5px; }
+    .quote-form { margin-top: 72px; padding: 56px 15px 20px; }
+    .quote-form .form-logo { width: 80px; height: 80px; top: -40px; }
+  }
+
 </style>
 <script type="application/ld+json">
 {
@@ -2324,6 +2382,7 @@
 
   /* Mobile menu JS */
   (function() {
+    function _spvMenuInit(){
     var ham = document.getElementById('hamburger');
     var menu = document.getElementById('mob-menu');
     var overlay = document.getElementById('mob-overlay');
@@ -2353,6 +2412,8 @@
     servicesToggle && servicesToggle.addEventListener('click', function() {
       servicesLi.classList.toggle('open');
     });
+    }
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',_spvMenuInit);else _spvMenuInit();
   })();
 
 </script>
