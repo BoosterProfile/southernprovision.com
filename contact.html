@@ -1008,6 +1008,9 @@
 
   /* Mobile: prevent off-canvas menu / wide elements from causing horizontal overflow */
   @media (max-width: 768px) { html { overflow-x: clip; } }
+
+  /* Mobile: hide the visible breadcrumb eyebrow (crowds the H1). JSON-LD BreadcrumbList is untouched. */
+  @media (max-width: 768px) { .contact-hero-eyebrow { display: none !important; } }
 </style>
 <script type="application/ld+json">
 {
