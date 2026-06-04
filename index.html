@@ -1487,6 +1487,14 @@
     .about-grid, .faq-grid, .areas-grid { grid-template-columns: 1fr; }
     .about-img img { min-height: 280px; }
     .about-text-content { padding: 0; }
+    /* About Us (mobile): reorder to text -> photo -> icons.
+       Flatten the text wrapper so the photo (.about-img) and the icons
+       (.social-row, normally nested in the text column) become siblings we
+       can reorder. Desktop is untouched (this is inside the mobile query). */
+    .about-grid { display: flex; flex-direction: column; gap: 0; }
+    .about-text-content { display: contents; }
+    .about-img { order: 1; margin-top: 22px; }     /* photo right after the text, no empty gap */
+    .social-row { order: 2; margin-top: 0; padding-top: 30px; } /* icons under photo, comfortable space above */
     .trust-inner { justify-content: center; }
     .spv-cards-grid { grid-template-columns: 1fr 1fr; }
     .spv-services-title-row h2 { font-size: 34px; }
