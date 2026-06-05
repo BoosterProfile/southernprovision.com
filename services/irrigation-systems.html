@@ -844,7 +844,7 @@
       <li><a href="/contact">Contact</a></li>
     </ul>
     <div class="nav-cta">
-      <button class="btn btn-primary" onclick="document.getElementById('estimate-form').scrollIntoView({behavior:'smooth'})">Get Free Estimate</button>
+      <button class="btn btn-primary">Get Free Estimate</button>
       <a href="tel:+14693635551" class="btn btn-secondary"><svg class="fa-solid fa-phone" style="width:1em;height:1em;vertical-align:-0.125em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> (469) 363-5551</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -1024,28 +1024,7 @@
 
       <!-- Right: form -->
       <div class="svc-contact-right reveal reveal-delay-1">
-        <form class="quote-form" id="svc-form" novalidate aria-label="Get a free irrigation estimate">
-          <img class="form-logo" src="../brand_assets/logo.webp" alt="Southern Pro-Vision" loading="lazy" width="750" height="750" decoding="async">
-          <h2>GET A FREE ESTIMATE</h2>
-          <div class="field">
-            <label for="sf-name">Full Name <span class="req">*</span></label>
-            <input id="sf-name" name="name" type="text" placeholder="John Smith" required autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="sf-phone">Phone <span class="req">*</span></label>
-            <input id="sf-phone" name="phone" type="tel" placeholder="(808) 555-1234" required autocomplete="tel" inputmode="tel">
-          </div>
-          <div class="field">
-            <label for="sf-msg">Tell us about your project <span class="req">*</span></label>
-            <textarea id="sf-msg" name="message" placeholder="Describe your irrigation needs, such as a new system, repairs, or zone issues." required></textarea>
-          </div>
-          <div class="checkbox-row">
-            <input type="checkbox" id="sf-terms" required>
-            <label for="sf-terms" style="font-weight:400;font-size:13px;">I agree to <a href="#">terms &amp; conditions</a> provided by the company. By providing my phone number, I agree to receive text messages from the business.</label>
-          </div>
-          <button class="submit-btn" type="submit">SEND</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
+        <div class="quote-form is-ghl" style="background:none;background-color:transparent;padding:0;border:none;box-shadow:none;max-height:none;overflow:visible" id="svc-form"><iframe src="https://api.leadconnectorhq.com/widget/form/0CfLTJY2IWOAtWOqb0XY" style="width:100%;height:760px;border:none;border-radius:10px;min-height:760px" id="inline-0CfLTJY2IWOAtWOqb0XY" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Website Form" data-height="748" data-layout-iframe-id="inline-0CfLTJY2IWOAtWOqb0XY" data-form-id="0CfLTJY2IWOAtWOqb0XY" title="Website Form"></iframe></div>
       </div>
 
     </div>
@@ -1059,7 +1038,7 @@
 
 <!-- Floating CTA -->
 <div class="cta-bottom-right">
-  <button onclick="document.getElementById('estimate-form').scrollIntoView({behavior:'smooth'})">get free quote</button>
+  <button>get free quote</button>
 </div>
 
 <script>
@@ -1162,9 +1141,10 @@
   </div>
   <div class="mob-footer">
     <a href="tel:+14693635551" class="mob-call"><svg class="fa-solid fa-phone" style="width:1em;height:1em;vertical-align:-0.125em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg> (469) 363-5551</a>
-    <button class="mob-estimate" onclick="document.getElementById('mob-overlay').classList.remove('open');document.getElementById('mob-menu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';document.getElementById('estimate-form')?.scrollIntoView({behavior:'smooth'});">Get Free Estimate</button>
+    <button class="mob-estimate">Get Free Estimate</button>
   </div>
 </nav>
 
+<script src="/components/estimate-modal.js" defer></script>
 </body>
 </html>
