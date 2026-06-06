@@ -30,7 +30,7 @@
     /* --- popup --- overlay ALWAYS in layout; hidden via opacity+visibility+pointer-
        events (NEVER display:none), so the iframe is never re-laid-out on reopen. */
     ".spv-popup-overlay{position:fixed;inset:0;z-index:100000;display:flex;" +
-    "align-items:flex-start;justify-content:center;background:rgba(0,0,0,0.62);" +
+    "align-items:center;justify-content:center;background:rgba(0,0,0,0.62);" +
     "padding:24px 16px;overflow-y:auto;-webkit-overflow-scrolling:touch;" +
     "opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s ease;}" +
     ".spv-popup-overlay.open{opacity:1;visibility:visible;pointer-events:auto;}" +
@@ -43,29 +43,14 @@
     "display:flex;align-items:center;justify-content:center;}" +
     ".spv-popup-close:hover{background:#f1f1f1;}" +
     ".spv-popup-close:focus-visible{outline:2px solid #008037;outline-offset:2px;}" +
-    /* content box: TRANSPARENT (no white box/border/shadow/padding) so only the GHL card
-       shows. min(92vw,660px) fits the 625px two-column form (heading on one line). The
-       min-height FLOORS it so form_embed's 0->grow resize sequence can never collapse it
-       to nothing; capped to the viewport + scrolls if the form is taller. */
-    ".spv-popup-box{position:relative;width:min(92vw,660px);max-width:660px;min-width:0;" +
-    "margin:auto;background:transparent;border:none;border-radius:0;box-shadow:none;padding:0;" +
-    "min-height:760px;max-height:90vh;overflow-y:auto;-webkit-overflow-scrolling:touch;}" +
-    /* popup iframe: SAME collapse protection the inline form has (min-height floor; height
-       left to form_embed; full width so it can't collapse to GHL's ~304px default).
-       force display+visibility so form_embed's transient hide can't blank it. */
-    "#popup-form-iframe{display:block!important;visibility:visible!important;width:100%!important;" +
-    "min-height:760px!important;height:auto;max-height:none!important;overflow:visible;" +
-    "border:none!important;border-radius:10px;background:transparent;}" +
-    /* form_embed wraps the iframe in .ep-wrapper/.ep-iFrameContainer and, mid-init, sets
-       .ep-iFrameContainer to display:none + the iframe to visibility:hidden during its
-       0->grow resize. That (not just height) is what blanked/collapsed the popup. Pin
-       their min-height AND force display:block + visibility:visible so the form stays
-       fully visible the whole time — no flash, no collapse. */
-    ".spv-popup-box .ep-wrapper,.spv-popup-box .ep-iFrameContainer{display:block!important;" +
-    "visibility:visible!important;width:100%!important;max-width:100%!important;" +
-    "min-height:760px!important;height:auto!important;max-height:none!important;" +
-    "overflow:visible!important;background:transparent!important;padding:0!important;" +
-    "border:none!important;box-shadow:none!important;}" +
+    /* content box: FIXED height for the plain iframe to fill; min(92vw,660px) fits the
+       625px two-column form (heading on one line). The GHL form scrolls inside the iframe
+       if it's taller (one clean scroll). */
+    ".spv-popup-box{position:relative;width:min(92vw,660px);max-width:660px;" +
+    "margin:auto;background:transparent;border:none;box-shadow:none;padding:0;" +
+    "height:min(760px,90vh);max-height:90vh;}" +
+    /* popup iframe = PLAIN iframe (no GHL data-attrs, no form_embed), fills the box. */
+    "#popup-form-iframe{display:block;width:100%;height:100%;border:none;border-radius:10px;background:#fff;}" +
     "body.spv-popup-open{overflow:hidden;}";
   var st = document.createElement("style");
   st.textContent = css;
@@ -114,8 +99,9 @@
     document.addEventListener("DOMContentLoaded", watchInlineForm);
   else watchInlineForm();
 
-  /* 3) Popup markup, injected once. The iframe uses the STABLE INLINE config and ships
-        with data-src (no src) so nothing loads until the first open. */
+  /* 3) Popup markup, injected once. The iframe is a PLAIN iframe — NO loading="lazy" and
+        NO GHL data-* attrs — so form_embed.js never touches it; its real src is set on
+        first open (see openPopup). This decouples the popup from form_embed entirely. */
   var overlay = document.createElement("div");
   overlay.className = "spv-popup-overlay";
   overlay.setAttribute("aria-hidden", "true");
@@ -124,11 +110,7 @@
        corner and never moves when the form content resizes/collapses. */
     '<button class="spv-popup-close" type="button" aria-label="Close form">&times;</button>' +
     '<div class="spv-popup-box" role="dialog" aria-modal="true" aria-label="Get a free estimate">' +
-      '<iframe title="Website Form" loading="lazy" id="popup-form-iframe" ' +
-        'data-form-id="' + FORM + '" ' +
-        "data-layout=\"{'id':'INLINE'}\" " +
-        'data-src="' + SRC + '" ' +
-        'style="width:100%;border:none;border-radius:10px;min-height:760px"></iframe>' +
+      '<iframe title="Website Form" id="popup-form-iframe" style="display:block;width:100%;height:100%;border:none;border-radius:10px;background:#fff"></iframe>' +
     "</div>";
   function mountPopup() { document.body.appendChild(overlay); }
   if (document.body) mountPopup(); else document.addEventListener("DOMContentLoaded", mountPopup);
@@ -137,16 +119,12 @@
   var popupLoaded = false;
 
   function openPopup() {
-    // Make the overlay VISIBLE first, THEN load the form on the first open only — so
-    // form_embed.js measures/sizes the iframe while it's visible (one correct layout).
     overlay.classList.add("open");
     overlay.setAttribute("aria-hidden", "false");
     document.body.classList.add("spv-popup-open");
     if (!popupLoaded) {
-      popupFrame.src = popupFrame.getAttribute("data-src");
-      popupFrame.removeAttribute("data-src");
+      popupFrame.src = SRC;      // loads the GHL form directly; form_embed NOT needed
       popupLoaded = true;
-      loadFormEmbed();
     }
   }
   function closePopup() {
