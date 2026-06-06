@@ -64,7 +64,27 @@
     /* popup iframe fills the box. NOTE: form_embed.js DOES manage this iframe (it matches
        by src, not by data-attrs) — the closed-state rules above neutralize that. */
     "#popup-form-iframe{display:block;width:100%;height:100%;border:none;border-radius:10px;background:#fff;}" +
-    "body.spv-popup-open{overflow:hidden;}";
+    "body.spv-popup-open{overflow:hidden;}" +
+    /* ---- Canonical MOBILE HEADER (single source of truth) ----
+       The header markup is identical on all 43 pages but only index.html carried the mobile
+       nav recipe; the other 42 kept the 160px logo visible + the Get-Free-Estimate button
+       hidden, so the bar read [logo]…[phone][hamburger] with the hamburger sometimes pushed
+       off-screen (blog/service-areas). These rules reproduce index.html's mobile header
+       EXACTLY on every page, scoped to .nav and !important to beat each page's inline rules
+       + one-off breakpoints. Desktop (>768px / >1024px) is untouched. */
+    "@media (max-width:1024px){" +
+      ".nav .hamburger{display:flex!important;}" +
+      ".nav .nav-links{display:none!important;}" +
+      ".nav .nav-cta .btn-primary{display:none;}" +    /* matches index @1024 (overridden at <=768 below) */
+    "}" +
+    "@media (max-width:768px){" +
+      ".nav .logo-wrapper{display:none!important;}" +
+      ".nav .nav-inner{gap:10px!important;padding:0 14px!important;justify-content:space-between!important;}" +
+      ".nav .nav-cta{gap:8px!important;}" +
+      ".nav .nav-cta .btn-primary{display:inline-flex!important;}" +
+      ".nav .nav-cta .btn{padding:10px 11px!important;font-size:12px!important;letter-spacing:0!important;}" +
+      ".nav .hamburger{z-index:101!important;}" +      /* match homepage stacking so it's never hidden */
+    "}";
   var st = document.createElement("style");
   st.textContent = css;
   document.head.appendChild(st);
