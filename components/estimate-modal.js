@@ -22,7 +22,9 @@
     ".estimate-modal-overlay.open{display:flex;}" +
     "body.estimate-modal-open{overflow:hidden;}" +
     /* modal = NO box: just the GHL iframe (its own white card) on the dark backdrop */
-    ".estimate-modal{position:relative;width:100%;max-width:520px;margin:auto;" +
+    /* wide enough that GHL's 625px two-column form renders at full width (no squash):
+       ~92vw on phones, capped at 680px on desktop. Centered via margin:auto + overlay flex. */
+    ".estimate-modal{position:relative;width:min(92vw,680px);max-width:680px;margin:auto;" +
     "background:transparent!important;border:none!important;box-shadow:none!important;padding:0!important;}" +
     ".estimate-modal-close{position:absolute;top:-2px;right:-2px;z-index:3;width:36px;height:36px;" +
     "border:none;border-radius:50%;background:#fff;color:#1a1a1a;font-size:24px;" +
