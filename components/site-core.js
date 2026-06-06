@@ -34,26 +34,38 @@
     "padding:24px 16px;overflow-y:auto;-webkit-overflow-scrolling:touch;" +
     "opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s ease;}" +
     ".spv-popup-overlay.open{opacity:1;visibility:visible;pointer-events:auto;}" +
-    /* content box: TRANSPARENT (no white box/border/shadow/padding) so only the GHL
-       card shows. min(92vw,660px) fits the 625px two-column form (heading on one line);
-       scrolls vertically if the form is taller than the viewport. */
-    ".spv-popup-box{position:relative;width:min(92vw,660px);max-width:660px;min-width:0;" +
-    "margin:auto;background:transparent;border:none;border-radius:0;box-shadow:none;padding:0;}" +
-    ".spv-popup-close{position:absolute;top:-2px;right:-2px;z-index:3;width:36px;height:36px;" +
+    /* × anchored to the OVERLAY corner (position:fixed relative to the viewport, NOT to
+       the form content) so it always stays top-right and can never float to a random
+       spot mid-resize. */
+    ".spv-popup-close{position:fixed;top:16px;right:16px;z-index:5;width:38px;height:38px;" +
     "border:none;border-radius:50%;background:#fff;color:#1a1a1a;font-size:24px;" +
     "box-shadow:0 2px 10px rgba(0,0,0,0.28);line-height:1;cursor:pointer;" +
     "display:flex;align-items:center;justify-content:center;}" +
     ".spv-popup-close:hover{background:#f1f1f1;}" +
     ".spv-popup-close:focus-visible{outline:2px solid #008037;outline-offset:2px;}" +
-    /* force the GHL wrapper chain + iframe to fill the box (form_embed wraps the iframe
-       in .ep-wrapper; without this it can collapse to ~304px). Width only — height is
-       left to form_embed (min-height floor), exactly like the stable inline form, so
-       there is no fixed-height-vs-resize fight. */
-    ".spv-popup-box .ep-wrapper,.spv-popup-box .ep-iFrameContainer{width:100%!important;" +
-    "max-width:100%!important;background:transparent!important;padding:0!important;" +
-    "border:none!important;box-shadow:none!important;max-height:none!important;overflow:visible!important;}" +
-    ".spv-popup-box iframe{display:block;width:100%!important;min-height:760px;max-height:none;" +
-    "overflow:visible;border:none!important;border-radius:10px;background:transparent;}" +
+    /* content box: TRANSPARENT (no white box/border/shadow/padding) so only the GHL card
+       shows. min(92vw,660px) fits the 625px two-column form (heading on one line). The
+       min-height FLOORS it so form_embed's 0->grow resize sequence can never collapse it
+       to nothing; capped to the viewport + scrolls if the form is taller. */
+    ".spv-popup-box{position:relative;width:min(92vw,660px);max-width:660px;min-width:0;" +
+    "margin:auto;background:transparent;border:none;border-radius:0;box-shadow:none;padding:0;" +
+    "min-height:760px;max-height:90vh;overflow-y:auto;-webkit-overflow-scrolling:touch;}" +
+    /* popup iframe: SAME collapse protection the inline form has (min-height floor; height
+       left to form_embed; full width so it can't collapse to GHL's ~304px default).
+       force display+visibility so form_embed's transient hide can't blank it. */
+    "#popup-form-iframe{display:block!important;visibility:visible!important;width:100%!important;" +
+    "min-height:760px!important;height:auto;max-height:none!important;overflow:visible;" +
+    "border:none!important;border-radius:10px;background:transparent;}" +
+    /* form_embed wraps the iframe in .ep-wrapper/.ep-iFrameContainer and, mid-init, sets
+       .ep-iFrameContainer to display:none + the iframe to visibility:hidden during its
+       0->grow resize. That (not just height) is what blanked/collapsed the popup. Pin
+       their min-height AND force display:block + visibility:visible so the form stays
+       fully visible the whole time — no flash, no collapse. */
+    ".spv-popup-box .ep-wrapper,.spv-popup-box .ep-iFrameContainer{display:block!important;" +
+    "visibility:visible!important;width:100%!important;max-width:100%!important;" +
+    "min-height:760px!important;height:auto!important;max-height:none!important;" +
+    "overflow:visible!important;background:transparent!important;padding:0!important;" +
+    "border:none!important;box-shadow:none!important;}" +
     "body.spv-popup-open{overflow:hidden;}";
   var st = document.createElement("style");
   st.textContent = css;
@@ -108,8 +120,10 @@
   overlay.className = "spv-popup-overlay";
   overlay.setAttribute("aria-hidden", "true");
   overlay.innerHTML =
+    /* × is a direct child of the overlay (NOT the box) so it anchors to the overlay
+       corner and never moves when the form content resizes/collapses. */
+    '<button class="spv-popup-close" type="button" aria-label="Close form">&times;</button>' +
     '<div class="spv-popup-box" role="dialog" aria-modal="true" aria-label="Get a free estimate">' +
-      '<button class="spv-popup-close" type="button" aria-label="Close form">&times;</button>' +
       '<iframe title="Website Form" loading="lazy" id="popup-form-iframe" ' +
         'data-form-id="' + FORM + '" ' +
         "data-layout=\"{'id':'INLINE'}\" " +
