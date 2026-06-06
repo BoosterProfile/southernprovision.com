@@ -36,6 +36,16 @@
     "padding:24px 16px;overflow-y:auto;-webkit-overflow-scrolling:touch;" +
     "opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s ease;}" +
     ".spv-popup-overlay.open{opacity:1;visibility:visible;pointer-events:auto;}" +
+    /* CLOSED-STATE INERT — the core fix. GHL's form_embed.js matches the popup iframe BY
+       ITS src and force-sets INLINE visibility:visible / pointer-events:auto on it. That
+       inline style overrides the hidden overlay, leaving an invisible (opacity:0) but
+       still HIT-TESTABLE iframe (~358x790) over screen-center that swallows every tap
+       ("I can scroll but can't click anything"). A stylesheet !important beats an inline
+       non-important style, so these rules force the closed popup + its iframe to intercept
+       ZERO pointer events and be untestable by elementFromPoint. The .open state above is
+       unaffected (these only apply while NOT open). */
+    ".spv-popup-overlay:not(.open){pointer-events:none!important;}" +
+    ".spv-popup-overlay:not(.open) #popup-form-iframe{pointer-events:none!important;visibility:hidden!important;}" +
     /* × anchored to the OVERLAY corner (position:fixed relative to the viewport, NOT to
        the form content) so it always stays top-right and can never float to a random
        spot mid-resize. */
@@ -51,7 +61,8 @@
     ".spv-popup-box{position:relative;width:min(92vw,660px);max-width:660px;" +
     "margin:auto;background:transparent;border:none;box-shadow:none;padding:0;" +
     "height:min(760px,90vh);max-height:90vh;}" +
-    /* popup iframe = PLAIN iframe (no GHL data-attrs, no form_embed), fills the box. */
+    /* popup iframe fills the box. NOTE: form_embed.js DOES manage this iframe (it matches
+       by src, not by data-attrs) — the closed-state rules above neutralize that. */
     "#popup-form-iframe{display:block;width:100%;height:100%;border:none;border-radius:10px;background:#fff;}" +
     "body.spv-popup-open{overflow:hidden;}";
   var st = document.createElement("style");
@@ -152,9 +163,11 @@
     document.addEventListener("DOMContentLoaded", armInlineFormLoad);
   else armInlineFormLoad();
 
-  /* 3) Popup markup, injected once. The iframe is a PLAIN iframe — NO loading="lazy" and
-        NO GHL data-* attrs — so form_embed.js never touches it; its real src is set on
-        first open (see openPopup). This decouples the popup from form_embed entirely. */
+  /* 3) Popup markup, injected once. The iframe's real src is set on first open. NOTE:
+        form_embed.js DOES manage this iframe (it matches GHL forms by src and stamps
+        inline visibility:visible/pointer-events:auto on them) — so when closed it must be
+        forced inert via the CSS !important rules above AND defensively in closePopup(),
+        or the invisible iframe keeps swallowing taps over screen-center. */
   var overlay = document.createElement("div");
   overlay.className = "spv-popup-overlay";
   overlay.setAttribute("aria-hidden", "true");
@@ -175,17 +188,24 @@
     overlay.classList.add("open");
     overlay.setAttribute("aria-hidden", "false");
     document.body.classList.add("spv-popup-open");
+    // re-enable interactivity (clear the defensive inline inert set on close)
+    popupFrame.style.removeProperty("pointer-events");
+    popupFrame.style.removeProperty("visibility");
     if (!popupLoaded) {
-      popupFrame.src = SRC;      // loads the GHL form directly; form_embed NOT needed
+      popupFrame.src = SRC;      // loads the GHL form directly
       popupLoaded = true;
     }
   }
   function closePopup() {
-    // Hide the overlay ONLY. Never touch the iframe (no display:none, no src reload),
-    // so reopening is instant and GHL never re-lays-out the form.
+    // Hide the overlay ONLY (no display:none, no src reload) so reopen is instant and GHL
+    // never re-lays-out the form. Belt & suspenders: besides the CSS !important closed
+    // rules, defensively stamp the iframe inert with inline !important so it can never sit
+    // hit-testable over the page after form_embed re-asserts visibility:visible.
     overlay.classList.remove("open");
     overlay.setAttribute("aria-hidden", "true");
     document.body.classList.remove("spv-popup-open");
+    popupFrame.style.setProperty("pointer-events", "none", "important");
+    popupFrame.style.setProperty("visibility", "hidden", "important");
   }
   window.openEstimateModal = openPopup;
   window.closeEstimateModal = closePopup;
