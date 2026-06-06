@@ -22,11 +22,25 @@
   /* 1) Styles: inline-form chrome (unchanged) + the popup. */
   var css =
     /* --- inline form chrome (do not change; matches the inline embed dimensions) --- */
-    ".quote-form.is-ghl{background:none!important;background-color:transparent!important;" +
+    ".quote-form.is-ghl{position:relative;background:none!important;background-color:transparent!important;" +
     "box-shadow:none!important;padding:0!important;border:none!important;border-top:none!important;}" +
     ".quote-form.is-ghl>iframe{display:block;width:100%;height:auto;min-height:620px;max-height:none;" +
     "overflow:visible;border:none!important;border-radius:10px;background:transparent;}" +
     ".quote-form.is-ghl .ep-wrapper,.quote-form.is-ghl .ep-iFrameContainer{background:transparent!important;padding:0!important;border:none!important;box-shadow:none!important;max-height:none!important;overflow:visible!important;}" +
+    /* Branded loading skeleton over the inline form so the area is never a blank white box
+       while the GHL widget fetches/renders. Sits absolutely over the (height-reserved)
+       iframe; fades out + is removed once the form reports/loads (see site-core JS). */
+    ".spv-form-skel{position:absolute;inset:0;z-index:2;display:flex;align-items:center;" +
+    "justify-content:center;background:#fff;border-radius:10px;transition:opacity .35s ease;}" +
+    ".spv-form-skel.hide{opacity:0;pointer-events:none;}" +
+    ".spv-form-skel-card{display:flex;flex-direction:column;align-items:center;gap:16px;padding:24px;text-align:center;}" +
+    ".spv-form-skel-logo{width:64px;height:64px;object-fit:contain;opacity:.92;}" +
+    ".spv-form-skel-spin{width:34px;height:34px;border-radius:50%;border:3px solid #e8f4ec;" +
+    "border-top-color:#008037;animation:spv-spin .8s linear infinite;}" +
+    ".spv-form-skel-txt{font:600 14px/1.45 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;" +
+    "color:#004E05;letter-spacing:.01em;margin:0;}" +
+    "@keyframes spv-spin{to{transform:rotate(360deg);}}" +
+    "@media (prefers-reduced-motion:reduce){.spv-form-skel-spin{animation-duration:2s;}}" +
     /* homepage hero on mobile: tighten the gap left by the old card's badge margin. */
     "@media (max-width:768px){.hero .quote-form.is-ghl{margin-top:22px!important;}}" +
     /* --- popup --- overlay ALWAYS in layout; hidden via opacity+visibility+pointer-
@@ -128,60 +142,92 @@
     return !!(menu && menu.classList.contains("open"));
   }
 
-  /* 2) Inline hero/page form: lazy-load only when it nears the viewport (data-src->src).
-        Unchanged — the inline forms and their dimensions are final. */
+  /* 2) Inline hero/page form: branded skeleton + lazy load (data-src->src).
+        The inline forms and their dimensions are final — we only add a loading skeleton
+        and start the load earlier so the area is never a blank white box. */
+
+  /* Inject a branded loading skeleton into every inline-form wrapper up front (at parse),
+     so the height-reserved area shows a logo + spinner instead of blank white during load. */
+  function setupFormSkeletons() {
+    var wraps = document.querySelectorAll(".quote-form.is-ghl");
+    for (var i = 0; i < wraps.length; i++) {
+      var w = wraps[i];
+      if (w.querySelector(".spv-form-skel")) continue;
+      var sk = document.createElement("div");
+      sk.className = "spv-form-skel";
+      sk.setAttribute("aria-hidden", "true");
+      sk.innerHTML =
+        '<div class="spv-form-skel-card">' +
+          '<img class="spv-form-skel-logo" src="/brand_assets/logo-circular.webp" alt="" ' +
+            'width="64" height="64" decoding="async">' +
+          '<div class="spv-form-skel-spin"></div>' +
+          '<p class="spv-form-skel-txt">Loading your free quote form…</p>' +
+        "</div>";
+      w.appendChild(sk);
+    }
+  }
+  function hideFormSkeletons() {
+    var sks = document.querySelectorAll(".quote-form.is-ghl .spv-form-skel");
+    for (var i = 0; i < sks.length; i++) {
+      (function (sk) {
+        if (sk.classList.contains("hide")) return;
+        sk.classList.add("hide");
+        setTimeout(function () { if (sk.parentNode) sk.parentNode.removeChild(sk); }, 450);
+      })(sks[i]);
+    }
+  }
+  /* The GHL form posts messages (form_embed resize) from its leadconnectorhq/msgsndr origin
+     once it's live — that's our most accurate "form has rendered" signal; hide the skeleton
+     then. (Plus iframe onload+delay and a hard fallback below, whichever fires first.) */
+  window.addEventListener("message", function (e) {
+    if (e.origin && /leadconnectorhq\.com|msgsndr\.com/.test(e.origin)) hideFormSkeletons();
+  });
+
   function loadInlineForm() {
     var ifr = document.querySelector('iframe[id^="inline-"][data-src]');
     if (!ifr) return;
+    if (isPopupOpen()) {                    // don't load a 2nd GHL form over the open popup
+      setTimeout(loadInlineForm, 800);
+      return;
+    }
+    ifr.addEventListener("load", function () { setTimeout(hideFormSkeletons, 600); });
     ifr.src = ifr.getAttribute("data-src");
     ifr.removeAttribute("data-src");
     loadFormEmbed();
+    /* Consistent reveal: the GHL form is reliably rendered ~1.5-1.8s after src across
+       devices. Hide then so the ready form is never trapped behind the skeleton (on
+       desktop the iframe load/message signals can lag). The message listener + onload
+       above hide it sooner when those fire; this is the floor + backstop. */
+    setTimeout(hideFormSkeletons, 1800);
   }
+  /* Observe the inline form from init. The IntersectionObserver itself is the gate:
+     - a far-down form is NOT within rootMargin at load, so it does NOT load during the
+       initial render (preserves first-tap/menu responsiveness, no form_embed at render);
+       it loads the moment the user scrolls within ~1200px of it (native, reliable).
+     - a form already near the viewport (contact / home hero) would intersect at init, so
+       we DEFER its load past the initial-paint window (~1200ms) instead of loading
+       synchronously at render. No scroll/idle/tap arming needed — the IO is always live. */
   function watchInlineForm() {
     var ifr = document.querySelector('iframe[id^="inline-"][data-src]');
     if (!ifr) return;
-    if (!("IntersectionObserver" in window)) { loadInlineForm(); return; }
+    if (!("IntersectionObserver" in window)) { setTimeout(loadInlineForm, 1200); return; }
     var io = new IntersectionObserver(function (entries) {
       if (entries.some(function (e) { return e.isIntersecting; })) {
-        loadInlineForm();
         io.disconnect();
+        var now = (window.performance && performance.now) ? performance.now() : 9999;
+        setTimeout(loadInlineForm, Math.max(0, 1200 - now));   // defer only within initial paint
       }
-    }, { rootMargin: "400px 0px" });
+    }, { rootMargin: "1200px 0px" });
     io.observe(ifr);
   }
-  /* PERF (mobile): do NOT start the inline GHL form + form_embed.js during initial
-     render — its resize churn thrashes the main thread. Arm the load on SCROLL only
-     (the user heading toward the form), plus an idle fallback so it still loads on
-     pages that are never scrolled. Runs once.
-     CRITICAL: tap/pointer/key events are NOT triggers — otherwise tapping the estimate
-     CTA (or the hamburger) would load the inline form + inject form_embed.js at the same
-     moment the popup loads its own GHL form, and form_embed's resize churn would lag
-     every subsequent tap. And never pile this work onto an OPEN popup: if the trigger
-     fires while the popup is open, defer until it closes. The popup is a plain iframe and
-     never needs form_embed. */
   function isPopupOpen() {
     var ov = document.querySelector(".spv-popup-overlay");
     return !!(ov && ov.classList.contains("open"));
   }
-  function armInlineFormLoad() {
-    var fired = false, retry = null;
-    function go() {
-      if (fired) return;
-      if (isPopupOpen()) {                  // don't load a 2nd GHL form over the open popup
-        if (!retry) retry = setTimeout(function () { retry = null; go(); }, 800);
-        return;
-      }
-      fired = true;
-      if (retry) { clearTimeout(retry); retry = null; }
-      window.removeEventListener("scroll", go);
-      watchInlineForm();
-    }
-    window.addEventListener("scroll", go, { passive: true });
-    (window.requestIdleCallback || function (cb) { return setTimeout(cb, 1500); })(go);
-  }
+  function initInlineForm() { setupFormSkeletons(); watchInlineForm(); }
   if (document.readyState === "loading")
-    document.addEventListener("DOMContentLoaded", armInlineFormLoad);
-  else armInlineFormLoad();
+    document.addEventListener("DOMContentLoaded", initInlineForm);
+  else initInlineForm();
 
   /* 3) Popup markup, injected once. The iframe's real src is set on first open. NOTE:
         form_embed.js DOES manage this iframe (it matches GHL forms by src and stamps
