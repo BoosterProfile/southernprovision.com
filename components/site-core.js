@@ -119,20 +119,33 @@
     io.observe(ifr);
   }
   /* PERF (mobile): do NOT start the inline GHL form + form_embed.js during initial
-     render — its resize churn thrashes the main thread right when the user is at the top
-     trying to tap the hamburger ("lags at top, fine after scroll"). Arm the load to fire
-     on the FIRST real interaction (scroll/touch/pointer/key/mousemove) or, failing any,
-     when the browser goes idle — so first paint + the menu stay responsive. Runs once. */
+     render — its resize churn thrashes the main thread. Arm the load on SCROLL only
+     (the user heading toward the form), plus an idle fallback so it still loads on
+     pages that are never scrolled. Runs once.
+     CRITICAL: tap/pointer/key events are NOT triggers — otherwise tapping the estimate
+     CTA (or the hamburger) would load the inline form + inject form_embed.js at the same
+     moment the popup loads its own GHL form, and form_embed's resize churn would lag
+     every subsequent tap. And never pile this work onto an OPEN popup: if the trigger
+     fires while the popup is open, defer until it closes. The popup is a plain iframe and
+     never needs form_embed. */
+  function isPopupOpen() {
+    var ov = document.querySelector(".spv-popup-overlay");
+    return !!(ov && ov.classList.contains("open"));
+  }
   function armInlineFormLoad() {
-    var fired = false;
-    var evs = ["scroll", "touchstart", "pointerdown", "keydown", "mousemove", "wheel"];
+    var fired = false, retry = null;
     function go() {
       if (fired) return;
+      if (isPopupOpen()) {                  // don't load a 2nd GHL form over the open popup
+        if (!retry) retry = setTimeout(function () { retry = null; go(); }, 800);
+        return;
+      }
       fired = true;
-      evs.forEach(function (ev) { window.removeEventListener(ev, go); });
+      if (retry) { clearTimeout(retry); retry = null; }
+      window.removeEventListener("scroll", go);
       watchInlineForm();
     }
-    evs.forEach(function (ev) { window.addEventListener(ev, go, { passive: true }); });
+    window.addEventListener("scroll", go, { passive: true });
     (window.requestIdleCallback || function (cb) { return setTimeout(cb, 1500); })(go);
   }
   if (document.readyState === "loading")
