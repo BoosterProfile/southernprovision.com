@@ -1,7 +1,9 @@
 /* Shared GoHighLevel estimate form: powers the popup modal + wires every
-   "Get A Free Estimate" / "free quote" button across the site. Loaded once per
-   page. The inline form iframes live in the page markup; this file loads GHL's
-   form_embed.js (which auto-resizes BOTH the inline and modal iframes). */
+   "Get A Free Estimate" / "free quote" button across the site. Loaded once per page.
+   PERF (mobile): all heavy cross-origin GHL loading is LAZY — the popup form loads on
+   first open, the inline page form loads when it nears the viewport, and form_embed.js
+   (which auto-resizes both iframes) loads once, on demand. Nothing GHL initializes on
+   page load. Also hardens the mobile-menu scroll-lock so the page can't feel frozen. */
 (function () {
   var FORM = "0CfLTJY2IWOAtWOqb0XY";
   var SRC = "https://api.leadconnectorhq.com/widget/form/" + FORM;
@@ -60,17 +62,18 @@
   st.textContent = css;
   document.head.appendChild(st);
 
-  /* 2) Modal markup (hidden). The iframe is INLINE-layout so GHL never auto-pops
-        it — only our show()/hide() controls visibility. src is set ONCE at mount so
-        the form is fully rendered + resized by form_embed.js BEFORE the first open —
-        no load/resize flicker (slide-in → transparent → squish) when the modal appears. */
+  /* 2) Modal markup (hidden). The iframe is INLINE-layout so GHL never auto-pops it —
+        only our show()/hide() controls visibility. PERF: src is loaded LAZILY on the
+        first open (see show()), never on page load, so the heavy cross-origin GHL form
+        does not init alongside the inline form + reviews widget on mobile. The iframe
+        size is locked in CSS, so it can't squish/flicker as form_embed.js sizes it. */
   var overlay = document.createElement("div");
   overlay.className = "estimate-modal-overlay";
   overlay.setAttribute("aria-hidden", "true");
   overlay.innerHTML =
     '<div class="estimate-modal" role="dialog" aria-modal="true" aria-label="Get a free estimate">' +
       '<button class="estimate-modal-close" type="button" aria-label="Close form">&times;</button>' +
-      '<iframe title="Website Form" loading="eager" ' +
+      '<iframe title="Website Form" loading="lazy" ' +
         'id="popup-' + FORM + '" ' +
         'data-form-id="' + FORM + '" ' +
         "data-layout=\"{'id':'INLINE'}\" " +
@@ -83,22 +86,31 @@
 
   var frame = overlay.querySelector("iframe");
 
-  function mount() {
-    document.body.appendChild(overlay);
-    /* preload the form once, up front, so it's rendered + sized before any open */
-    if (!frame.src) frame.src = SRC;
-  }
+  function mount() { document.body.appendChild(overlay); }   // markup only; NO form load here
   if (document.body) mount(); else document.addEventListener("DOMContentLoaded", mount);
+
+  /* Load GHL's form_embed.js exactly ONCE per page, on demand. It auto-resizes every
+     GHL iframe (inline + popup). Deduped so the inline embed and the modal never load
+     it twice. Called lazily (modal open OR inline form near viewport), never on load. */
+  function loadFormEmbed() {
+    if (document.querySelector('script[src*="form_embed.js"]')) return;
+    var s = document.createElement("script");
+    s.src = "https://link.msgsndr.com/js/form_embed.js";
+    s.setAttribute("data-spv-ghl", "");
+    document.body.appendChild(s);
+  }
 
   function closeMobileMenu() {
     ["mob-menu", "mob-overlay", "hamburger"].forEach(function (id) {
       var el = document.getElementById(id);
       if (el) el.classList.remove("open");
     });
+    document.body.style.overflow = "";        // never leave the menu's scroll-lock stuck
   }
 
   function show() {
-    if (!frame.src) frame.src = SRC;   // safety net; normally preloaded at mount
+    if (!frame.src) frame.src = SRC;   // lazy load on FIRST open only (never on page load)
+    loadFormEmbed();
     closeMobileMenu();
     overlay.classList.add("open");
     overlay.setAttribute("aria-hidden", "false");
@@ -131,11 +143,47 @@
     show();
   });
 
-  /* 5) Load GHL form_embed.js once (auto-resizes inline + modal iframes). */
-  if (!document.querySelector('script[src*="form_embed.js"]')) {
-    var s = document.createElement("script");
-    s.src = "https://link.msgsndr.com/js/form_embed.js";
-    s.setAttribute("data-spv-ghl", "");
-    document.body.appendChild(s);
+  /* 5) Inline hero/page form: lazy-load it only when it nears the viewport, so it does
+        NOT init on page load alongside the popup + reviews widget (mobile main-thread
+        overload). The iframe ships with data-src (no src) so the browser never fetches
+        it during parse; we swap data-src->src + load form_embed.js when it's close. */
+  function loadInlineForm() {
+    var ifr = document.querySelector('iframe[id^="inline-"][data-src]');
+    if (!ifr) return false;
+    ifr.src = ifr.getAttribute("data-src");
+    ifr.removeAttribute("data-src");
+    loadFormEmbed();
+    return true;
   }
+  function watchInlineForm() {
+    var ifr = document.querySelector('iframe[id^="inline-"][data-src]');
+    if (!ifr) return;
+    if (!("IntersectionObserver" in window)) { loadInlineForm(); return; }
+    var io = new IntersectionObserver(function (entries) {
+      if (entries.some(function (e) { return e.isIntersecting; })) {
+        loadInlineForm();
+        io.disconnect();
+      }
+    }, { rootMargin: "400px 0px" });
+    io.observe(ifr);
+  }
+  if (document.readyState === "loading")
+    document.addEventListener("DOMContentLoaded", watchInlineForm);
+  else watchInlineForm();
+
+  /* 6) Mobile-menu safety net (every page). The per-page menu script can leave
+        document.body.style.overflow='hidden' stuck if open/close desync or the user
+        navigates away with the menu open — which makes the page feel frozen, especially
+        after iOS back/bfcache restore. Guarantee the scroll-lock is always released:
+        - tapping any link inside the mobile menu closes it + clears overflow;
+        - on pageshow (incl. bfcache restore) with the menu closed, clear overflow. */
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest && e.target.closest(".mob-menu a[href]");
+    if (!link) return;
+    closeMobileMenu();
+  });
+  window.addEventListener("pageshow", function () {
+    var menu = document.getElementById("mob-menu");
+    if (!menu || !menu.classList.contains("open")) document.body.style.overflow = "";
+  });
 })();

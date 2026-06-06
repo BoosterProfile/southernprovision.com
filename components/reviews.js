@@ -12,9 +12,11 @@
         <a class="contact-now" href="/contact">contact us now <svg class="fa-solid fa-arrow-right" style="width:1em;height:1em;vertical-align:-0.125em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" focusable="false"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
       </div>
 
-      <!-- GoHighLevel / ReputationHub review carousel -->
+      <!-- GoHighLevel / ReputationHub review carousel. PERF: data-src (no src) so the
+           heavy cross-origin widget iframe is NOT fetched on page load; reviews.js swaps
+           data-src->src only when the section nears the viewport (see below). -->
       <div class="reviews-widget-wrapper">
-        <iframe class="lc_reviews_widget" title="Customer reviews" loading="lazy" src="https://reputationhub.site/reputation/widgets/review_widget/z5ozcPKfsOi6MJB94NYI?widgetId=6a1db34e9501e8cad5b7590f" frameborder="0" scrolling="no" style="min-width: 100%; width: 100%;"></iframe>
+        <iframe class="lc_reviews_widget" title="Customer reviews" loading="lazy" data-src="https://reputationhub.site/reputation/widgets/review_widget/z5ozcPKfsOi6MJB94NYI?widgetId=6a1db34e9501e8cad5b7590f" frameborder="0" scrolling="no" style="min-width: 100%; width: 100%;"></iframe>
       </div>
 
       <div class="review-google-cta">
@@ -30,10 +32,13 @@
   if (!el) return;
   el.outerHTML = html;
 
-  // Lazy-load the GoHighLevel / ReputationHub widget script only when the reviews
-  // section nears the viewport, so the heavy third-party chain (incl. leadconnector
-  // main.js) does not block initial page load. The iframe itself is loading="lazy".
+  // Lazy-load the GoHighLevel / ReputationHub widget ONLY when the reviews section nears
+  // the viewport, so the heavy third-party chain (the widget iframe + leadconnector
+  // main.js) does not init on page load alongside the inline form + popup (mobile
+  // main-thread overload). Swaps the iframe's data-src->src AND injects the widget script.
   function loadWidget() {
+    var ifr = document.querySelector('iframe.lc_reviews_widget[data-src]');
+    if (ifr) { ifr.src = ifr.getAttribute('data-src'); ifr.removeAttribute('data-src'); }
     if (document.querySelector('script[data-spv-reviews]')) return;
     var s = document.createElement('script');
     s.type = 'text/javascript';
