@@ -791,7 +791,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('brand_assets/process-bg.webp');
+    background-image: none; /* removed process-bg.webp ghost: it duplicated the foreground process diagram */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1508,7 +1508,7 @@
     .footer-main { grid-template-columns: 1fr 1fr; }
     .section-title-block h2, .gallery-head h2, .reviews-head h2, .faq-grid h2, .areas h2, .big-cta h2, .process-head h2 { font-size: 28px; letter-spacing: -0.01em; }
     .process-image { display: none; }
-    .process-image.mobile { display: block; height: 200px; }
+    .process-image.mobile { display: block; height: 200px; background: none; } /* clear inherited process-diagram bg that bled through the transparent foreground image */
     .trust-inner { font-size: 14px; }
     .footer-logo-block { margin-right: 0; }
   }
