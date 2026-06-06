@@ -1,8 +1,10 @@
-/* Site core (shared, loaded once on every page). Responsibilities:
-     1) lazy-load the inline GHL form when it nears the viewport,
-     2) the "Get A Free Estimate" / "free quote" popup (re-added, built anti-freeze),
-     3) open those CTAs into the popup,
-     4) keep the mobile-menu scroll-lock from ever sticking.
+/* Site core (shared, loaded once on every page) — the SINGLE controller for all mobile
+   interactivity, so an edit here propagates everywhere and one page can't break another.
+   Responsibilities:
+     1) lazy-load the inline GHL form (deferred to first interaction/idle — see armInlineFormLoad),
+     2) the "Get A Free Estimate" / "free quote" popup (anti-freeze, plain iframe),
+     3) open those CTAs into the popup via the explicit [data-open-estimate] hook,
+     4) the mobile menu: open/close/services-toggle + scroll-lock (no per-page inline JS).
 
    ANTI-FREEZE NOTES (why the popup no longer glitches/freezes on iOS):
      - The popup iframe uses GHL's stable INLINE config (NOT the POPUP layout, which
@@ -66,12 +68,33 @@
     document.body.appendChild(s);
   }
 
+  /* ---- Mobile menu: the ONE controller (single source of truth) ----
+     All open/close/services-toggle + body scroll-lock lives here and NOWHERE else.
+     The duplicated per-page inline _spvMenuInit <script> has been removed from every
+     page, so there is exactly one owner of the menu state. open/close are idempotent. */
   function closeMobileMenu() {
     ["mob-menu", "mob-overlay", "hamburger"].forEach(function (id) {
       var el = document.getElementById(id);
       if (el) el.classList.remove("open");
     });
+    var ham = document.getElementById("hamburger");
+    if (ham) ham.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";        // never leave the menu's scroll-lock stuck
+  }
+  function openMobileMenu() {
+    var menu = document.getElementById("mob-menu");
+    if (!menu) return;                          // page has no mobile menu — nothing to do
+    ["mob-menu", "mob-overlay", "hamburger"].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.classList.add("open");
+    });
+    var ham = document.getElementById("hamburger");
+    if (ham) ham.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+  function menuIsOpen() {
+    var menu = document.getElementById("mob-menu");
+    return !!(menu && menu.classList.contains("open"));
   }
 
   /* 2) Inline hero/page form: lazy-load only when it nears the viewport (data-src->src).
@@ -95,9 +118,26 @@
     }, { rootMargin: "400px 0px" });
     io.observe(ifr);
   }
+  /* PERF (mobile): do NOT start the inline GHL form + form_embed.js during initial
+     render — its resize churn thrashes the main thread right when the user is at the top
+     trying to tap the hamburger ("lags at top, fine after scroll"). Arm the load to fire
+     on the FIRST real interaction (scroll/touch/pointer/key/mousemove) or, failing any,
+     when the browser goes idle — so first paint + the menu stay responsive. Runs once. */
+  function armInlineFormLoad() {
+    var fired = false;
+    var evs = ["scroll", "touchstart", "pointerdown", "keydown", "mousemove", "wheel"];
+    function go() {
+      if (fired) return;
+      fired = true;
+      evs.forEach(function (ev) { window.removeEventListener(ev, go); });
+      watchInlineForm();
+    }
+    evs.forEach(function (ev) { window.addEventListener(ev, go, { passive: true }); });
+    (window.requestIdleCallback || function (cb) { return setTimeout(cb, 1500); })(go);
+  }
   if (document.readyState === "loading")
-    document.addEventListener("DOMContentLoaded", watchInlineForm);
-  else watchInlineForm();
+    document.addEventListener("DOMContentLoaded", armInlineFormLoad);
+  else armInlineFormLoad();
 
   /* 3) Popup markup, injected once. The iframe is a PLAIN iframe — NO loading="lazy" and
         NO GHL data-* attrs — so form_embed.js never touches it; its real src is set on
@@ -145,17 +185,37 @@
     if ((e.key === "Escape" || e.keyCode === 27) && overlay.classList.contains("open")) closePopup();
   });
 
-  /* CTA wiring: any "Get [a] Free Estimate" / "free quote" button or link opens the
-     popup. A CTA inside the mobile menu closes the menu (+ clears the scroll-lock) first. */
+  /* CTA wiring: PRIMARY = the explicit [data-open-estimate] hook present on every CTA
+     (works on the first tap, at the top of the page, regardless of script load order and
+     regardless of the button's visible label). BACKSTOP = the old visible-text regex, so
+     any CTA that somehow lacks the hook still works. A CTA inside the mobile menu closes
+     the menu (+ clears the scroll-lock) first, then opens the popup. */
   var RE = /(get\s*a?\s*free\s+estimate|free\s+quote)/i;
   document.addEventListener("click", function (e) {
-    var el = e.target.closest && e.target.closest("a, button");
+    if (!e.target.closest) return;
+    if (e.target.closest(".spv-popup-overlay")) return;     // ignore clicks inside the popup
+    var hook = e.target.closest("[data-open-estimate]");
+    var el = hook || e.target.closest("a, button");
     if (!el) return;
-    if (el.closest(".spv-popup-overlay")) return;          // ignore clicks inside the popup
-    if (!RE.test((el.textContent || "").replace(/\s+/g, " ").trim())) return;
+    if (!hook && !RE.test((el.textContent || "").replace(/\s+/g, " ").trim())) return;
     e.preventDefault();
-    if (el.closest && el.closest(".mob-menu")) closeMobileMenu();
+    if (el.closest(".mob-menu")) closeMobileMenu();
     openPopup();
+  });
+
+  /* Mobile-menu controls — delegated on document so they fire no matter when the menu
+     HTML or this script loads (the single controller; no per-page inline JS). */
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest) return;
+    if (e.target.closest("#hamburger")) {
+      e.preventDefault();
+      menuIsOpen() ? closeMobileMenu() : openMobileMenu();
+    } else if (e.target.closest("#mob-close") || e.target.closest("#mob-overlay")) {
+      closeMobileMenu();
+    } else if (e.target.closest("#mob-services-toggle")) {
+      var li = document.getElementById("mob-services-li");
+      if (li) li.classList.toggle("open");
+    }
   });
 
   /* 4) Mobile-menu safety net (every page): never let the scroll-lock stick.
