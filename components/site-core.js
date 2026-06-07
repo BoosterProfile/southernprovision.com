@@ -85,15 +85,13 @@
       ".nav .nav-cta .btn{padding:10px 11px!important;font-size:12px!important;letter-spacing:0!important;}" +
       ".nav .hamburger{z-index:101!important;}" +      /* match homepage stacking so it's never hidden */
     "}" +
-    /* ---- Floating "Get Free Quote" CTA, paired just LEFT of the GHL chat bubble ----
-       Measured bubble: 58x58 at right:20/bottom:20 (same desktop + mobile). right:100 clears
-       it with a ~22px gap; shown on EVERY width (overrides the per-page @640 display:none +
-       @1024 right:16 with !important) so it's visible on phones and never hidden/clipped/
-       overlapping the bubble. Reveal on body.scrolled is preserved. */
-    /* z-index sits ABOVE GHL's chat wrapper (.lc_text-widget is position:fixed z:99999999
-       and extends LEFT over our button, stealing taps) so real taps land on the button.
-       The bubble itself is to the RIGHT and uncovered, so it stays tappable. */
-    ".cta-bottom-right{position:fixed!important;left:auto!important;right:100px!important;bottom:20px!important;" +
+    /* ---- Floating "Get Free Quote" CTA, pinned to the bottom-right corner ----
+       The GHL chat widget was removed, so the button now rests cleanly in the corner
+       (right:24/bottom:22 desktop, right:16 on small phones). Shown on EVERY width
+       (overrides the per-page @640 display:none + @1024 right:16 with !important) so it's
+       visible on phones and never hidden/clipped. Reveal on body.scrolled is preserved.
+       High z-index keeps it above page content; it's hidden while the popup is open. */
+    ".cta-bottom-right{position:fixed!important;left:auto!important;right:24px!important;bottom:22px!important;" +
     "display:block!important;opacity:0;transform:translateX(120%);transition:opacity .45s ease,transform .45s ease;" +
     "z-index:2147483646!important;pointer-events:none;}" +
     "body.scrolled .cta-bottom-right{opacity:1!important;transform:translateX(0)!important;pointer-events:auto;}" +
@@ -106,7 +104,7 @@
     ".cta-bottom-right button:hover{border-color:#fff;}" +
     ".cta-bottom-right button:focus-visible{outline:2px solid #fff;outline-offset:2px;}" +
     /* small phones: hug a touch closer + slightly smaller so it stays fully on-screen */
-    "@media (max-width:480px){.cta-bottom-right{right:92px!important;}" +
+    "@media (max-width:480px){.cta-bottom-right{right:16px!important;}" +
     ".cta-bottom-right button{padding:13px 15px;font-size:12px;}}";
   var st = document.createElement("style");
   st.textContent = css;
