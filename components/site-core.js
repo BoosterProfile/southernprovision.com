@@ -84,7 +84,30 @@
       ".nav .nav-cta .btn-primary{display:inline-flex!important;}" +
       ".nav .nav-cta .btn{padding:10px 11px!important;font-size:12px!important;letter-spacing:0!important;}" +
       ".nav .hamburger{z-index:101!important;}" +      /* match homepage stacking so it's never hidden */
-    "}";
+    "}" +
+    /* ---- Floating "Get Free Quote" CTA, paired just LEFT of the GHL chat bubble ----
+       Measured bubble: 58x58 at right:20/bottom:20 (same desktop + mobile). right:100 clears
+       it with a ~22px gap; shown on EVERY width (overrides the per-page @640 display:none +
+       @1024 right:16 with !important) so it's visible on phones and never hidden/clipped/
+       overlapping the bubble. Reveal on body.scrolled is preserved. */
+    /* z-index sits ABOVE GHL's chat wrapper (.lc_text-widget is position:fixed z:99999999
+       and extends LEFT over our button, stealing taps) so real taps land on the button.
+       The bubble itself is to the RIGHT and uncovered, so it stays tappable. */
+    ".cta-bottom-right{position:fixed!important;left:auto!important;right:100px!important;bottom:20px!important;" +
+    "display:block!important;opacity:0;transform:translateX(120%);transition:opacity .45s ease,transform .45s ease;" +
+    "z-index:2147483646!important;pointer-events:none;}" +
+    "body.scrolled .cta-bottom-right{opacity:1!important;transform:translateX(0)!important;pointer-events:auto;}" +
+    /* while the estimate popup is open, hide the button so it doesn't float over the overlay */
+    "body.spv-popup-open .cta-bottom-right{opacity:0!important;pointer-events:none!important;}" +
+    ".cta-bottom-right button{background:#008037;color:#fff;padding:16px 20px;" +
+    "font:900 14px/1 'Montserrat',system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em;" +
+    "border:2px solid transparent;border-radius:6px;cursor:pointer;white-space:nowrap;" +
+    "box-shadow:0 10px 24px -10px rgba(0,0,0,.4);transition:border-color .25s,background .2s;}" +
+    ".cta-bottom-right button:hover{border-color:#fff;}" +
+    ".cta-bottom-right button:focus-visible{outline:2px solid #fff;outline-offset:2px;}" +
+    /* small phones: hug a touch closer + slightly smaller so it stays fully on-screen */
+    "@media (max-width:480px){.cta-bottom-right{right:92px!important;}" +
+    ".cta-bottom-right button{padding:13px 15px;font-size:12px;}}";
   var st = document.createElement("style");
   st.textContent = css;
   document.head.appendChild(st);
@@ -253,4 +276,27 @@
     var popupOpen = overlay.classList.contains("open");
     if (!menuOpen && !popupOpen) document.body.style.overflow = "";
   });
+
+  /* 5) Floating "Get Free Quote" CTA (every page, paired with the chat bubble).
+        - Inject the button on pages whose markup lacks it (blog/service-areas/gallery/
+          portfolio) so every page shows the same bottom-right pairing — no duplicate on
+          pages that already have it. It keeps data-open-estimate, so it opens the popup.
+        - Toggle body.scrolled here too (some pages have no scroll handler of their own),
+          so the button reveals on scroll everywhere. */
+  function ensureFloatingCta() {
+    if (document.querySelector(".cta-bottom-right")) return;   // already present — no dup
+    var d = document.createElement("div");
+    d.className = "cta-bottom-right";
+    d.innerHTML = '<button data-open-estimate>get free quote</button>';
+    document.body.appendChild(d);
+  }
+  function syncScrolled() {
+    if (window.scrollY > 50) document.body.classList.add("scrolled");
+    else document.body.classList.remove("scrolled");
+  }
+  function initFloatingCta() { ensureFloatingCta(); syncScrolled(); }
+  if (document.readyState === "loading")
+    document.addEventListener("DOMContentLoaded", initFloatingCta);
+  else initFloatingCta();
+  window.addEventListener("scroll", syncScrolled, { passive: true });
 })();
