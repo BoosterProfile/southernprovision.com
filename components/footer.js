@@ -70,7 +70,7 @@
     <div class="footer-bottom-bar">
       <div class="footer-bottom-left">
         <span>&copy; 2025 Southern Pro-Vision Landscape &amp; Construction. All rights reserved.</span>
-        <a href="#">Privacy Policy</a>
+        <a href="/privacy-policy">Privacy Policy</a>
       </div>
       <div class="footer-social-icons">
         <a href="https://maps.app.goo.gl/2ZQp1rPAzU8yKpai8" target="_blank" rel="noopener noreferrer" aria-label="Google Business Profile">
