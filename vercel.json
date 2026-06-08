@@ -7,7 +7,31 @@
       "has": [{ "type": "host", "value": "southernpro-vision.com" }],
       "destination": "https://www.southernpro-vision.com/:path*",
       "permanent": true
-    }
+    },
+
+    { "source": "/about-us(/)?", "destination": "/", "permanent": true },
+    { "source": "/contact-us(/)?", "destination": "/contact", "permanent": true },
+
+    { "source": "/contact-us/dallas-landscape-design-installation(/)?", "destination": "/service-areas/dallas-tx", "permanent": true },
+    { "source": "/contact-us/north-dallas-landscape-design-installation(/)?", "destination": "/service-areas/dallas-tx", "permanent": true },
+    { "source": "/contact-us/south-dallas-landscape-design-installation(/)?", "destination": "/service-areas/dallas-tx", "permanent": true },
+    { "source": "/contact-us/fort-worth-landscape-design-installation(/)?", "destination": "/service-areas/fort-worth-tx", "permanent": true },
+    { "source": "/contact-us/plano-landscape-design-installation(/)?", "destination": "/service-areas/plano-tx", "permanent": true },
+    { "source": "/contact-us/frisco-landscape-design-installation(/)?", "destination": "/service-areas/frisco-tx", "permanent": true },
+    { "source": "/contact-us/mckinney-landscape-design-installation(/)?", "destination": "/service-areas/mckinney-tx", "permanent": true },
+    { "source": "/contact-us/allen-landscape-design-installation(/)?", "destination": "/service-areas/allen-tx", "permanent": true },
+    { "source": "/contact-us/richardson-landscape-design-installation(/)?", "destination": "/service-areas/richardson-tx", "permanent": true },
+    { "source": "/contact-us/rockwall-landscape-design-installation(/)?", "destination": "/service-areas/rockwall-tx", "permanent": true },
+    { "source": "/contact-us/heath-landscape-design-installation(/)?", "destination": "/service-areas/heath-tx", "permanent": true },
+    { "source": "/contact-us/fairview-landscape-design-installation(/)?", "destination": "/service-areas/fairview-tx", "permanent": true },
+    { "source": "/contact-us/murphy-landscape-design-installation(/)?", "destination": "/service-areas/murphy-tx", "permanent": true },
+    { "source": "/contact-us/lakewood-landscape-design-installation(/)?", "destination": "/service-areas/lakewood-tx", "permanent": true },
+    { "source": "/contact-us/highland-park-landscape-design-installation(/)?", "destination": "/service-areas/highland-park-tx", "permanent": true },
+    { "source": "/contact-us/preston-hollow-landscape-design-installation(/)?", "destination": "/service-areas/preston-hollow-tx", "permanent": true },
+    { "source": "/contact-us/university-park-landscape-design-installation(/)?", "destination": "/service-areas/university-park-tx", "permanent": true },
+    { "source": "/contact-us/the-colony-landscape-design-installation(/)?", "destination": "/service-areas/the-colony-tx", "permanent": true },
+
+    { "source": "/contact-us/:slug*", "destination": "/service-areas", "permanent": true }
   ],
   "headers": [
     {
